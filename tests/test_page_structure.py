@@ -6,7 +6,7 @@ from pathlib import Path
 import pytest
 
 ROOT = Path(__file__).resolve().parent.parent
-PAGES = sorted(p for track in ("fundamentals", "scientist", "engineer", "safety") for p in (ROOT / "content" / track).glob("*.md"))
+PAGES = sorted(p for track in ("fundamentals", "scientist", "engineer", "safety", "datasets") for p in (ROOT / "content" / track).glob("*.md"))
 
 REQUIRED_HEADINGS = [
     "## Core idea",
@@ -18,8 +18,8 @@ REQUIRED_HEADINGS = [
 ]
 
 
-def test_all_28_pages_exist():
-    assert len(PAGES) == 28
+def test_all_34_pages_exist():
+    assert len(PAGES) == 34
 
 
 @pytest.mark.parametrize("page", PAGES, ids=lambda p: f"{p.parent.name}/{p.stem}")

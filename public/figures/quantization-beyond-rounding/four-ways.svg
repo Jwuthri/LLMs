@@ -1,0 +1,14 @@
+<svg viewBox="0 0 720 226" role="img" aria-label="Two families of newer quantization methods. Use the model to decide: importance from activations lowers the weighted error from 0.037 to 0.009, and training with the model as a teacher lowers the output error from 0.650 to 0.025. Change what is stored: ternary weights use 1.585 bits, and a codebook stores one code for 2 weights at 1 bit per weight. The baseline of lesson 7 rounds each weight alone to 4 bits.">
+<defs><marker id="quantization-beyond-rounding-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dgm-head-accent"/></marker></defs>
+<rect x="14" y="12" width="340" height="40" rx="6" class="dgm-box-accent"/><text x="184" y="37" text-anchor="middle" class="dgm-text">Use the model to decide</text>
+<rect x="366" y="12" width="340" height="40" rx="6" class="dgm-box-accent"/><text x="536" y="37" text-anchor="middle" class="dgm-text">Change what is stored</text>
+<path d="M96 52V86" class="dgm-arrow-accent" marker-end="url(#quantization-beyond-rounding-head)"/>
+<path d="M272 52V86" class="dgm-arrow-accent" marker-end="url(#quantization-beyond-rounding-head)"/>
+<path d="M448 52V86" class="dgm-arrow-accent" marker-end="url(#quantization-beyond-rounding-head)"/>
+<path d="M624 52V86" class="dgm-arrow-accent" marker-end="url(#quantization-beyond-rounding-head)"/>
+<rect x="14" y="90" width="164" height="90" rx="6" class="dgm-box"/><text x="96" y="114" text-anchor="middle" class="dgm-text">1. Importance</text><text x="96" y="136" text-anchor="middle" class="dgm-text-small">activations on real text</text><text x="96" y="162" text-anchor="middle" class="dgm-text-mono">0.037 → 0.009</text>
+<rect x="190" y="90" width="164" height="90" rx="6" class="dgm-box"/><text x="272" y="114" text-anchor="middle" class="dgm-text">2. Training</text><text x="272" y="136" text-anchor="middle" class="dgm-text-small">the model is the teacher</text><text x="272" y="162" text-anchor="middle" class="dgm-text-mono">0.650 → 0.025</text>
+<rect x="366" y="90" width="164" height="90" rx="6" class="dgm-box"/><text x="448" y="114" text-anchor="middle" class="dgm-text">3. Ternary</text><text x="448" y="136" text-anchor="middle" class="dgm-text-small">3 values: -1, 0, 1</text><text x="448" y="162" text-anchor="middle" class="dgm-text-mono">1.585 bits</text>
+<rect x="542" y="90" width="164" height="90" rx="6" class="dgm-box"/><text x="624" y="114" text-anchor="middle" class="dgm-text">4. Codebook</text><text x="624" y="136" text-anchor="middle" class="dgm-text-small">one code for 2 weights</text><text x="624" y="162" text-anchor="middle" class="dgm-text-mono">1 bit per weight</text>
+<text x="14" y="208" class="dgm-text-small">Baseline of lesson 7: each weight alone, rounded to the nearest of 15 values (4 bits).</text>
+</svg>

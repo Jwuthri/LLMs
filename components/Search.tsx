@@ -28,14 +28,23 @@ export function Search() {
   const dialog = useRef<HTMLDialogElement>(null);
   const [items, setItems] = useState<SearchItem[]>();
   const [query, setQuery] = useState("");
+  const [failed, setFailed] = useState(false);
   const router = useRouter();
 
   const open = () => {
     dialog.current?.showModal();
     if (!items) {
+      setFailed(false);
       fetch("/search-index.json")
-        .then((response) => response.json())
-        .then(setItems);
+        .then((response) => {
+          if (!response.ok) throw new Error(`search index: HTTP ${response.status}`);
+          return response.json();
+        })
+        .then(setItems)
+        .catch((error) => {
+          console.error(error);
+          setFailed(true);
+        });
     }
   };
 
@@ -91,6 +100,7 @@ export function Search() {
               </button>
             </li>
           ))}
+          {failed && <li className="search__empty">The search index did not load. Close the search and try again.</li>}
           {items && query && results.length === 0 && <li className="search__empty">No lesson matches “{query}”.</li>}
         </ul>
       </dialog>

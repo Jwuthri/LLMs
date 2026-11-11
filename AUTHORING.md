@@ -1,7 +1,7 @@
 # How to write a page
 
 Each page explains one section of the [LLM Course](https://github.com/mlabonne/llm-course), or one topic that
-this site adds (the AI Safety track in `content/safety/`, diffusion models, training libraries).
+this site adds (the AI Safety track in `content/safety/`, diffusion models, training libraries, metrics, newer quantization).
 The reference page is `content/scientist/01-architecture.md`. Read it first and copy its structure.
 
 ## The method (8 rules)
