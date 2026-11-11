@@ -1,0 +1,8 @@
+<svg viewBox="0 0 720 206" role="img" aria-label="Timeline of one request on the server: prefill of 500 input tokens takes 0.10 seconds, the first output token 0.02 seconds, the other 199 tokens 3.98 seconds. Time to first token is 0.12 seconds and total latency is 4.10 seconds.">
+<text x="14" y="30" class="dgm-text-small">The request arrives</text><text x="706" y="30" text-anchor="end" class="dgm-text-small">The answer is complete</text>
+<rect x="14" y="44" width="240" height="64" rx="6" class="dgm-box"/><text x="134" y="70" text-anchor="middle" class="dgm-text">Prefill: read 500 tokens</text><text x="134" y="92" text-anchor="middle" class="dgm-text-mono">500 / 5,000 = 0.10 s</text>
+<rect x="262" y="44" width="112" height="64" rx="6" class="dgm-box-accent"/><text x="318" y="70" text-anchor="middle" class="dgm-text">Token 1</text><text x="318" y="92" text-anchor="middle" class="dgm-text-mono">0.02 s</text>
+<rect x="382" y="44" width="324" height="64" rx="6" class="dgm-box"/><text x="544" y="70" text-anchor="middle" class="dgm-text">Decode: tokens 2 to 200</text><text x="544" y="92" text-anchor="middle" class="dgm-text-mono">199 × 0.02 = 3.98 s</text>
+<path d="M14 122V134M14 128H374M374 122V134" class="dgm-arrow-accent"/><text x="14" y="152" class="dgm-text">Time to first token = 0.12 s</text>
+<path d="M14 166V178M14 172H706M706 166V178" class="dgm-arrow"/><text x="706" y="196" text-anchor="end" class="dgm-text">Total latency = 4.10 s</text>
+</svg>

@@ -1,0 +1,9 @@
+<svg viewBox="0 0 720 200" role="img" aria-label="Your program sends a request with the model name, the messages and the token limit to an API server. The server runs the tokenizer and the model and sends back the new message and the usage. With assumed prices, 1,000 input tokens and 200 output tokens cost 0.006 dollars.">
+<defs><marker id="running-llms-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dgm-head"/></marker><marker id="running-llms-head-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dgm-head-accent"/></marker></defs>
+<rect x="14" y="36" width="150" height="100" rx="6" class="dgm-box"/><text x="89" y="76" text-anchor="middle" class="dgm-text">Your program</text><text x="89" y="98" text-anchor="middle" class="dgm-text-small">builds the messages</text>
+<rect x="556" y="36" width="150" height="100" rx="6" class="dgm-box-accent"/><text x="631" y="66" text-anchor="middle" class="dgm-text">API server</text><text x="631" y="88" text-anchor="middle" class="dgm-text-small">tokenizer + model</text><text x="631" y="106" text-anchor="middle" class="dgm-text-small">generation loop</text>
+<path d="M164 62H552" class="dgm-arrow-accent" marker-end="url(#running-llms-head-accent)"/><text x="360" y="52" text-anchor="middle" class="dgm-text-mono">request: model, messages, max_tokens</text>
+<text x="360" y="92" text-anchor="middle" class="dgm-text-small">1,000 input tokens go in, 200 output tokens come back</text>
+<path d="M556 112H168" class="dgm-arrow" marker-end="url(#running-llms-head)"/><text x="360" y="132" text-anchor="middle" class="dgm-text-mono">response: choices[0].message, usage</text>
+<text x="360" y="178" text-anchor="middle" class="dgm-text">Cost with the assumed prices: (1,000 × 3 + 200 × 15) / 1,000,000 = 0.006 dollars</text>
+</svg>
