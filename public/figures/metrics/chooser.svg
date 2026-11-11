@@ -1,0 +1,19 @@
+<svg viewBox="0 0 720 330" role="img" aria-label="Which metric to use. Token probabilities and the correct token: loss and perplexity. Two probability distributions: KL divergence. Scores with labels: precision, recall, AUROC. A text with a reference: exact match, F1, ROUGE, or tests. A ranked list: recall at k, MRR, nDCG.">
+<defs><marker id="metrics-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dgm-head"/></marker></defs>
+<text x="14" y="22" class="dgm-text-small">What you have</text><text x="330" y="22" class="dgm-text-small">Metric</text><text x="560" y="22" class="dgm-text-small">Part</text>
+<rect x="14" y="34" width="270" height="46" rx="6" class="dgm-box"/><text x="26" y="62" class="dgm-text">Token probabilities + correct token</text>
+<rect x="330" y="34" width="200" height="46" rx="6" class="dgm-box-accent"/><text x="342" y="62" class="dgm-text">Loss, perplexity</text><text x="560" y="62" class="dgm-text-mono">1</text>
+<path d="M284 57H326" class="dgm-arrow" marker-end="url(#metrics-head)"/>
+<rect x="14" y="92" width="270" height="46" rx="6" class="dgm-box"/><text x="26" y="120" class="dgm-text">Two probability distributions</text>
+<rect x="330" y="92" width="200" height="46" rx="6" class="dgm-box-accent"/><text x="342" y="120" class="dgm-text">KL divergence</text><text x="560" y="120" class="dgm-text-mono">2</text>
+<path d="M284 115H326" class="dgm-arrow" marker-end="url(#metrics-head)"/>
+<rect x="14" y="150" width="270" height="46" rx="6" class="dgm-box"/><text x="26" y="178" class="dgm-text">Scores + yes/no labels</text>
+<rect x="330" y="150" width="200" height="46" rx="6" class="dgm-box-accent"/><text x="342" y="170" class="dgm-text">Precision, recall, F1,</text><text x="342" y="188" class="dgm-text">AUROC, calibration</text><text x="560" y="178" class="dgm-text-mono">3</text>
+<path d="M284 173H326" class="dgm-arrow" marker-end="url(#metrics-head)"/>
+<rect x="14" y="208" width="270" height="46" rx="6" class="dgm-box"/><text x="26" y="236" class="dgm-text">A written text + a reference or tests</text>
+<rect x="330" y="208" width="200" height="46" rx="6" class="dgm-box-accent"/><text x="342" y="228" class="dgm-text">Exact match, F1, BLEU,</text><text x="342" y="246" class="dgm-text">ROUGE, pass@k</text><text x="560" y="236" class="dgm-text-mono">4</text>
+<path d="M284 231H326" class="dgm-arrow" marker-end="url(#metrics-head)"/>
+<rect x="14" y="266" width="270" height="46" rx="6" class="dgm-box"/><text x="26" y="294" class="dgm-text">A ranked list of documents</text>
+<rect x="330" y="266" width="200" height="46" rx="6" class="dgm-box-accent"/><text x="342" y="294" class="dgm-text">Recall@k, MRR, nDCG</text><text x="560" y="294" class="dgm-text-mono">4</text>
+<path d="M284 289H326" class="dgm-arrow" marker-end="url(#metrics-head)"/>
+</svg>
