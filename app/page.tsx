@@ -28,7 +28,7 @@ export default function Home() {
           </h1>
           <p className="hero__lead">
             Each lesson explains one topic with the same tiny model: three words, numbers that you can calculate
-            by hand, and the reason for each step. The topics follow the LLM Course, plus one lesson on AI safety.
+            by hand, and the reason for each step. The topics follow the LLM Course, plus a track on AI safety.
           </p>
           <div className="hero__actions">
             <Link className="button" href="/toy-example/">

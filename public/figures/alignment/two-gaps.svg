@@ -1,0 +1,14 @@
+<svg viewBox="0 0 720 186" role="img" aria-label="The intended goal reaches the behaviour of the model in three steps: intended goal, specification, learned goal, behaviour. Gap 1, outer alignment, is between the intended goal and the specification: in the toy the reward is 1.0 and the goal is 0.0. Gap 2, inner alignment, is between the specification and the learned goal: in the toy the accuracy is 1.0 in training and 0.0 in deployment.">
+<defs><marker id="alignment-gaps-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dgm-head-accent"/></marker></defs>
+<rect x="14" y="24" width="150" height="60" rx="6" class="dgm-box"/><text x="89" y="50" text-anchor="middle" class="dgm-text">Intended goal</text><text x="89" y="70" text-anchor="middle" class="dgm-text-small">what we want</text>
+<rect x="204" y="24" width="150" height="60" rx="6" class="dgm-box-accent"/><text x="279" y="50" text-anchor="middle" class="dgm-text">Specification</text><text x="279" y="70" text-anchor="middle" class="dgm-text-small">reward, examples</text>
+<rect x="394" y="24" width="150" height="60" rx="6" class="dgm-box-accent"/><text x="469" y="50" text-anchor="middle" class="dgm-text">Learned goal</text><text x="469" y="70" text-anchor="middle" class="dgm-text-small">inside the model</text>
+<rect x="584" y="24" width="122" height="60" rx="6" class="dgm-box"/><text x="645" y="50" text-anchor="middle" class="dgm-text">Behaviour</text><text x="645" y="70" text-anchor="middle" class="dgm-text-small">in deployment</text>
+<path d="M164 54H200" class="dgm-arrow-accent" marker-end="url(#alignment-gaps-head)"/>
+<path d="M354 54H390" class="dgm-arrow-accent" marker-end="url(#alignment-gaps-head)"/>
+<path d="M544 54H580" class="dgm-arrow-accent" marker-end="url(#alignment-gaps-head)"/>
+<path d="M182 60V108" class="dgm-arrow"/>
+<path d="M372 60V108" class="dgm-arrow"/>
+<rect x="62" y="108" width="240" height="66" rx="6" class="dgm-box-warm"/><text x="182" y="132" text-anchor="middle" class="dgm-text">Gap 1: outer alignment</text><text x="182" y="156" text-anchor="middle" class="dgm-text-mono">reward 1.0, goal 0.0</text>
+<rect x="322" y="108" width="250" height="66" rx="6" class="dgm-box-warm"/><text x="447" y="132" text-anchor="middle" class="dgm-text">Gap 2: inner alignment</text><text x="447" y="156" text-anchor="middle" class="dgm-text-mono">train 1.0, deployment 0.0</text>
+</svg>

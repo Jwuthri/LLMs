@@ -1,10 +1,10 @@
-// Site structure: the three tracks and their lessons, read from content/ at build time.
+// Site structure: the tracks and their lessons, read from content/ at build time.
 import fs from "node:fs";
 import path from "node:path";
 
 export const CONTENT_DIR = path.join(process.cwd(), "content");
 
-export type TrackId = "fundamentals" | "scientist" | "engineer";
+export type TrackId = "fundamentals" | "scientist" | "engineer" | "safety";
 
 export interface Track {
   id: TrackId;
@@ -27,6 +27,11 @@ export const TRACKS: Track[] = [
     id: "engineer",
     title: "The LLM Engineer",
     tagline: "How to build applications with a model and put them in service.",
+  },
+  {
+    id: "safety",
+    title: "AI Safety",
+    tagline: "How to test a model, protect it, and check what it does inside.",
   },
 ];
 
@@ -96,6 +101,7 @@ export function trackOf(id: string): Track | undefined {
 // Route of a content file, for links between pages: "scientist/04-fine-tuning.md" -> "/scientist/fine-tuning/".
 export function routeOfFile(file: string): string {
   if (file === "toy-example.md") return "/toy-example/";
+  if (file === "glossary.md") return "/glossary/";
   const lesson = allLessons().find((item) => item.file === file);
   if (!lesson) throw new Error(`Link to a page that does not exist: ${file}`);
   return lesson.href;
@@ -121,6 +127,7 @@ function phrasesOf(file: string): string[] {
 export function searchIndex(): SearchItem[] {
   return [
     { href: "/toy-example/", title: "The toy example", context: "Start here", phrases: phrasesOf("toy-example.md") },
+    { href: "/glossary/", title: "AI safety glossary", context: "AI Safety", phrases: phrasesOf("glossary.md") },
     ...allLessons().map((lesson) => ({
       href: lesson.href,
       title: lesson.title,

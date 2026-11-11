@@ -1,6 +1,7 @@
 # How to write a page
 
-Each page explains one section of the [LLM Course](https://github.com/mlabonne/llm-course).
+Each page explains one section of the [LLM Course](https://github.com/mlabonne/llm-course), or one topic that
+this site adds (the AI Safety track in `content/safety/`, diffusion models, training libraries).
 The reference page is `content/scientist/01-architecture.md`. Read it first and copy its structure.
 
 ## The method (8 rules)
@@ -68,7 +69,9 @@ Length: 1,800 to 2,600 words for each page.
   "Real-library sketch (the tests do not run this code)". Keep it short. Never write a string that looks like
   an API key; read keys from the environment.
 - The **Sources** section starts with the credit line of the reference page, then lists the reference links
-  of that course section.
+  of that course section. A page that the course does not have starts with "This lesson is an addition." and
+  the same link to the course. It lists only sources that the writer opened, with the date.
+- A term of the AI Safety track that is defined in bold also gets one line in `content/glossary.md`.
 
 ## Formulas, figures, widgets
 

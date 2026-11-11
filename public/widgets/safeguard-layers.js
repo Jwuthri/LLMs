@@ -1,5 +1,5 @@
 // Layers of safeguards: the pass rate of one harmful request, and the chance that an attacker
-// with many attempts gets one request through. Starts with the numbers of the AI safety lesson.
+// with many attempts gets one request through. Starts with the numbers of the lesson "Jailbreaks and safeguards".
 LLMWidgets.register("safeguard-layers", (el) => {
   const { h, fmt, slider, bars } = LLMWidgets;
   const names = ["Input classifier", "Model", "Output classifier"];

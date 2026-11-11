@@ -1,0 +1,24 @@
+<svg viewBox="0 0 720 332" role="img" aria-label="Three questions lead from the job to the library. Question 1, does it fit in memory: full fine-tuning needs 132 GB, LoRA 20.7 GB, QLoRA 10.2 GB, on a GPU of 24 GB. Question 2, what data: reference answers lead to SFT, pairs to DPO, a checker to RL. Question 3, do you change the loop: no change leads to a YAML file or a web UI, a loss or a reward to a trainer class, all of it to your own loop. The job of the page ends at QLoRA, SFT and no change of the loop.">
+<defs><marker id="training-libraries-path-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dgm-head"/></marker><marker id="training-libraries-path-head-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dgm-head-accent"/></marker></defs>
+<text x="14" y="24" class="dgm-text-small">The job: 8 billion parameters, 10,000 examples with answers, one GPU with 24 GB</text>
+<rect x="14" y="38" width="216" height="58" rx="6" class="dgm-box"/><text x="122" y="62" text-anchor="middle" class="dgm-text">1. Does it fit in memory?</text><text x="122" y="82" text-anchor="middle" class="dgm-text-small">weights + states + activations</text>
+<rect x="252" y="38" width="216" height="58" rx="6" class="dgm-box"/><text x="360" y="62" text-anchor="middle" class="dgm-text">2. What data do you have?</text><text x="360" y="82" text-anchor="middle" class="dgm-text-small">answers, pairs, or a checker</text>
+<rect x="490" y="38" width="216" height="58" rx="6" class="dgm-box"/><text x="598" y="62" text-anchor="middle" class="dgm-text">3. Do you change the loop?</text><text x="598" y="82" text-anchor="middle" class="dgm-text-small">no, one function, or all of it</text>
+<path d="M230 67H249" class="dgm-arrow" marker-end="url(#training-libraries-path-head)"/>
+<path d="M468 67H487" class="dgm-arrow" marker-end="url(#training-libraries-path-head)"/>
+<rect x="14" y="112" width="216" height="34" rx="6" class="dgm-box"/><text x="122" y="134" text-anchor="middle" class="dgm-text-small">Full fine-tuning: 132 GB, no</text>
+<rect x="14" y="152" width="216" height="34" rx="6" class="dgm-box"/><text x="122" y="174" text-anchor="middle" class="dgm-text-small">LoRA, 16-bit: 20.7 GB, tight</text>
+<rect x="14" y="192" width="216" height="34" rx="6" class="dgm-box-accent"/><text x="122" y="214" text-anchor="middle" class="dgm-text">QLoRA, 4-bit: 10.2 GB, yes</text>
+<path d="M122 226V258" class="dgm-arrow-accent" marker-end="url(#training-libraries-path-head-accent)"/>
+<rect x="252" y="112" width="216" height="34" rx="6" class="dgm-box"/><text x="360" y="134" text-anchor="middle" class="dgm-text-small">Only a checker: RL</text>
+<rect x="252" y="152" width="216" height="34" rx="6" class="dgm-box"/><text x="360" y="174" text-anchor="middle" class="dgm-text-small">Good and bad pairs: DPO</text>
+<rect x="252" y="192" width="216" height="34" rx="6" class="dgm-box-accent"/><text x="360" y="214" text-anchor="middle" class="dgm-text">Reference answers: SFT</text>
+<path d="M360 226V258" class="dgm-arrow-accent" marker-end="url(#training-libraries-path-head-accent)"/>
+<rect x="490" y="112" width="216" height="34" rx="6" class="dgm-box"/><text x="598" y="134" text-anchor="middle" class="dgm-text-small">All of it: your own loop</text>
+<rect x="490" y="152" width="216" height="34" rx="6" class="dgm-box"/><text x="598" y="174" text-anchor="middle" class="dgm-text-small">Loss or reward: a trainer class</text>
+<rect x="490" y="192" width="216" height="34" rx="6" class="dgm-box-accent"/><text x="598" y="214" text-anchor="middle" class="dgm-text">No change: YAML or web UI</text>
+<path d="M598 226V258" class="dgm-arrow-accent" marker-end="url(#training-libraries-path-head-accent)"/>
+<rect x="14" y="262" width="692" height="56" rx="6" class="dgm-box-accent"/>
+<text x="360" y="285" text-anchor="middle" class="dgm-text">QLoRA + SFT + no change of the loop</text>
+<text x="360" y="305" text-anchor="middle" class="dgm-text-small">Take Unsloth, Axolotl, LlamaFactory or the TRL SFTTrainer. Another answer leads to another tool.</text>
+</svg>

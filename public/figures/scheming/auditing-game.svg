@@ -1,0 +1,16 @@
+<svg viewBox="0 0 720 190" role="img" aria-label="An auditing game. The red team builds 8 models: 4 organisms with a trigger and 4 clean models. The blue team tests them without the answer and writes a report that flags 4 models. The report is compared with the ground truth that the red team keeps: true positive rate 0.75, false positive rate 0.25.">
+<defs><marker id="scheming-game-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dgm-head-accent"/></marker><marker id="scheming-game-head-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dgm-head"/></marker></defs>
+<text x="14" y="24" class="dgm-text-small">Top row: what the blue team sees. Bottom row: what only the red team knows.</text>
+<rect x="14" y="40" width="110" height="60" rx="6" class="dgm-box"/><text x="69" y="66" text-anchor="middle" class="dgm-text">Red team</text><text x="69" y="86" text-anchor="middle" class="dgm-text-small">builds them</text>
+<rect x="178" y="40" width="200" height="60" rx="6" class="dgm-box-accent"/><text x="278" y="66" text-anchor="middle" class="dgm-text">8 models</text><text x="278" y="86" text-anchor="middle" class="dgm-text-small">4 organisms + 4 clean models</text>
+<rect x="432" y="40" width="120" height="60" rx="6" class="dgm-box"/><text x="492" y="66" text-anchor="middle" class="dgm-text">Blue team</text><text x="492" y="86" text-anchor="middle" class="dgm-text-small">has no answer</text>
+<rect x="606" y="40" width="100" height="60" rx="6" class="dgm-box"/><text x="656" y="66" text-anchor="middle" class="dgm-text">Report</text><text x="656" y="86" text-anchor="middle" class="dgm-text-small">flags 4 models</text>
+<path d="M124 70H174" class="dgm-arrow-accent" marker-end="url(#scheming-game-head)"/>
+<path d="M378 70H428" class="dgm-arrow-accent" marker-end="url(#scheming-game-head)"/>
+<path d="M552 70H602" class="dgm-arrow-accent" marker-end="url(#scheming-game-head)"/>
+<path d="M656 100V124" class="dgm-arrow-accent" marker-end="url(#scheming-game-head)"/>
+<path d="M69 100V152H174" class="dgm-arrow" marker-end="url(#scheming-game-head-muted)"/>
+<rect x="178" y="128" width="374" height="48" rx="6" class="dgm-box-warm"/><text x="365" y="157" text-anchor="middle" class="dgm-text">Ground truth: which models have the trigger</text>
+<path d="M552 152H602" class="dgm-arrow" marker-end="url(#scheming-game-head-muted)"/>
+<rect x="606" y="128" width="100" height="48" rx="6" class="dgm-box-accent"/><text x="656" y="148" text-anchor="middle" class="dgm-text-mono">TPR 0.75</text><text x="656" y="166" text-anchor="middle" class="dgm-text-mono">FPR 0.25</text>
+</svg>
