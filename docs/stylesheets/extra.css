@@ -216,3 +216,16 @@
 .llm-bars__label {
   font-family: "JetBrains Mono", ui-monospace, monospace;
 }
+
+/* A long display formula scrolls inside its own box at phone width. */
+.md-typeset .katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.2em 0;
+}
+
+/* KaTeX keeps a hidden, absolutely positioned MathML copy of each formula. Anchor it to the
+   formula, so that a formula in a wide table does not make the page scroll sideways. */
+.md-typeset .katex {
+  position: relative;
+}
