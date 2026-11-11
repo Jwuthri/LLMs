@@ -1,0 +1,15 @@
+<svg viewBox="0 0 720 250" role="img" aria-label="The 6 rows are split into 4 train rows and 2 test rows. The median, the mean, the standard deviation and the model weights are learned from the train rows only, then applied to the test rows.">
+<defs><marker id="python-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dgm-head"/></marker><marker id="python-head-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dgm-head-accent"/></marker></defs>
+<rect x="10" y="95" width="90" height="60" rx="6" class="dgm-box"/><text x="55" y="120" text-anchor="middle" class="dgm-text">6 rows</text><text x="55" y="140" text-anchor="middle" class="dgm-text-small">seed 5</text>
+<rect x="140" y="30" width="110" height="60" rx="6" class="dgm-box"/><text x="195" y="55" text-anchor="middle" class="dgm-text">Train</text><text x="195" y="75" text-anchor="middle" class="dgm-text-mono">rows 1 2 3 4</text>
+<rect x="140" y="160" width="110" height="60" rx="6" class="dgm-box"/><text x="195" y="185" text-anchor="middle" class="dgm-text">Test</text><text x="195" y="205" text-anchor="middle" class="dgm-text-mono">rows 0 5</text>
+<rect x="290" y="30" width="150" height="60" rx="6" class="dgm-box-accent"/><text x="365" y="52" text-anchor="middle" class="dgm-text">Fit on train</text><text x="365" y="68" text-anchor="middle" class="dgm-text-small">median 300, mean 300</text><text x="365" y="83" text-anchor="middle" class="dgm-text-small">std 70.711</text>
+<rect x="290" y="160" width="150" height="60" rx="6" class="dgm-box"/><text x="365" y="185" text-anchor="middle" class="dgm-text">Apply to test</text><text x="365" y="205" text-anchor="middle" class="dgm-text-small">the same 3 numbers</text>
+<rect x="480" y="30" width="230" height="60" rx="6" class="dgm-box-accent"/><text x="595" y="55" text-anchor="middle" class="dgm-text">Fit the regression</text><text x="595" y="75" text-anchor="middle" class="dgm-text-mono">θ = [3.1, 0.778, 0.9]</text>
+<rect x="480" y="160" width="230" height="60" rx="6" class="dgm-box"/><text x="595" y="185" text-anchor="middle" class="dgm-text">Predict and measure</text><text x="595" y="205" text-anchor="middle" class="dgm-text-mono">test MSE = 0.065</text>
+<path d="M100 125H120V60H136" class="dgm-arrow" marker-end="url(#python-head)"/><path d="M100 125H120V190H136" class="dgm-arrow" marker-end="url(#python-head)"/>
+<path d="M250 60H286" class="dgm-arrow" marker-end="url(#python-head)"/><path d="M440 60H476" class="dgm-arrow" marker-end="url(#python-head)"/>
+<path d="M250 190H286" class="dgm-arrow" marker-end="url(#python-head)"/><path d="M440 190H476" class="dgm-arrow" marker-end="url(#python-head)"/>
+<path d="M365 90V156" class="dgm-arrow-accent" marker-end="url(#python-head-accent)"/><text x="375" y="128" class="dgm-text-small">median, mean, std</text>
+<path d="M595 90V156" class="dgm-arrow-accent" marker-end="url(#python-head-accent)"/><text x="605" y="128" class="dgm-text-small">weights θ</text>
+</svg>

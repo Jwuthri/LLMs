@@ -1,0 +1,17 @@
+<svg viewBox="0 0 720 244" role="img" aria-label="A recurrent network reads the, cat and sat one token at a time. The hidden state goes from 0, 0 to 0.762, 0 then 0.363, 0.923 then 0.074, 0.917.">
+<defs><marker id="nlp-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dgm-head"/></marker><marker id="nlp-head-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dgm-head-accent"/></marker></defs>
+<text x="20" y="22" class="dgm-text-small">Hidden state h (the memory), passed from left to right</text>
+<rect x="120" y="66" width="110" height="64" rx="6" class="dgm-box-accent"/><text x="175" y="92" text-anchor="middle" class="dgm-text">RNN cell</text><text x="175" y="112" text-anchor="middle" class="dgm-text-small">tanh(W h + U x)</text>
+<rect x="320" y="66" width="110" height="64" rx="6" class="dgm-box-accent"/><text x="375" y="92" text-anchor="middle" class="dgm-text">RNN cell</text><text x="375" y="112" text-anchor="middle" class="dgm-text-small">same W, same U</text>
+<rect x="520" y="66" width="110" height="64" rx="6" class="dgm-box-accent"/><text x="575" y="92" text-anchor="middle" class="dgm-text">RNN cell</text><text x="575" y="112" text-anchor="middle" class="dgm-text-small">same W, same U</text>
+<path d="M36 98H116" class="dgm-arrow-accent" marker-end="url(#nlp-head-accent)"/><path d="M230 98H316" class="dgm-arrow-accent" marker-end="url(#nlp-head-accent)"/><path d="M430 98H516" class="dgm-arrow-accent" marker-end="url(#nlp-head-accent)"/><path d="M630 98H704" class="dgm-arrow-accent" marker-end="url(#nlp-head-accent)"/>
+<text x="72" y="44" text-anchor="middle" class="dgm-text-small">h₀</text><text x="72" y="60" text-anchor="middle" class="dgm-text-mono">[0, 0]</text>
+<text x="275" y="44" text-anchor="middle" class="dgm-text-small">h₁</text><text x="275" y="60" text-anchor="middle" class="dgm-text-mono">[0.762, 0]</text>
+<text x="475" y="44" text-anchor="middle" class="dgm-text-small">h₂</text><text x="475" y="60" text-anchor="middle" class="dgm-text-mono">[0.363, 0.923]</text>
+<text x="648" y="44" text-anchor="middle" class="dgm-text-small">h₃</text><text x="648" y="60" text-anchor="middle" class="dgm-text-mono">[0.074, 0.917]</text>
+<rect x="120" y="176" width="110" height="56" rx="6" class="dgm-box"/><text x="175" y="199" text-anchor="middle" class="dgm-text">the</text><text x="175" y="219" text-anchor="middle" class="dgm-text-mono">[1, 0]</text>
+<rect x="320" y="176" width="110" height="56" rx="6" class="dgm-box"/><text x="375" y="199" text-anchor="middle" class="dgm-text">cat</text><text x="375" y="219" text-anchor="middle" class="dgm-text-mono">[0, 1]</text>
+<rect x="520" y="176" width="110" height="56" rx="6" class="dgm-box"/><text x="575" y="199" text-anchor="middle" class="dgm-text">sat</text><text x="575" y="219" text-anchor="middle" class="dgm-text-mono">[1, 1]</text>
+<path d="M175 176V134" class="dgm-arrow" marker-end="url(#nlp-head)"/><path d="M375 176V134" class="dgm-arrow" marker-end="url(#nlp-head)"/><path d="M575 176V134" class="dgm-arrow" marker-end="url(#nlp-head)"/>
+<text x="185" y="159" class="dgm-text-small">x₁</text><text x="385" y="159" class="dgm-text-small">x₂</text><text x="585" y="159" class="dgm-text-small">x₃</text>
+</svg>
