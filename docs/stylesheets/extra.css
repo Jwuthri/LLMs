@@ -1,0 +1,218 @@
+/* Theme colours. Series colours follow the validated chart palette (light / dark steps). */
+:root,
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #184f95;
+  --md-primary-fg-color--light: #2a78d6;
+  --md-primary-fg-color--dark: #104281;
+  --md-accent-fg-color: #eb6834;
+  --llm-s1: #2a78d6;
+  --llm-s2: #eb6834;
+  --llm-s3: #1baf7a;
+  --llm-s1-soft: #cde2fb;
+  --llm-ink: #0b0b0b;
+  --llm-ink-2: #52514e;
+  --llm-muted: #898781;
+  --llm-grid: #e1e0d9;
+  --llm-axis: #c3c2b7;
+  --llm-surface: #fcfcfb;
+  --llm-panel: #f4f3ef;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #104281;
+  --md-primary-fg-color--light: #3987e5;
+  --md-primary-fg-color--dark: #0d366b;
+  --md-accent-fg-color: #ec835a;
+  --md-typeset-a-color: #6da7ec;
+  --llm-s1: #3987e5;
+  --llm-s2: #d95926;
+  --llm-s3: #199e70;
+  --llm-s1-soft: #184f95;
+  --llm-ink: #f0efec;
+  --llm-ink-2: #c3c2b7;
+  --llm-muted: #898781;
+  --llm-grid: #2c2c2a;
+  --llm-axis: #383835;
+  --llm-surface: #1a1a19;
+  --llm-panel: #232322;
+}
+
+/* "Why" line after a step: `**Why:** ...` followed by `{ .why }`. */
+.md-typeset p.why {
+  margin: 0.4em 0 1em;
+  padding: 0.5em 0.8em;
+  border-left: 3px solid var(--llm-s2);
+  background: var(--llm-panel);
+  border-radius: 0 4px 4px 0;
+  font-size: 0.92em;
+}
+
+/* Wide tables scroll inside their own box, not the page. */
+.md-typeset table:not([class]) {
+  font-size: 0.72rem;
+}
+
+/* Figures: inline SVG diagrams and plots. */
+.md-typeset figure.diagram,
+.md-typeset figure.plot {
+  margin: 1.2em auto;
+  max-width: 100%;
+}
+/* Material sizes a figure to its content; an inline SVG has no intrinsic width. */
+.md-typeset figure.diagram {
+  width: 100%;
+}
+.md-typeset figure.diagram svg {
+  display: block;
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  margin: 0 auto;
+}
+.md-typeset figure.plot img {
+  max-width: min(100%, 640px);
+}
+.md-typeset figcaption {
+  color: var(--llm-ink-2);
+  font-size: 0.85em;
+  font-style: normal;
+  max-width: 640px;
+}
+
+/* Classes for hand-written SVG diagrams (see AUTHORING.md). */
+.dgm-box { fill: var(--llm-panel); stroke: var(--llm-axis); stroke-width: 1.5; }
+.dgm-box-accent { fill: var(--llm-s1-soft); stroke: var(--llm-s1); stroke-width: 1.5; }
+.dgm-box-warm { fill: none; stroke: var(--llm-s2); stroke-width: 1.5; stroke-dasharray: 5 4; }
+.dgm-text { fill: var(--llm-ink); font: 500 14px Inter, system-ui, sans-serif; }
+.dgm-text-small { fill: var(--llm-ink-2); font: 400 12px Inter, system-ui, sans-serif; }
+.dgm-text-mono { fill: var(--llm-ink); font: 500 13px "JetBrains Mono", ui-monospace, monospace; }
+.dgm-arrow { stroke: var(--llm-muted); stroke-width: 1.5; fill: none; }
+.dgm-arrow-accent { stroke: var(--llm-s1); stroke-width: 2; fill: none; }
+.dgm-head { fill: var(--llm-muted); }
+.dgm-head-accent { fill: var(--llm-s1); }
+.dgm-s1 { fill: var(--llm-s1); }
+.dgm-s2 { fill: var(--llm-s2); }
+.dgm-s3 { fill: var(--llm-s3); }
+
+/* Interactive widgets (docs/javascripts/widgets). */
+.llm-widget {
+  margin: 1.2em 0;
+  padding: 1em 1.1em;
+  border: 1px solid var(--llm-axis);
+  border-radius: 8px;
+  background: var(--llm-surface);
+  color: var(--llm-ink);
+  font-size: 0.8rem;
+}
+.llm-widget__title {
+  margin: 0 0 0.6em;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+.llm-widget__controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6em 1.4em;
+  margin-bottom: 0.9em;
+}
+.llm-widget__control {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+  min-width: 170px;
+  flex: 1 1 170px;
+}
+.llm-widget__control label {
+  display: flex;
+  justify-content: space-between;
+  color: var(--llm-ink-2);
+}
+.llm-widget__control output {
+  color: var(--llm-ink);
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+.llm-widget input[type="range"] {
+  width: 100%;
+  accent-color: var(--llm-s1);
+}
+.llm-widget input[type="number"],
+.llm-widget input[type="text"],
+.llm-widget textarea,
+.llm-widget select {
+  padding: 0.3em 0.5em;
+  border: 1px solid var(--llm-axis);
+  border-radius: 4px;
+  background: var(--llm-panel);
+  color: var(--llm-ink);
+  font: inherit;
+}
+.llm-widget button {
+  padding: 0.35em 0.9em;
+  border: 1px solid var(--llm-s1);
+  border-radius: 4px;
+  background: var(--llm-s1);
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+.llm-widget button.secondary {
+  background: transparent;
+  color: var(--llm-ink);
+  border-color: var(--llm-axis);
+}
+.llm-widget button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+.llm-widget__note {
+  margin: 0.7em 0 0;
+  color: var(--llm-ink-2);
+}
+.llm-widget table {
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+.llm-widget th,
+.llm-widget td {
+  padding: 0.3em 0.7em;
+  border-bottom: 1px solid var(--llm-grid);
+  text-align: right;
+}
+.llm-widget th:first-child,
+.llm-widget td:first-child {
+  text-align: left;
+}
+.llm-widget svg text {
+  fill: var(--llm-ink-2);
+  font: 400 12px Inter, system-ui, sans-serif;
+}
+
+/* Horizontal bar rows: label, bar, value. Used by several widgets. */
+.llm-bars {
+  display: grid;
+  grid-template-columns: max-content 1fr max-content;
+  gap: 0.45em 0.8em;
+  align-items: center;
+}
+.llm-bars__track {
+  height: 14px;
+  border-radius: 0 4px 4px 0;
+  background: transparent;
+}
+.llm-bars__fill {
+  height: 100%;
+  min-width: 1px;
+  border-radius: 0 4px 4px 0;
+  background: var(--llm-s1);
+  transition: width 120ms ease-out;
+}
+.llm-bars__fill.is-off {
+  background: var(--llm-axis);
+}
+.llm-bars__value {
+  font-variant-numeric: tabular-nums;
+}
+.llm-bars__label {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+}

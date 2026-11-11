@@ -1,0 +1,10 @@
+# Santa blocks the gitleaks binary that pre-commit builds from source on this Mac.
+# This local hook uses the Homebrew binary with the same rules.
+repos:
+  - repo: local
+    hooks:
+      - id: gitleaks
+        name: gitleaks (installed binary)
+        entry: gitleaks git --pre-commit --staged --redact --config .gitleaks.toml
+        language: system
+        pass_filenames: false
