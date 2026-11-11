@@ -253,6 +253,8 @@ SmoothQuant does not round better. It changes the numbers so that normal roundin
 - The SmoothQuant paper reports INT8 weights and activations for LLMs, with up to 1.56× faster inference and 2× less memory.
 - **ZeroQuant** (in the DeepSpeed library until September 2026) is a full pipeline, not one formula. Its paper lists three parts: a fine-grained quantization scheme for weights and activations, a layer-by-layer **knowledge distillation** (each quantized layer learns to copy the output of the original layer) that does not need the original training data, and an inference backend that removes the cost of the quantize and dequantize operations. It reports a mixed INT4/INT8 model with a memory footprint 3 times smaller than FP16.
 
+The lesson [Quantization beyond rounding](11-quantization-beyond-rounding.md) continues with the newer methods: importance matrices, training with the original model as a teacher, 1.58-bit models and codebooks.
+
 ## Minimal code
 
 This code gives the same numbers as the steps on this page.

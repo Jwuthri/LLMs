@@ -18,6 +18,7 @@ export function Header() {
             </Link>
           ))}
           <Link href="/glossary/">Glossary</Link>
+          <Link href="/notebooks/">Notebooks</Link>
         </nav>
         <Search />
       </div>

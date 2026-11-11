@@ -4,7 +4,7 @@ import path from "node:path";
 
 export const CONTENT_DIR = path.join(process.cwd(), "content");
 
-export type TrackId = "fundamentals" | "scientist" | "engineer" | "safety";
+export type TrackId = "fundamentals" | "scientist" | "engineer" | "safety" | "datasets";
 
 export interface Track {
   id: TrackId;
@@ -32,6 +32,11 @@ export const TRACKS: Track[] = [
     id: "safety",
     title: "AI Safety",
     tagline: "How to test a model, protect it, and check what it does inside.",
+  },
+  {
+    id: "datasets",
+    title: "LLM Datasets",
+    tagline: "How to measure, choose, mix and build the data that a model learns from.",
   },
 ];
 
@@ -102,6 +107,8 @@ export function trackOf(id: string): Track | undefined {
 export function routeOfFile(file: string): string {
   if (file === "toy-example.md") return "/toy-example/";
   if (file === "glossary.md") return "/glossary/";
+  if (file === "datasets-catalogue.md") return "/datasets-catalogue/";
+  if (file === "notebooks.md") return "/notebooks/";
   const lesson = allLessons().find((item) => item.file === file);
   if (!lesson) throw new Error(`Link to a page that does not exist: ${file}`);
   return lesson.href;
@@ -128,6 +135,13 @@ export function searchIndex(): SearchItem[] {
   return [
     { href: "/toy-example/", title: "The toy example", context: "Start here", phrases: phrasesOf("toy-example.md") },
     { href: "/glossary/", title: "AI safety glossary", context: "AI Safety", phrases: phrasesOf("glossary.md") },
+    {
+      href: "/datasets-catalogue/",
+      title: "Dataset catalogue",
+      context: "LLM Datasets",
+      phrases: phrasesOf("datasets-catalogue.md"),
+    },
+    { href: "/notebooks/", title: "Notebook guide", context: "Practice", phrases: phrasesOf("notebooks.md") },
     ...allLessons().map((lesson) => ({
       href: lesson.href,
       title: lesson.title,
