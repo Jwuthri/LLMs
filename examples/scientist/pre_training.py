@@ -1,4 +1,4 @@
-"""Numbers and plots for docs/scientist/02-pre-training.md.
+"""Numbers and plots for content/scientist/02-pre-training.md.
 
 Run: uv run python -m examples.scientist.pre_training
 """
@@ -9,7 +9,7 @@ import re
 
 import numpy as np
 
-from examples.plotstyle import save_light_dark
+from examples.plotstyle import save_figure
 from examples.toy import LOGITS, VOCAB, W, E, softmax
 
 PAGE = "pre-training"
@@ -195,7 +195,7 @@ def make_figures() -> None:
         ax.set_ylim(0.5, 1.15)
         ax.legend(loc="upper right")
 
-    save_light_dark(draw, PAGE, "loss-curve")
+    save_figure(draw, PAGE, "loss-curve")
 
 
 if __name__ == "__main__":

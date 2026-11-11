@@ -1,4 +1,4 @@
-"""Numbers and plots for docs/engineer/03-rag.md.
+"""Numbers and plots for content/engineer/03-rag.md.
 
 Run: uv run python -m examples.engineer.rag
 """
@@ -8,7 +8,7 @@ import math
 import numpy as np
 
 from examples.engineer.corpus import CHUNK_IDS, CHUNKS, cosine, embed, get_chunk, rank_by_cosine, tokenize
-from examples.plotstyle import save_light_dark
+from examples.plotstyle import save_figure
 
 PAGE = "rag"
 
@@ -213,7 +213,7 @@ def make_figures() -> None:
         ax.grid(axis="x", visible=False)
         ax.legend(loc="upper left", ncols=3, fontsize=8)
 
-    save_light_dark(draw, PAGE, "hybrid")
+    save_figure(draw, PAGE, "hybrid")
 
 
 if __name__ == "__main__":

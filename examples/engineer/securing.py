@@ -1,4 +1,4 @@
-"""Numbers and plots for docs/engineer/08-securing.md.
+"""Numbers and plots for content/engineer/08-securing.md.
 
 Run: uv run python -m examples.engineer.securing
 
@@ -10,7 +10,7 @@ from dataclasses import dataclass
 
 import numpy as np
 
-from examples.plotstyle import save_light_dark
+from examples.plotstyle import save_figure
 
 PAGE = "securing"
 
@@ -177,7 +177,7 @@ def make_figures() -> None:
         ax.grid(axis="x", visible=False)
         ax.legend(loc="upper left")
 
-    save_light_dark(draw, PAGE, "backdoor-weights")
+    save_figure(draw, PAGE, "backdoor-weights")
 
 
 if __name__ == "__main__":

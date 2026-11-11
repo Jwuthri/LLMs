@@ -1,4 +1,4 @@
-"""Numbers and plots for docs/scientist/08-new-trends.md.
+"""Numbers and plots for content/scientist/08-new-trends.md.
 
 Run: uv run python -m examples.scientist.new_trends
 """
@@ -7,7 +7,7 @@ from math import comb
 
 import numpy as np
 
-from examples.plotstyle import save_light_dark
+from examples.plotstyle import save_figure
 from examples.toy import E, W, softmax
 
 PAGE = "new-trends"
@@ -161,7 +161,7 @@ def make_figures() -> None:
         ax.set_ylabel("Probability that the vote is correct")
         ax.legend(loc="center right")
 
-    save_light_dark(draw, PAGE, "majority-vote")
+    save_figure(draw, PAGE, "majority-vote")
 
 
 if __name__ == "__main__":

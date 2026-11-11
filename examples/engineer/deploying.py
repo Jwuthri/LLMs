@@ -1,4 +1,4 @@
-"""Numbers and plots for docs/engineer/07-deploying.md.
+"""Numbers and plots for content/engineer/07-deploying.md.
 
 Run: uv run python -m examples.engineer.deploying
 
@@ -7,7 +7,7 @@ Each speed, price and memory budget in this file is an assumption for the exampl
 
 import math
 
-from examples.plotstyle import save_light_dark
+from examples.plotstyle import save_figure
 
 PAGE = "deploying"
 GB = 1e9  # bytes
@@ -139,7 +139,7 @@ def make_figures() -> None:
         ax.set_xlabel("Batch size B (requests in the GPU at the same time)")
         ax.set_ylabel("Cost for 1 million tokens (USD)")
 
-    save_light_dark(draw, PAGE, "cost-vs-batch")
+    save_figure(draw, PAGE, "cost-vs-batch")
 
 
 if __name__ == "__main__":

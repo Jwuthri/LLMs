@@ -1,4 +1,4 @@
-"""Numbers and plots for docs/engineer/01-running-llms.md.
+"""Numbers and plots for content/engineer/01-running-llms.md.
 
 Run: uv run python -m examples.engineer.running_llms
 """
@@ -8,7 +8,7 @@ from math import ceil
 
 import numpy as np
 
-from examples.plotstyle import save_light_dark
+from examples.plotstyle import save_figure
 from examples.toy import LOGITS, VOCAB, softmax
 
 PAGE = "running-llms"
@@ -151,7 +151,7 @@ def make_figures() -> None:
         ax.grid(axis="x", visible=False)
         ax.legend(loc="upper left")
 
-    save_light_dark(draw, PAGE, "constrained")
+    save_figure(draw, PAGE, "constrained")
 
 
 if __name__ == "__main__":

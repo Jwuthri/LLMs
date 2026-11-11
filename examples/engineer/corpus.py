@@ -1,4 +1,4 @@
-"""The shared corpus of the 3 retrieval pages (docs/engineer/02, 03 and 04).
+"""The shared corpus of the 3 retrieval pages (content/engineer/02, 03 and 04).
 
 Three chunks about the cat, and a 2-dimensional word table that extends the toy embeddings
 (`the`, `cat`, `sat` come from examples/toy.py; the other vectors are fixed by hand).
@@ -44,7 +44,7 @@ class Chunk:
     source: str = "cat.md"
 
 
-# The 3 chunks. docs/engineer/02-vector-storage.md builds them from one raw file.
+# The 3 chunks. content/engineer/02-vector-storage.md builds them from one raw file.
 CHUNKS = [
     Chunk("c1", "The cat sat on the mat.", "Habits"),
     Chunk("c2", "The cat sleeps all day.", "Habits"),

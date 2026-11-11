@@ -1,11 +1,11 @@
-"""Numbers and plots for docs/fundamentals/03-neural-networks.md.
+"""Numbers and plots for content/fundamentals/03-neural-networks.md.
 
 Run: uv run python -m examples.fundamentals.neural_networks
 """
 
 import numpy as np
 
-from examples.plotstyle import save_light_dark
+from examples.plotstyle import save_figure
 from examples.toy import LOGITS, VOCAB, E, W, softmax
 
 PAGE = "neural-networks"
@@ -211,8 +211,8 @@ def make_figures() -> None:
         ax.set_ylim(0, 1.7)
         ax.legend(loc="upper left")
 
-    save_light_dark(draw_activations, PAGE, "activations")
-    save_light_dark(draw_overfitting, PAGE, "overfitting")
+    save_figure(draw_activations, PAGE, "activations")
+    save_figure(draw_overfitting, PAGE, "overfitting")
 
 
 if __name__ == "__main__":

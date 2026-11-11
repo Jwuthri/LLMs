@@ -1,4 +1,4 @@
-"""Each number shown in docs/scientist/08-new-trends.md."""
+"""Each number shown in content/scientist/08-new-trends.md."""
 
 from math import comb
 

@@ -1,4 +1,4 @@
-"""The shared toy example. Every page reuses these numbers (see docs/toy-example.md)."""
+"""The shared toy example. Every page reuses these numbers (see content/toy-example.md)."""
 
 import numpy as np
 

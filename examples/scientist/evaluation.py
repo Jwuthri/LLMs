@@ -1,4 +1,4 @@
-"""Numbers and plots for docs/scientist/06-evaluation.md.
+"""Numbers and plots for content/scientist/06-evaluation.md.
 
 Run: uv run python -m examples.scientist.evaluation
 """
@@ -7,7 +7,7 @@ import math
 
 import numpy as np
 
-from examples.plotstyle import save_light_dark
+from examples.plotstyle import save_figure
 
 PAGE = "evaluation"
 
@@ -160,7 +160,7 @@ def make_figures() -> None:
         ax.set_ylim(0, 0.5)
         ax.legend(loc="upper right")
 
-    save_light_dark(draw, PAGE, "interval-width")
+    save_figure(draw, PAGE, "interval-width")
 
 
 if __name__ == "__main__":

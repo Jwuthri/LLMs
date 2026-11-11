@@ -1,4 +1,4 @@
-"""Numbers and plots for docs/fundamentals/01-math.md.
+"""Numbers and plots for content/fundamentals/01-math.md.
 
 Run: uv run python -m examples.fundamentals.mathematics
 """
@@ -7,7 +7,7 @@ from collections.abc import Callable
 
 import numpy as np
 
-from examples.plotstyle import save_light_dark
+from examples.plotstyle import save_figure
 from examples.toy import LOGITS, VOCAB, E, W, softmax
 
 PAGE = "math"
@@ -114,7 +114,7 @@ def make_figures() -> None:
         ax.set_ylabel("Weight w")
         ax.legend(loc="upper left")
 
-    save_light_dark(draw, PAGE, "learning-rate")
+    save_figure(draw, PAGE, "learning-rate")
 
 
 if __name__ == "__main__":

@@ -1,4 +1,4 @@
-"""Each number shown in docs/engineer/08-securing.md."""
+"""Each number shown in content/engineer/08-securing.md."""
 
 import numpy as np
 import pytest

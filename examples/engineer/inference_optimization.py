@@ -1,11 +1,11 @@
-"""Numbers and plots for docs/engineer/06-inference-optimization.md.
+"""Numbers and plots for content/engineer/06-inference-optimization.md.
 
 Run: uv run python -m examples.engineer.inference_optimization
 """
 
 import numpy as np
 
-from examples.plotstyle import save_light_dark
+from examples.plotstyle import save_figure
 from examples.scientist.architecture import attention
 from examples.toy import LOGITS, E, softmax
 
@@ -142,7 +142,7 @@ def make_figures() -> None:
         ax.set_ylabel("Speed-up (draft cost c = 0.05)")
         ax.legend(loc="upper left", ncols=3, fontsize=8, columnspacing=1.2)
 
-    save_light_dark(draw, PAGE, "speculative-speedup")
+    save_figure(draw, PAGE, "speculative-speedup")
 
 
 if __name__ == "__main__":

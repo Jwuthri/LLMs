@@ -1,4 +1,4 @@
-"""Each number shown in docs/scientist/02-pre-training.md."""
+"""Each number shown in content/scientist/02-pre-training.md."""
 
 import math
 

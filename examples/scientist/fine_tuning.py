@@ -1,11 +1,11 @@
-"""Numbers and plots for docs/scientist/04-fine-tuning.md.
+"""Numbers and plots for content/scientist/04-fine-tuning.md.
 
 Run: uv run python -m examples.scientist.fine_tuning
 """
 
 import numpy as np
 
-from examples.plotstyle import save_light_dark
+from examples.plotstyle import save_figure
 from examples.toy import W
 
 PAGE = "fine-tuning"
@@ -182,7 +182,7 @@ def make_figures() -> None:
         ax.set_ylim(0, 2.2)
         ax.legend(loc="upper center")
 
-    save_light_dark(draw, PAGE, "loss-curves")
+    save_figure(draw, PAGE, "loss-curves")
 
 
 if __name__ == "__main__":

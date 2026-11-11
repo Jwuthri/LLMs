@@ -1,4 +1,4 @@
-"""Numbers and plots for docs/scientist/01-architecture.md.
+"""Numbers and plots for content/scientist/01-architecture.md.
 
 Run: uv run python -m examples.scientist.architecture
 """
@@ -7,7 +7,7 @@ from collections import Counter
 
 import numpy as np
 
-from examples.plotstyle import save_light_dark
+from examples.plotstyle import save_figure
 from examples.toy import LOGITS, VOCAB, E, encode, softmax
 
 PAGE = "architecture"
@@ -129,7 +129,7 @@ def make_figures() -> None:
         ax.grid(axis="x", visible=False)
         ax.legend(loc="upper left")
 
-    save_light_dark(draw, PAGE, "temperature")
+    save_figure(draw, PAGE, "temperature")
 
 
 if __name__ == "__main__":
