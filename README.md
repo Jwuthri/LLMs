@@ -1,22 +1,29 @@
 # LLM Course, Explained
 
-A website that explains each section of the [LLM Course](https://github.com/mlabonne/llm-course) by Maxime
-Labonne (Apache-2.0) with one tiny example, real numbers, formulas, figures and small interactive widgets.
+A learning website that explains each section of the [LLM Course](https://github.com/mlabonne/llm-course) by
+Maxime Labonne (Apache-2.0) with one tiny example, real numbers, formulas, figures and small interactive widgets.
 
 ## Run
 
 ```bash
-uv sync --frozen
-uv run mkdocs serve          # http://127.0.0.1:8000
-uv run pytest -q             # checks each number shown on the pages
-uv run mkdocs build --strict # static site in site/
+npm ci                 # Next.js site
+npm run dev            # http://localhost:3210
+npm run build          # static site in out/
+npm run preview        # serves out/ at http://127.0.0.1:3211
+
+uv sync --frozen       # Python, for the example scripts
+uv run pytest -q       # checks each number shown on the pages
 ```
 
 ## Layout
 
 | Path | Content |
 |---|---|
-| `docs/` | The pages (Markdown), figures, widgets, CSS |
-| `examples/` | One script for each page. It calculates each number on the page and writes the plots |
-| `tests/` | Asserts for the numbers on the pages |
-| `AUTHORING.md` | The method and the template of a page |
+| `content/` | The 20 lessons and the toy-example page (Markdown) |
+| `app/`, `components/`, `lib/` | The Next.js site. `lib/markdown.ts` turns a lesson into HTML at build time |
+| `app/globals.css` | The theme (cream, white, light orange) and all styles |
+| `public/figures/` | Diagrams (hand-written SVG) and plots (written by the example scripts) |
+| `public/widgets/` | The interactive widgets (plain JavaScript, no build step) |
+| `examples/` | One script for each lesson. It calculates each number of the lesson and writes its plots |
+| `tests/` | Asserts for the numbers of the lessons, and a check of the lesson template |
+| `AUTHORING.md` | The method and the template of a lesson |

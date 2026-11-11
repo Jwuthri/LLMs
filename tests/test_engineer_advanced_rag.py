@@ -1,4 +1,4 @@
-"""Each number shown in docs/engineer/04-advanced-rag.md."""
+"""Each number shown in content/engineer/04-advanced-rag.md."""
 
 import sqlite3
 

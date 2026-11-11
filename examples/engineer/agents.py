@@ -1,4 +1,4 @@
-"""Numbers and plots for docs/engineer/05-agents.md.
+"""Numbers and plots for content/engineer/05-agents.md.
 
 Run: uv run python -m examples.engineer.agents
 """
@@ -8,7 +8,7 @@ import math
 from collections.abc import Callable
 from dataclasses import dataclass
 
-from examples.plotstyle import save_light_dark
+from examples.plotstyle import save_figure
 
 PAGE = "agents"
 
@@ -204,7 +204,7 @@ def make_figures() -> None:
         ax.set_ylim(0, 1.05)
         ax.legend(loc="lower left")
 
-    save_light_dark(draw, PAGE, "reliability")
+    save_figure(draw, PAGE, "reliability")
 
 
 if __name__ == "__main__":

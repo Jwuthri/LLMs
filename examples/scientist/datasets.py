@@ -1,4 +1,4 @@
-"""Numbers and plots for docs/scientist/03-datasets.md.
+"""Numbers and plots for content/scientist/03-datasets.md.
 
 Run: uv run python -m examples.scientist.datasets
 
@@ -11,7 +11,7 @@ import json
 
 import numpy as np
 
-from examples.plotstyle import save_light_dark
+from examples.plotstyle import save_figure
 
 PAGE = "datasets"
 
@@ -241,7 +241,7 @@ def make_figures() -> None:
         ax.set_ylim(0, 1.05)
         ax.legend(loc="lower right", fontsize=8)
 
-    save_light_dark(draw, PAGE, "minhash")
+    save_figure(draw, PAGE, "minhash")
 
 
 if __name__ == "__main__":

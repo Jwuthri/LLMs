@@ -1,4 +1,4 @@
-"""Each number and message shown in docs/engineer/05-agents.md."""
+"""Each number and message shown in content/engineer/05-agents.md."""
 
 import json
 

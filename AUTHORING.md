@@ -1,7 +1,7 @@
 # How to write a page
 
 Each page explains one section of the [LLM Course](https://github.com/mlabonne/llm-course).
-The reference page is `docs/scientist/01-architecture.md`. Read it first and copy its structure.
+The reference page is `content/scientist/01-architecture.md`. Read it first and copy its structure.
 
 ## The method (8 rules)
 
@@ -9,7 +9,7 @@ The reference page is `docs/scientist/01-architecture.md`. Read it first and cop
 2. For each sub-part, use the structure **Setup → Steps → Key point**. The sub-parts are the bullets of the
    course section (usually 4).
 3. Use **one tiny concrete example with real numbers**. Show every calculation step. Use the shared toy
-   example (`docs/toy-example.md`, `examples/toy.py`) where it fits. If it does not fit, define one small
+   example (`content/toy-example.md`, `examples/toy.py`) where it fits. If it does not fit, define one small
    example for the page and reuse it in all sub-parts.
 4. After each step, say **why** it is done, not only what is done.
 5. Go from concrete to abstract: the toy case first, then how it scales to the real system.
@@ -35,10 +35,12 @@ The reference page is `docs/scientist/01-architecture.md`. Read it first and cop
 1. **Do this.** The calculation, with the numbers.
 
     **Why:** the reason.
-    { .why }
 
-!!! success "Key point"
-    One or two sentences.
+<div class="key-point">
+
+One or two sentences.
+
+</div>
 
 ### From toy to real
 (real sizes, real names, real tools; cite the source of each real number)
@@ -71,44 +73,45 @@ Length: 1,800 to 2,600 words for each page.
 ## Formulas, figures, widgets
 
 - **Formulas**: KaTeX. Inline `$...$`, display `$$...$$` on its own paragraph. Inside a list item, indent 4
-  spaces.
-- **Diagrams**: a hand-written SVG file in `docs/assets/figures/<page>/<name>.svg`. No XML header, no blank
-  lines, `viewBox="0 0 720 H"`, an `aria-label`, unique marker ids. Use only the CSS classes `dgm-*` from
-  `docs/stylesheets/extra.css` (no fixed colours), so the diagram works in light and dark mode. Keep all text
-  inside the viewBox. Include it with:
+  spaces. A formula that KaTeX cannot read stops the build. Do not put a formula in a wide table.
+- **A "Why" paragraph** starts with `**Why:**`. The site gives it its own style.
+- **Raw HTML blocks** (`<div class="key-point">`, `<figure>`, widgets) need one blank line before and after.
+- **Diagrams**: a hand-written SVG file in `public/figures/<page>/<name>.svg`. No XML header, no blank lines,
+  `viewBox="0 0 720 H"`, an `aria-label`, marker ids that start with the page name. Use only the CSS classes
+  `dgm-*` of `app/globals.css` (no fixed colours). Keep all text inside the viewBox. The build puts the SVG
+  inline:
 
     ```markdown
-    <figure class="diagram">
-    --8<-- "docs/assets/figures/<page>/<name>.svg"
+    <figure class="diagram" data-src="<page>/<name>.svg">
     <figcaption>One sentence.</figcaption>
     </figure>
     ```
 
-- **Plots**: draw them in the example script with `examples.plotstyle.save_light_dark(draw, page, name)`.
-  It writes `<name>.svg` and `<name>-dark.svg`. One y-axis only. Use `theme["series"]` colours in order.
-  Label the axes. Include both files:
+- **Plots**: draw them in the example script with `examples.plotstyle.save_figure(draw, page, name)`. It writes
+  `public/figures/<page>/<name>.svg`. One y-axis only. Use `theme["series"]` colours in order. Label the axes.
 
     ```markdown
-    <figure class="plot" markdown>
-    ![Alt text with the main numbers.](../assets/figures/<page>/<name>.svg#only-light)
-    ![Alt text with the main numbers.](../assets/figures/<page>/<name>-dark.svg#only-dark)
+    <figure class="plot">
+    <img src="/figures/<page>/<name>.svg" alt="Alt text with the main numbers.">
     <figcaption>One sentence that says what to see.</figcaption>
     </figure>
     ```
 
-- **Widgets**: one file `docs/javascripts/widgets/<name>.js` that calls
-  `LLMWidgets.register("<name>", (el) => { ... })`. Use the helpers of `docs/javascripts/widgets.js`
+- **Widgets**: one file `public/widgets/<name>.js` that calls
+  `LLMWidgets.register("<name>", (el) => { ... })`. Use the helpers of `lib/widget-runtime.ts`
   (`h`, `fmt`, `slider`, `bars`, `softmax`, `toy`) and the `llm-widget*` / `llm-bars*` classes. Use the CSS
   variables `--llm-*` for colours. The widget must start with the numbers of the page. Place it with
-  `<div class="llm-widget" data-widget="<name>"></div>`. The hook `hooks/widgets.py` loads each widget file.
+  `<div class="llm-widget" data-widget="<name>"></div>`. The site loads the file of each widget on the page.
+- **Links to other lessons** are relative links to the Markdown file, for example `../toy-example.md` or
+  `../scientist/01-architecture.md#2-tokenization`. The build changes them into routes and stops on a broken link.
 
 ## Checks before a page is done
 
 ```bash
 uv run python -m examples.<track>.<name>        # prints the numbers, writes the plots
-uv run pytest -q                                # all asserted numbers pass
-uv run mkdocs build --strict                    # no broken link, no warning
+uv run pytest -q                                # all asserted numbers pass, each page follows the template
+npm run build                                   # no broken link, no formula error, no type error
 ```
 
-Then open the page with `uv run mkdocs serve` and check: formulas render, figures show in light and dark
-mode, the widget works, no horizontal scroll at phone width.
+Then open the page with `npm run dev` and check: formulas render, figures show, the widget works, no
+horizontal scroll at phone width.

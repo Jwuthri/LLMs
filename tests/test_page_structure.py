@@ -5,8 +5,8 @@ from pathlib import Path
 
 import pytest
 
-DOCS = Path(__file__).resolve().parent.parent / "docs"
-PAGES = sorted(p for track in ("fundamentals", "scientist", "engineer") for p in (DOCS / track).glob("*.md"))
+ROOT = Path(__file__).resolve().parent.parent
+PAGES = sorted(p for track in ("fundamentals", "scientist", "engineer") for p in (ROOT / "content" / track).glob("*.md"))
 
 REQUIRED_HEADINGS = [
     "## Core idea",
@@ -34,21 +34,22 @@ def test_page_follows_template(page: Path):
     assert len(sub_parts) >= 3, "a page has one numbered section for each course bullet"
     for block in ("### Setup", "### Steps", "### From toy to real"):
         assert lines.count(block) == len(sub_parts), f"each sub-part needs one '{block}'"
-    assert text.count('!!! success "Key point"') == len(sub_parts)
+    assert text.count('<div class="key-point">') == len(sub_parts)
 
     steps = len(re.findall(r"^\d+\. \*\*", text, flags=re.MULTILINE))
     whys = len(re.findall(r"^\s*\*\*Why:\*\*", text, flags=re.MULTILINE))
     assert whys >= steps >= 3 * len(sub_parts), f"{steps} steps but {whys} 'Why' paragraphs"
-    assert text.count("{ .why }") == whys, "each 'Why' paragraph ends with '{ .why }'"
 
     assert "https://github.com/mlabonne/llm-course" in text, "credit the course in Sources"
 
-    for figure in re.findall(r"docs/assets/figures/[\w./-]+\.svg|\.\./assets/figures/[\w./-]+\.svg", text):
-        path = DOCS.parent / figure if figure.startswith("docs/") else (page.parent / figure).resolve()
-        assert path.exists(), f"missing figure: {figure}"
+    figures = re.findall(r'<figure class="diagram" data-src="([^"]+)">', text)
+    figures += re.findall(r'<img src="/figures/([^"]+)"', text)
+    assert figures, "a page has one figure or more"
+    for figure in figures:
+        assert (ROOT / "public" / "figures" / figure).exists(), f"missing figure: {figure}"
 
     for widget in re.findall(r'data-widget="([\w-]+)"', text):
-        assert (DOCS / "javascripts" / "widgets" / f"{widget}.js").exists(), f"missing widget: {widget}"
+        assert (ROOT / "public" / "widgets" / f"{widget}.js").exists(), f"missing widget: {widget}"
 
     prose = re.sub(r"```.*?```", "", text, flags=re.DOTALL)
     words = len(re.findall(r"[A-Za-z][A-Za-z'-]*", prose))

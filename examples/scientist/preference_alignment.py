@@ -1,11 +1,11 @@
-"""Numbers and plots for docs/scientist/05-preference-alignment.md.
+"""Numbers and plots for content/scientist/05-preference-alignment.md.
 
 Run: uv run python -m examples.scientist.preference_alignment
 """
 
 import numpy as np
 
-from examples.plotstyle import save_light_dark
+from examples.plotstyle import save_figure
 from examples.toy import LOGITS, VOCAB, softmax
 
 PAGE = "preference-alignment"
@@ -137,7 +137,7 @@ def make_figures() -> None:
         ax.set_ylim(0, 2)
         ax.legend(loc="upper right")
 
-    save_light_dark(draw, PAGE, "dpo-loss")
+    save_figure(draw, PAGE, "dpo-loss")
 
 
 if __name__ == "__main__":

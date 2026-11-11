@@ -1,11 +1,11 @@
-"""Numbers and plots for docs/scientist/07-quantization.md.
+"""Numbers and plots for content/scientist/07-quantization.md.
 
 Run: uv run python -m examples.scientist.quantization
 """
 
 import numpy as np
 
-from examples.plotstyle import save_light_dark
+from examples.plotstyle import save_figure
 from examples.toy import W
 
 PAGE = "quantization"
@@ -173,7 +173,7 @@ def make_figures() -> None:
         ax.set_ylabel("Mean absolute error of W (log scale)")
         ax.legend(loc="upper right")
 
-    save_light_dark(draw, PAGE, "error-by-bits")
+    save_figure(draw, PAGE, "error-by-bits")
 
 
 if __name__ == "__main__":

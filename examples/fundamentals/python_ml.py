@@ -1,11 +1,11 @@
-"""Numbers and plots for docs/fundamentals/02-python.md.
+"""Numbers and plots for content/fundamentals/02-python.md.
 
 Run: uv run python -m examples.fundamentals.python_ml
 """
 
 import numpy as np
 
-from examples.plotstyle import save_light_dark
+from examples.plotstyle import save_figure
 
 PAGE = "python"
 
@@ -178,7 +178,7 @@ def make_figures() -> None:
         ax.set_xlim(50, 620)
         ax.legend(loc="upper left", fontsize=8)
 
-    save_light_dark(draw, PAGE, "regression")
+    save_figure(draw, PAGE, "regression")
 
 
 if __name__ == "__main__":

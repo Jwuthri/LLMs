@@ -1,4 +1,4 @@
-"""Numbers and plots for docs/engineer/02-vector-storage.md.
+"""Numbers and plots for content/engineer/02-vector-storage.md.
 
 Run: uv run python -m examples.engineer.vector_storage
 """
@@ -9,7 +9,7 @@ import re
 import numpy as np
 
 from examples.engineer.corpus import CHUNK_IDS, CHUNKS, Chunk, chunk_vectors, cosine, embed, normalize
-from examples.plotstyle import save_light_dark
+from examples.plotstyle import save_figure
 
 PAGE = "vector-storage"
 
@@ -210,7 +210,7 @@ def make_figures() -> None:
         ax.set_xlabel("Dimension 1")
         ax.set_ylabel("Dimension 2")
 
-    save_light_dark(draw, PAGE, "plane", size=(6.4, 5.2))
+    save_figure(draw, PAGE, "plane", size=(6.4, 5.2))
 
 
 if __name__ == "__main__":

@@ -1,4 +1,4 @@
-"""Each number shown in docs/fundamentals/03-neural-networks.md."""
+"""Each number shown in content/fundamentals/03-neural-networks.md."""
 
 import numpy as np
 import pytest

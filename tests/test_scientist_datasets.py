@@ -1,4 +1,4 @@
-"""Each number and each rendered string shown in docs/scientist/03-datasets.md."""
+"""Each number and each rendered string shown in content/scientist/03-datasets.md."""
 
 from examples.scientist.datasets import (
     A, B, BAD_OUTPUT, C, CANDIDATES, D, FUNCTION_NAMES, GENERATED, MESSAGES, POOL, SEED_TASKS, SHAREGPT,

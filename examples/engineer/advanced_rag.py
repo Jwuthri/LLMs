@@ -1,4 +1,4 @@
-"""Numbers and plots for docs/engineer/04-advanced-rag.md.
+"""Numbers and plots for content/engineer/04-advanced-rag.md.
 
 Run: uv run python -m examples.engineer.advanced_rag
 """
@@ -12,7 +12,7 @@ import numpy as np
 
 from examples.engineer.corpus import CHUNKS, cosine, embed, get_chunk, rank_by_cosine, tokenize
 from examples.engineer.rag import QUESTION, bm25_totals, count_tokens, order, retrieve
-from examples.plotstyle import save_light_dark
+from examples.plotstyle import save_figure
 
 PAGE = "advanced-rag"
 
@@ -185,7 +185,7 @@ def make_figures() -> None:
         ax.set_ylabel("Exact match on 5 examples")
         ax.grid(axis="x", visible=False)
 
-    save_light_dark(draw, PAGE, "prompts")
+    save_figure(draw, PAGE, "prompts")
 
 
 if __name__ == "__main__":

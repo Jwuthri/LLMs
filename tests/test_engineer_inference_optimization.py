@@ -1,4 +1,4 @@
-"""Each number shown in docs/engineer/06-inference-optimization.md."""
+"""Each number shown in content/engineer/06-inference-optimization.md."""
 
 import numpy as np
 import pytest

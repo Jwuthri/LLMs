@@ -1,4 +1,4 @@
-"""Each number shown in docs/scientist/05-preference-alignment.md."""
+"""Each number shown in content/scientist/05-preference-alignment.md."""
 
 import numpy as np
 

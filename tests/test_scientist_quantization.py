@@ -1,4 +1,4 @@
-"""Each number shown in docs/scientist/07-quantization.md."""
+"""Each number shown in content/scientist/07-quantization.md."""
 
 import numpy as np
 

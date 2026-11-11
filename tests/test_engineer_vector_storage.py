@@ -1,4 +1,4 @@
-"""Each number shown in docs/engineer/02-vector-storage.md."""
+"""Each number shown in content/engineer/02-vector-storage.md."""
 
 import numpy as np
 

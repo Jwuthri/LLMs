@@ -1,4 +1,4 @@
-"""Numbers and plots for docs/fundamentals/04-nlp.md.
+"""Numbers and plots for content/fundamentals/04-nlp.md.
 
 Run: uv run python -m examples.fundamentals.nlp
 """
@@ -8,7 +8,7 @@ from collections import Counter
 
 import numpy as np
 
-from examples.plotstyle import save_light_dark
+from examples.plotstyle import save_figure
 from examples.scientist.architecture import BPE_CORPUS, bpe_merge, bpe_pair_counts
 from examples.toy import VOCAB, E, W, softmax
 
@@ -182,7 +182,7 @@ def make_figures() -> None:
         ax.set_ylabel("Size of the gradient (log scale)")
         ax.legend(loc="lower left")
 
-    save_light_dark(draw, PAGE, "gradient")
+    save_figure(draw, PAGE, "gradient")
 
 
 if __name__ == "__main__":

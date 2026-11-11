@@ -1,4 +1,4 @@
-"""Each number shown in docs/engineer/07-deploying.md."""
+"""Each number shown in content/engineer/07-deploying.md."""
 
 import math
 

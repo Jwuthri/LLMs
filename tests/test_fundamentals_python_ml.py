@@ -1,4 +1,4 @@
-"""Each number shown in docs/fundamentals/02-python.md."""
+"""Each number shown in content/fundamentals/02-python.md."""
 
 import numpy as np
 import pytest
