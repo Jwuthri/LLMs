@@ -67,8 +67,11 @@ function readLessonMeta(track: TrackId, fileName: string): LessonMeta {
 
 let cache: LessonMeta[] | undefined;
 
+// The build reads the lessons once. The dev server reads them again on each call, so that a new or
+// changed lesson shows without a restart.
 export function allLessons(): LessonMeta[] {
-  cache ??= TRACKS.flatMap((track) =>
+  if (cache && process.env.NODE_ENV === "production") return cache;
+  cache = TRACKS.flatMap((track) =>
     fs
       .readdirSync(path.join(CONTENT_DIR, track.id))
       .filter((name) => name.endsWith(".md"))

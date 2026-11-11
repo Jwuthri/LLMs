@@ -1,0 +1,15 @@
+<svg viewBox="0 0 720 170" role="img" aria-label="A harmful request must get through three layers: the input classifier misses 0.2 of them, the model answers 0.3 of those, and the output classifier misses 0.1 of those. 0.006 of the requests get through all three.">
+<defs><marker id="ai-safety-layers-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dgm-head-accent"/></marker></defs>
+<text x="14" y="26" class="dgm-text-small">1,000 harmful requests</text>
+<rect x="14" y="40" width="110" height="60" rx="6" class="dgm-box"/><text x="69" y="66" text-anchor="middle" class="dgm-text">Requests</text><text x="69" y="86" text-anchor="middle" class="dgm-text-mono">1,000</text>
+<rect x="178" y="40" width="130" height="60" rx="6" class="dgm-box-accent"/><text x="243" y="66" text-anchor="middle" class="dgm-text">Input classifier</text><text x="243" y="86" text-anchor="middle" class="dgm-text-small">misses 0.2</text>
+<rect x="362" y="40" width="130" height="60" rx="6" class="dgm-box-accent"/><text x="427" y="66" text-anchor="middle" class="dgm-text">Model</text><text x="427" y="86" text-anchor="middle" class="dgm-text-small">answers 0.3</text>
+<rect x="546" y="40" width="130" height="60" rx="6" class="dgm-box-accent"/><text x="611" y="66" text-anchor="middle" class="dgm-text">Output classifier</text><text x="611" y="86" text-anchor="middle" class="dgm-text-small">misses 0.1</text>
+<path d="M124 70H174" class="dgm-arrow-accent" marker-end="url(#ai-safety-layers-head)"/>
+<path d="M308 70H358" class="dgm-arrow-accent" marker-end="url(#ai-safety-layers-head)"/>
+<path d="M492 70H542" class="dgm-arrow-accent" marker-end="url(#ai-safety-layers-head)"/>
+<path d="M611 100V128" class="dgm-arrow-accent" marker-end="url(#ai-safety-layers-head)"/>
+<text x="333" y="60" text-anchor="middle" class="dgm-text-mono">200</text><text x="517" y="60" text-anchor="middle" class="dgm-text-mono">60</text>
+<text x="611" y="150" text-anchor="middle" class="dgm-text-mono">6 get through</text>
+<text x="14" y="150" class="dgm-text-small">0.2 × 0.3 × 0.1 = 0.006, if the layers fail independently</text>
+</svg>

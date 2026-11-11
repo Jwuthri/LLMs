@@ -215,6 +215,8 @@ Use layers. Text controls (filter, output check) lower the number of successful 
 
 The OWASP Top 10 for LLM applications (2025 edition) is a checklist of the main risks: prompt injection (LLM01), sensitive information disclosure (LLM02), supply chain (LLM03), data and model poisoning (LLM04), improper output handling (LLM05), excessive agency (LLM06), system prompt leakage (LLM07), vector and embedding weaknesses (LLM08), misinformation (LLM09) and unbounded consumption (LLM10). This page shows examples for LLM01, LLM04, LLM05, LLM06 and LLM07.
 
+This page protects one application. The page [AI safety](../scientist/09-ai-safety.md) shows how model developers test the model itself and add layers of safeguards.
+
 ## Minimal code
 
 This code gives the same results as the steps on this page.

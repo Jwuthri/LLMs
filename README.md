@@ -2,6 +2,7 @@
 
 A learning website that explains each section of the [LLM Course](https://github.com/mlabonne/llm-course) by
 Maxime Labonne (Apache-2.0) with one tiny example, real numbers, formulas, figures and small interactive widgets.
+One more lesson, on AI safety, is an addition to the course.
 
 ## Run
 
@@ -19,7 +20,7 @@ uv run pytest -q       # checks each number shown on the pages
 
 | Path | Content |
 |---|---|
-| `content/` | The 20 lessons and the toy-example page (Markdown) |
+| `content/` | The 21 lessons and the toy-example page (Markdown) |
 | `app/`, `components/`, `lib/` | The Next.js site. `lib/markdown.ts` turns a lesson into HTML at build time |
 | `app/globals.css` | The theme (cream, white, light orange) and all styles |
 | `public/figures/` | Diagrams (hand-written SVG) and plots (written by the example scripts) |
