@@ -29,7 +29,7 @@ export default async function LessonPage({ params }: Props) {
   const page = await renderPage(lesson.file);
   const lessons = lessonsOf(track.id);
   const all = allLessons();
-  const index = all.indexOf(lesson);
+  const index = all.findIndex((item) => item.href === lesson.href);
   const previous = all[index - 1];
   const next = all[index + 1];
 
@@ -44,7 +44,7 @@ export default async function LessonPage({ params }: Props) {
           <ol>
             {lessons.map((item) => (
               <li key={item.href}>
-                <Link href={item.href} aria-current={item === lesson ? "page" : undefined}>
+                <Link href={item.href} aria-current={item.href === lesson.href ? "page" : undefined}>
                   <span className="lesson-nav__number">{item.number}</span>
                   <span className="lesson-nav__title">{item.title}</span>
                   <DoneMark href={item.href} />

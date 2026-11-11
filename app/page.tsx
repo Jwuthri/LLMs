@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { LessonCard } from "@/components/LessonCard";
 import { TrackProgress } from "@/components/Progress";
-import { TRACKS, lessonsOf } from "@/lib/site";
+import { TRACKS, allLessons, lessonsOf } from "@/lib/site";
 
 const METHOD = [
   { title: "Core idea", text: "Two or three sentences, with no special terms." },
@@ -22,13 +22,13 @@ export default function Home() {
     <main className="home">
       <section className="hero">
         <div className="hero__text">
-          <p className="eyebrow">Twenty lessons · three tracks</p>
+          <p className="eyebrow">{allLessons().length} lessons · {TRACKS.length} tracks</p>
           <h1>
             Understand large language models, <em>one small number at a time.</em>
           </h1>
           <p className="hero__lead">
-            Each lesson explains one section of the LLM Course with the same tiny model: three words, numbers that
-            you can calculate by hand, and the reason for each step.
+            Each lesson explains one topic with the same tiny model: three words, numbers that you can calculate
+            by hand, and the reason for each step. The topics follow the LLM Course, plus one lesson on AI safety.
           </p>
           <div className="hero__actions">
             <Link className="button" href="/toy-example/">

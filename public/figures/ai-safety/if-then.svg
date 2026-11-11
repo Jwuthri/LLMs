@@ -1,0 +1,15 @@
+<svg viewBox="0 0 720 250" role="img" aria-label="An if-then safety commitment: test the model, compare the score with a threshold, then use the current safeguards or stronger safeguards before release, and test again.">
+<defs><marker id="ai-safety-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dgm-head"/></marker><marker id="ai-safety-head-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dgm-head-accent"/></marker></defs>
+<rect x="14" y="88" width="140" height="64" rx="6" class="dgm-box"/><text x="84" y="114" text-anchor="middle" class="dgm-text">1 Test the model</text><text x="84" y="136" text-anchor="middle" class="dgm-text-mono">7 of 20 tasks</text>
+<rect x="190" y="88" width="190" height="64" rx="6" class="dgm-box-accent"/><text x="285" y="114" text-anchor="middle" class="dgm-text">2 Compare with threshold</text><text x="285" y="136" text-anchor="middle" class="dgm-text-mono">0.559 vs 0.5</text>
+<rect x="424" y="24" width="150" height="64" rx="6" class="dgm-box"/><text x="499" y="50" text-anchor="middle" class="dgm-text">Current safeguards</text><text x="499" y="72" text-anchor="middle" class="dgm-text-small">upper end below 0.5</text>
+<rect x="424" y="152" width="150" height="64" rx="6" class="dgm-box"/><text x="499" y="178" text-anchor="middle" class="dgm-text">Stronger safeguards</text><text x="499" y="200" text-anchor="middle" class="dgm-text-small">upper end 0.5 or more</text>
+<rect x="622" y="88" width="84" height="64" rx="6" class="dgm-box"/><text x="664" y="114" text-anchor="middle" class="dgm-text">3 Release</text><text x="664" y="136" text-anchor="middle" class="dgm-text-small">and monitor</text>
+<path d="M154 120H186" class="dgm-arrow" marker-end="url(#ai-safety-head)"/>
+<path d="M380 108L420 68" class="dgm-arrow" marker-end="url(#ai-safety-head)"/>
+<path d="M380 132L420 172" class="dgm-arrow-accent" marker-end="url(#ai-safety-head-accent)"/>
+<path d="M574 56L630 86" class="dgm-arrow" marker-end="url(#ai-safety-head)"/>
+<path d="M574 184L630 154" class="dgm-arrow-accent" marker-end="url(#ai-safety-head-accent)"/>
+<path d="M664 152V240H84V156" class="dgm-arrow" marker-end="url(#ai-safety-head)"/>
+<text x="374" y="232" text-anchor="middle" class="dgm-text-small">4 Test again when the model or its tools change</text>
+</svg>

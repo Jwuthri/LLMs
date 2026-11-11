@@ -18,8 +18,8 @@ REQUIRED_HEADINGS = [
 ]
 
 
-def test_all_20_pages_exist():
-    assert len(PAGES) == 20
+def test_all_21_pages_exist():
+    assert len(PAGES) == 21
 
 
 @pytest.mark.parametrize("page", PAGES, ids=lambda p: f"{p.parent.name}/{p.stem}")
