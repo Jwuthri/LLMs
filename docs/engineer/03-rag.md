@@ -303,8 +303,8 @@ This page follows section 3 of "The LLM Engineer" in the [LLM Course](https://gi
 - [LlamaIndex - High-level concepts](https://docs.llamaindex.ai/en/stable/getting_started/concepts.html).
 - [Model Context Protocol](https://modelcontextprotocol.io/introduction).
 - [Pinecone - Retrieval Augmentation](https://www.pinecone.io/learn/series/langchain/langchain-retrieval-augmentation/).
-- [LangChain - Q&A with RAG](https://python.langchain.com/docs/tutorials/rag/) (chunks of 1,000 characters, overlap of 200, k = 4).
-- [LangChain - Memory types](https://python.langchain.com/docs/how_to/chatbots_memory/).
+- [LangChain - RAG tutorial](https://python.langchain.com/docs/tutorials/rag/) (chunks of 1,000 characters, overlap of 200, k = 4; the link now opens a newer page with the same values).
+- [LangChain - Short-term memory](https://docs.langchain.com/oss/python/langchain/short-term-memory) (trim, delete or summarize the old messages).
 - [RAG pipeline - Metrics](https://docs.ragas.io/en/stable/concepts/metrics/index.html), Ragas (context precision, context recall, faithfulness), and [DeepEval - Answer relevancy](https://deepeval.com/docs/metrics-answer-relevancy).
 - [Precise Zero-Shot Dense Retrieval without Relevance Labels](https://arxiv.org/abs/2212.10496), Gao et al., 2022 (HyDE).
 - [ColBERT](https://arxiv.org/abs/2004.12832), Khattab and Zaharia, 2020 (one vector for each token).

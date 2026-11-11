@@ -64,7 +64,7 @@ A raw corpus (a set of texts) from the web has copies and low-quality pages. Our
 ### From toy to real
 
 - Llama 3.1 was pre-trained on about 15 trillion tokens.
-- FineWeb is an open dataset of 15 trillion tokens made from 96 Common Crawl snapshots. FineWeb-Edu is a subset of 1.3 trillion tokens that a classifier selected as educational text.
+- FineWeb is an open dataset made from Common Crawl. Its first release had 15 trillion tokens from 96 snapshots. FineWeb-Edu is a subset of 1.3 trillion tokens that a classifier selected as educational text.
 - A hash finds only exact copies. For near-copies, FineWeb uses **MinHash** on 5-grams (5 adjacent words) with 14 × 8 = 112 hash functions. The [datasets page](03-datasets.md#4-quality-filtering) shows how MinHash works.
 - Real pipelines add more filters: language detection, repetition rules, quality classifiers, removal of personal data.
 
@@ -191,7 +191,7 @@ The **learning rate** $\eta$ is the size of a step. Assume $\eta = 0.1$ for this
 ### From toy to real
 
 - $\beta_1 = 0.9$, $\beta_2 = 0.999$, $\epsilon = 10^{-8}$ and $\lambda = 0.01$ are the defaults of AdamW in PyTorch. A clipping limit of 1.0 is a common choice.
-- **Lion** is a more recent optimizer. It moves each weight by the sign of the average $m$, and it does not keep $v$.
+- **Lion** is a more recent optimizer. It moves each weight by the sign of an average of the gradients, and it does not keep $v$.
 - FP16 cannot hold a number above 65,504. **BF16** uses the same 8 exponent bits as FP32, so it has the same range with less precision. BF16 is a common choice for LLM training.
 - For 8 billion parameters, the weights need 32 GB in FP32 and 16 GB in BF16.
 

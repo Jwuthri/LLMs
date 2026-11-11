@@ -147,7 +147,8 @@ Without a standard, each application needs special code for each tool. Assume 3 
 
     ```json
     {"jsonrpc": "2.0", "id": 1,
-     "result": {"content": [{"type": "text", "text": "12"}]}}
+     "result": {"resultType": "complete",
+                "content": [{"type": "text", "text": "12"}]}}
     ```
 
     A real request also has a `_meta` field with the protocol version. It is left out here.
@@ -268,7 +269,7 @@ Other frameworks do not belong to a model vendor. They differ in the question th
 | LangGraph | Graph of nodes with a shared state, saved at checkpoints | Workflows that you must control, pause and continue |
 | LlamaIndex | Agents that use your data (RAG) | Questions about documents |
 | CrewAI | A team of agents with roles ("crew"), in a controlled "flow" | Work that divides into roles |
-| AutoGen | Agents that talk to each other | Research prototypes. The repository is archived. Microsoft names Microsoft Agent Framework as the replacement. |
+| AutoGen | Agents that talk to each other | Research prototypes. The README says that the project is archived. Microsoft names Microsoft Agent Framework as the replacement. |
 
 !!! success "Key point"
     All these frameworks run the same thought, action, observation loop. Select one for its control flow and its tooling, not for the count of its features.
@@ -276,7 +277,7 @@ Other frameworks do not belong to a model vendor. They differ in the question th
 ### From toy to real
 
 - Your own loop (sub-part 1) is a valid option. Use a framework when you need what it adds: checkpoints, data connectors or roles.
-- Examine the status of a project before you depend on it. The AutoGen repository shows why: it is archived.
+- Examine the status of a project before you depend on it. The AutoGen project shows why: its README says that it is archived and not maintained.
 
 ## Minimal code
 

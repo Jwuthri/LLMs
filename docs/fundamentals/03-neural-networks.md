@@ -94,7 +94,7 @@ The loss here is the cross-entropy (0.417). For a target that is a number, the u
 
     $$p - y = [0.099,\ 0.242,\ 0.659 - 1] = [0.099,\ 0.242,\ -0.341]$$
 
-    **Why:** this vector is the error signal. A negative value means "this logit must go up". Only the logit of `sat` is negative.
+    **Why:** this vector is the error signal. A negative value means "this logit must go up". Only the value for `sat` is negative.
     { .why }
 
 2. **Calculate the gradient for $U$.** The gradient of a weight is the error at its output times the value at its input.
@@ -140,7 +140,7 @@ The loss here is the cross-entropy (0.417). For a target that is a number, the u
 
 7. **Compare with the Adam optimizer.** For column 2 of $U$, the first SGD step changes the weights by [−0.010, −0.024, +0.034]. With the same learning rate, the first **Adam** step changes them by [−0.1, −0.1, +0.1].
 
-    **Why:** Adam divides each gradient by a running mean of its size (the idea of **RMSprop**), so each weight moves about one learning rate. It also uses a running mean of the gradient direction (**momentum**), which removes noise. Weights with small gradients learn as fast as the others. This is why Adam needs a smaller learning rate.
+    **Why:** Adam divides each gradient by the square root of a running mean of its square (the idea of **RMSprop**), so each weight moves about one learning rate. It also uses a running mean of the gradient direction (**momentum**), which removes noise. Weights with small gradients learn as fast as the others. This is why Adam needs a smaller learning rate.
     { .why }
 
 <div class="llm-widget" data-widget="forward-backward"></div>
@@ -323,7 +323,7 @@ for epoch in range(3000):
 | Gradient descent | The gradient of all the examples | [−0.010, −0.024, +0.034] | Exact, but slow on a large dataset |
 | SGD | The gradient of one batch | The same here (one example) | Fast steps with noise |
 | SGD with momentum | A running mean of the last gradients | | Keeps its direction when the gradients change sign |
-| RMSprop | The gradient divided by a running mean of its size | | One step size for each weight |
+| RMSprop | The gradient divided by the square root of a running mean of its square | | One step size for each weight |
 | Adam | Momentum and RMSprop together | [−0.1, −0.1, +0.1] | The usual choice for language models |
 
 ## Checks and common misconceptions

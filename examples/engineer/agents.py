@@ -153,7 +153,7 @@ def mcp_messages(call: dict, observation: str) -> tuple[dict, dict]:
     request = {"jsonrpc": "2.0", "id": 1, "method": "tools/call",
                "params": {"name": call["name"], "arguments": call["arguments"]}}
     response = {"jsonrpc": "2.0", "id": 1,
-                "result": {"content": [{"type": "text", "text": observation}]}}
+                "result": {"resultType": "complete", "content": [{"type": "text", "text": observation}]}}
     return request, response
 
 

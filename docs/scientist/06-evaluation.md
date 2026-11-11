@@ -44,7 +44,7 @@ A **benchmark** is a fixed set of questions with known answers, plus a rule that
     | A | 0.70 | 0.284 | 0.416 to 0.984 |
     | B | 0.60 | 0.304 | 0.296 to 0.904 |
 
-    The difference is $0.10 \pm 0.416$. This range contains 0.
+    The difference is $0.10 \pm 0.416$. This range contains 0. This formula treats the two results as independent. The two models answer the same questions, so a paired test (compare the two models question by question) gives a narrower range. Here the paired range also contains 0.
 
     **Why:** the two intervals overlap almost fully. The models disagree on only 3 questions: A alone is correct on 2, B alone on 1. Ten questions cannot say which model is better.
     { .why }
@@ -77,7 +77,7 @@ A **benchmark** is a fixed set of questions with known answers, plus a rule that
 
 ### From toy to real
 
-- MMLU is a common benchmark: 57 tasks, 4 choices, 14,079 test questions. At an accuracy of 0.70, the interval is ± 0.008. A gap of 1 point between two models is near this limit.
+- MMLU is a common benchmark: 57 tasks, 4 choices, 14,042 test questions in the released data (the paper says 14,079). At an accuracy of 0.70, the interval is ± 0.008. A gap of 1 point between two models is near this limit.
 - The formula above is rough for 10 questions (the interval of A almost reaches 1). The conclusion does not change.
 - [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) and [Lighteval](https://github.com/huggingface/lighteval) run many benchmarks with one command.
 - Benchmarks fit tasks with one correct answer. They are weak for open or creative tasks. Public questions also leak into training data with time.
@@ -277,7 +277,7 @@ This page follows section 6 of "The LLM Scientist" in the [LLM Course](https://g
 - [Language Model Evaluation Harness](https://github.com/EleutherAI/lm-evaluation-harness), EleutherAI.
 - [Lighteval](https://github.com/huggingface/lighteval), Hugging Face.
 - [Chatbot Arena](https://lmarena.ai/), LMSYS.
-- [Measuring Massive Multitask Language Understanding](https://arxiv.org/abs/2009.03300), Hendrycks et al., 2020 (MMLU: 57 tasks, 14,079 test questions).
+- [Measuring Massive Multitask Language Understanding](https://arxiv.org/abs/2009.03300), Hendrycks et al., 2020 (MMLU: 57 tasks, 14,079 test questions in the paper; the [released test set](https://huggingface.co/datasets/cais/mmlu) has 14,042).
 - [Adding Error Bars to Evals](https://arxiv.org/abs/2411.00640), Evan Miller, 2024 (standard errors and intervals for benchmark scores).
 - [Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference](https://arxiv.org/abs/2403.04132), Chiang et al., 2024 (anonymous battles, 240K votes, Bradley-Terry scores).
 - [Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena](https://arxiv.org/abs/2306.05685), Zheng et al., 2023 (position, verbosity and self-enhancement biases).

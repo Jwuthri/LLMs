@@ -3,9 +3,9 @@
 import numpy as np
 
 from examples.fundamentals.nlp import (
-    DOCS, FORGET_GATE, GPT2_VOCAB, LONG_TEXT, ONE_HOT, RAW_DOCS, STOP_WORDS, TERMS, U,
+    DOCS, FORGET_GATE, GPT2_VOCAB, LONG_TEXT, ONE_HOT, RAW_DOCS, TERMS, U,
     bag_of_words, bigram_counts, bigram_probability, bpe_trace, cosine, drop_punctuation,
-    gradient_norms, layer_parameters, lemmatize, preprocess, rnn_forward, rnn_jacobian,
+    drop_stop_words, gradient_norms, layer_parameters, lemmatize, rnn_forward, rnn_jacobian,
     skipgram_pairs, skipgram_step, stem, tf_idf, tokenize,
 )
 from examples.scientist.architecture import BPE_CORPUS
@@ -25,9 +25,10 @@ def test_stem_and_lemmatize():
 
 
 def test_stop_words():
-    assert [w for w in preprocess(RAW_DOCS[2]) if w not in STOP_WORDS] == ["cat", "sat", "cat"]
-    kept = sum(1 for doc in DOCS for w in doc if w not in STOP_WORDS)
-    assert (sum(map(len, DOCS)), kept) == (12, 7)
+    words = [drop_punctuation(tokenize(text)) for text in RAW_DOCS]
+    kept = [drop_stop_words(doc) for doc in words]  # step 2 comes before stemming: "cats" stays
+    assert kept == [["cat", "sat"], ["dog", "sat"], ["cats", "sat", "cat"]]
+    assert (sum(map(len, words)), sum(map(len, kept))) == (12, 7)
 
 
 def test_bpe_vocabulary_against_length():

@@ -20,6 +20,7 @@ The [toy example](../toy-example.md) is too small for deployment questions. This
 | Phone or browser | 3 GB of memory for the model, with 0.5 GB reserved for the cache and the runtime |
 
 On this page, 1 GB = 10⁹ bytes. $B$ is the **batch size**: the number of requests that the GPU processes at the same time.
+The steps show rounded values, but each calculation uses the values before rounding. Thus the last digit of a result can differ.
 The page [Inference optimization](06-inference-optimization.md) explains the key-value cache (KV cache), prefill and decode.
 
 ## 1. Local deployment
@@ -192,7 +193,7 @@ With **continuous batching**, a new request enters the batch at the next decode 
 ### From toy to real
 
 - **vLLM** is an inference server with continuous batching, an API in the OpenAI format, and PagedAttention, which manages the KV-cache memory.
-- **TGI** (Text Generation Inference) is the server of Hugging Face. Its README says that it is now in maintenance mode and recommends vLLM or SGLang for new projects.
+- **TGI** (Text Generation Inference) is the server of Hugging Face. Its repository became read-only (archived) in March 2026. Its README recommends vLLM or SGLang for new projects.
 - **SkyPilot** starts your server on a cloud or on your own cluster from one configuration file.
 - API providers usually give one price for input tokens and a higher price for output tokens. An output token needs one pass each. Input tokens are read in parallel.
 
@@ -298,7 +299,7 @@ The tools of the course section:
 | Streamlit | Demo | Python library that builds data and chat applications |
 | Hugging Face Spaces | Demo | Hosting for demo applications |
 | vLLM | Server | Inference server with continuous batching and PagedAttention |
-| TGI | Server | Inference server of Hugging Face, now in maintenance mode |
+| TGI | Server | Inference server of Hugging Face, archived (read-only) in March 2026 |
 | SkyPilot | Server | Tool that starts jobs and servers on clouds or your own cluster |
 | MLC LLM | Edge | Compiler and engine for iOS, Android and browsers |
 | mnn-llm | Edge | LLM runtime on the MNN engine for Android and iOS |
@@ -317,8 +318,8 @@ This page follows section 7 of "The LLM Engineer" in the [LLM Course](https://gi
 - [Hugging Face LLM inference container for Amazon SageMaker](https://huggingface.co/blog/sagemaker-huggingface-llm).
 - [Blog of Philipp Schmid](https://www.philschmid.de/) (deployment articles).
 - [Optimizing latency](https://hamel.dev/notes/llm/inference/03_inference.html), Hamel Husain (comparison of TGI, vLLM, CTranslate2 and MLC).
-- Local tools: [LM Studio](https://lmstudio.ai/), [Ollama](https://github.com/ollama/ollama), [TextGen / text-generation-webui](https://github.com/oobabooga/text-generation-webui), [KoboldCpp](https://github.com/LostRuins/koboldcpp).
+- Local tools: [LM Studio](https://lmstudio.ai/), [Ollama](https://github.com/ollama/ollama), [TextGen / text-generation-webui](https://github.com/oobabooga/textgen), [KoboldCpp](https://github.com/LostRuins/koboldcpp).
 - Demo tools: [Gradio](https://www.gradio.app/), [Streamlit](https://docs.streamlit.io/), [Hugging Face Spaces](https://huggingface.co/spaces).
-- Server tools: [vLLM](https://github.com/vllm-project/vllm), [TGI](https://github.com/huggingface/text-generation-inference) (maintenance notice in the README), [SkyPilot](https://skypilot.readthedocs.io/en/latest/).
+- Server tools: [vLLM](https://github.com/vllm-project/vllm), [TGI](https://github.com/huggingface/text-generation-inference) (archived; the README names the servers to use now), [SkyPilot](https://skypilot.readthedocs.io/en/latest/).
 - Edge tools: [MLC LLM](https://github.com/mlc-ai/mlc-llm), [mnn-llm](https://github.com/wangzhaode/mnn-llm/blob/master/README_en.md).
 - [Llama 3 8B configuration](https://huggingface.co/meta-llama/Meta-Llama-3-8B/blob/main/config.json), Meta (32 layers, 8 key-value heads of size 128: the shape of the KV cache in the example).

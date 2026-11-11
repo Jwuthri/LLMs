@@ -248,11 +248,11 @@ Assume that each sample is correct with $p = 0.6$, that samples are independent,
 <figure class="plot" markdown>
 ![Line chart of the probability that a majority vote is correct for 1 to 41 samples. For p = 0.6: 0.600, 0.648, 0.683, then 0.903 at 41 samples. For p = 0.8 the line goes to 1. For p = 0.4 the line falls to 0.097.](../assets/figures/new-trends/majority-vote.svg#only-light)
 ![Line chart of the probability that a majority vote is correct for 1 to 41 samples. For p = 0.6: 0.600, 0.648, 0.683, then 0.903 at 41 samples. For p = 0.8 the line goes to 1. For p = 0.4 the line falls to 0.097.](../assets/figures/new-trends/majority-vote-dark.svg#only-dark)
-<figcaption>A vote helps only when one sample is correct more often than not (p above 0.5).</figcaption>
+<figcaption>With 2 possible answers, a vote helps only when one sample is correct more often than not (p above 0.5).</figcaption>
 </figure>
 
 !!! success "Key point"
-    More samples change a model that is often correct into a system that is almost always correct. They cannot repair a model that is usually wrong.
+    More samples change a model that is often correct into a system that is almost always correct. They cannot repair a model whose most frequent answer is wrong.
 
 ### From toy to real
 
@@ -312,7 +312,7 @@ print(vote(0.6, 1), vote(0.6, 3), vote(0.6, 5))  # 0.6, 0.648, 0.683
 
 - **"A merge of two good models is a good model."** Not always. The models must share the architecture, and for task vectors also the base model. Check: evaluate the merged model on the tasks of each parent.
 - **"An SAE feature is what the model thinks."** A feature is a direction that an SAE found with a loss that we chose. A different SAE size gives different features. Check a feature with a test: change it and see if the output changes as you expect.
-- **"More samples always help."** Only when the most frequent answer is the correct one. Check: measure the accuracy of one sample first. If it is below 0.5 on a type of question, a vote makes it worse.
+- **"More samples always help."** Only when the most frequent answer is the correct one. Check: measure the accuracy of one sample first. With 2 possible answers, a vote makes the result worse if this accuracy is below 0.5. With more possible answers, the correct answer must occur more often than each wrong answer.
 
 ## Sources
 

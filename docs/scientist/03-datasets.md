@@ -339,7 +339,7 @@ prompt = tokenizer.apply_chat_template(sample["messages"][:2], tokenize=False, a
 
 This page follows section 3 of "The LLM Scientist" in the [LLM Course](https://github.com/mlabonne/llm-course) by Maxime Labonne (Apache-2.0). The text and the example are new.
 
-- [Synthetic Data Generator](https://huggingface.co/spaces/argilla/synthetic-data-generator), Argilla.
+- [Synthetic Data Generator](https://github.com/argilla-io/synthetic-data-generator), Argilla.
 - [LLM Datasets](https://github.com/mlabonne/llm-datasets), Maxime Labonne.
 - [NeMo-Curator](https://github.com/NVIDIA/NeMo-Curator), Nvidia.
 - [Distilabel](https://distilabel.argilla.io/dev/sections/pipeline_samples/), Argilla.

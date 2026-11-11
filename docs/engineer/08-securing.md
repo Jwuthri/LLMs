@@ -171,7 +171,7 @@ The attacker adds 2 poisoned samples with the trigger word `teal` and a wrong la
 
 ### From toy to real
 
-- An LLM learns from web text that anyone can write. One study trained models from 600 million to 13 billion parameters. About 250 poisoned documents made a backdoor in each of them. The number did not grow with the model size.
+- An LLM learns from web text that anyone can write. One study trained models from 600 million to 13 billion parameters. About 250 poisoned documents made a backdoor in each of them. The number did not grow with the model size. The study tested a simple backdoor: a trigger that makes the model write random text. The authors say that it is not known if the result holds for larger models or for more harmful behaviours.
 - Poisoning can also teach false facts with no trigger.
 - A model or a dataset that you download can already contain a backdoor. This is a supply-chain risk. Use sources that you trust, and record the exact version that you use.
 
@@ -279,6 +279,6 @@ This page follows section 8 of "The LLM Engineer" in the [LLM Course](https://gi
 - [Prompt Injection Primer for Engineers](https://github.com/jthack/PIPE), Joseph Thacker.
 - [LLM Security](https://llmsecurity.net/), a list of resources.
 - [Red teaming LLMs](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/red-teaming), Microsoft.
-- [garak](https://github.com/leondz/garak/), an LLM vulnerability scanner.
+- [garak](https://github.com/NVIDIA/garak), an LLM vulnerability scanner.
 - [Langfuse](https://github.com/langfuse/langfuse), tracing and evaluation for LLM applications.
 - [Poisoning Attacks on LLMs Require a Near-constant Number of Poison Samples](https://arxiv.org/abs/2510.07192), Souly et al., 2025 (250 documents, models from 600 million to 13 billion parameters).

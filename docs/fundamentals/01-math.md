@@ -81,7 +81,7 @@ A model stores words as vectors and stores what it learned as matrices.
 ### From toy to real
 
 - In Llama 3 8B, each vector has 4,096 numbers. The last matrix has one row for each of the 128,256 tokens: 128,256 × 4,096 = 525,336,576 numbers.
-- A **tensor** is an array with more than 2 axes, for example (texts, tokens, 4,096). The rules do not change: the library applies the same matrix to each vector.
+- A **tensor** is an array with any number of axes, for example 3 axes: (texts, tokens, 4,096). The rules do not change: the library applies the same matrix to each vector.
 - A graphics processing unit (GPU) does many dot products at the same time. This is why models run on GPUs.
 
 ## 2. Calculus
@@ -136,7 +136,7 @@ The loss is the squared error $L(w) = (w - 2)^2$. We start at $w = 0$, where $L 
     **Why:** a step that is too long jumps over the minimum and lands higher on the other side. The training **diverges**. The learning rate is the first setting to check when a loss goes up.
     { .why }
 
-6. **Use one derivative for each input: the gradient.** The loss of part 3 has 3 inputs, the logits [0.1, 1.0, 2.0], and its value is 0.417030. Add 0.001 to the logit of `sat` only: the loss becomes 0.416689. The slope is (0.416689 − 0.417030) / 0.001 = −0.341. This is a **partial derivative**. The same test for each logit gives the **gradient**:
+6. **Use one derivative for each input: the gradient.** The loss of part 3 has 3 inputs, the logits [0.1, 1.0, 2.0], and its value is 0.417030. Add 0.001 to the logit of `sat` only: the loss becomes 0.416689. The slope is (0.416689 − 0.417030) / 0.001 = −0.341. This is a **partial derivative**. The same test for each logit, with a smaller and smaller move, gives the **gradient**:
 
     $$\nabla L = [0.099,\ 0.242,\ -0.341]$$
 
@@ -271,7 +271,7 @@ gradient = p - y                                 # [0.099, 0.242, -0.341]
 
 ## Checks and common misconceptions
 
-- **"A larger learning rate always trains faster."** It does, up to a limit. For this loss, each rate above 1 makes the loss go up at each step. Check: if your loss increases or becomes `nan` ("not a number"), divide the learning rate by 10 first.
+- **"A larger learning rate always trains faster."** It does, up to a limit. For this loss, a rate of 0.5 gets to the minimum in one step. Between 0.5 and 1, $w$ jumps over the minimum at each step, and training becomes slower. Each rate above 1 makes the loss go up at each step. Check: if your loss increases or becomes `nan` ("not a number"), divide the learning rate by 10 first.
 - **"A large dot product means that two vectors are similar."** The dot product also grows with the length. `sat` · `sat` = 2 but `the` · `the` = 1, and each vector is identical to itself. Check: use the cosine similarity (1.0 for the two) when the lengths are different.
 - **"A probability of 0.659 means that the model is correct 65.9% of the time."** That is true only if the model is **calibrated**: its probabilities agree with the real frequencies. Softmax always gives numbers that add up to 1, also when the model is wrong.
 

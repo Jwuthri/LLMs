@@ -51,7 +51,7 @@ def test_contamination():
 
 
 def test_mmlu_interval():
-    assert round(confidence_interval(0.7, 14079)[0], 4) == 0.0076
+    assert round(confidence_interval(0.7, 14042)[0], 4) == 0.0076
 
 
 def test_elo():

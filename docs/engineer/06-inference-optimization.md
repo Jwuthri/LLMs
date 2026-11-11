@@ -168,7 +168,7 @@ We count two types of work for one layer and one head: the key-value pairs that 
 
 - **Two phases.** The first pass reads the full prompt in parallel and fills the cache. This is the **prefill**. Each later pass reads one token. This is the **decode** phase. See [Deploying LLMs](07-deploying.md).
 - The counts on this page are for one layer and one head. A real model multiplies them by its layers and heads.
-- MQA and GQA are part of the architecture. The model must be trained with them. You cannot switch them on later.
+- MQA and GQA are part of the architecture. The model must be trained with them. You cannot switch them on later without more training.
 - Servers such as vLLM also keep the cache of a shared prompt start between requests (prefix caching).
 
 ## 3. Speculative decoding
@@ -209,7 +209,7 @@ The target probabilities after "the cat" are $p = [0.099, 0.242, 0.659]$. Assume
     **Why:** the output distribution is exactly $p$. Speculative decoding changes the speed, not the quality.
     { .why }
 
-5. **Count the tokens that one target pass gives.** Draft token $i$ stays only if all the tokens before it stay: probability $a^i$. The pass stops at the first rejection. The target model always adds 1 token of its own.
+5. **Count the tokens that one target pass gives.** Draft token $i$ stays only if all the tokens before it stay: probability $a^i$. This assumes the same $a$ at each position, as the paper does. The pass stops at the first rejection. The target model always adds 1 token of its own.
 
     $$E[\text{tokens}] = 1 + a + a^2 + \dots + a^k = \frac{1 - a^{k+1}}{1 - a}$$
 
@@ -307,7 +307,7 @@ This page follows section 6 of "The LLM Engineer" in the [LLM Course](https://gi
 - [Speculators](https://github.com/vllm-project/speculators), vLLM project.
 - [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](https://arxiv.org/abs/2205.14135), Dao et al., 2022 (exact attention, linear memory, speed-up numbers).
 - [Fast Transformer Decoding: One Write-Head is All You Need](https://arxiv.org/abs/1911.02150), Shazeer, 2019 (MQA).
-- [GQA: Training Generalized Multi-Query Transformer Models](https://arxiv.org/abs/2305.13245), Ainslie et al., 2023 (GQA).
+- [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](https://arxiv.org/abs/2305.13245), Ainslie et al., 2023 (GQA).
 - [Fast Inference from Transformers via Speculative Decoding](https://arxiv.org/abs/2211.17192), Leviathan et al., 2023 (accept rule, expected tokens, speed-up formula).
 - [Llama 3 8B configuration](https://huggingface.co/meta-llama/Meta-Llama-3-8B/blob/main/config.json), Meta (32 layers, 32 heads, 8 key-value heads, hidden size 4,096, context 8,192).
 - [vLLM](https://github.com/vllm-project/vllm) (prefix caching).

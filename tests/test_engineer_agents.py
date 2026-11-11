@@ -67,7 +67,7 @@ def test_mcp_message_shape():
     request, response = mcp_messages(CAT_REPLIES[0]["tool_call"], "12")
     assert request["method"] == "tools/call"
     assert request["params"] == {"name": "calculator", "arguments": {"operation": "multiply", "a": 3, "b": 4}}
-    assert response["result"]["content"] == [{"type": "text", "text": "12"}]
+    assert response["result"] == {"resultType": "complete", "content": [{"type": "text", "text": "12"}]}
     assert json.loads(json.dumps(request)) == request
 
 

@@ -199,7 +199,7 @@ Our toy model takes the vector of each word and calculates the mean. This is **m
 
 ### From toy to real
 
-- A real embedding model is a Transformer encoder (see [the LLM architecture](../scientist/01-architecture.md)). Its attention layers mix the context into each token vector before the pooling. Our mean gives the same vector to "the cat eats fish" and "the fish eats cat".
+- A real embedding model is a Transformer, frequently an encoder (see [the LLM architecture](../scientist/01-architecture.md)). Its attention layers mix the context into each token vector before the pooling. Our mean gives the same vector to "the cat eats fish" and "the fish eats cat".
 - Real vectors are larger: 384 numbers for `all-MiniLM-L6-v2` and 1,024 numbers for `bge-large-en-v1.5`. Two numbers cannot keep many meanings apart: `sleeps`, `day` and `fish` share one vector in our table.
 - Each model has a maximum input: 256 word pieces for `all-MiniLM-L6-v2` and 512 tokens for `bge-large-en-v1.5`. The model ignores the text after this limit, so the chunk size must be below it.
 - Use the MTEB leaderboard to make a short list of models. Then test them on your own documents.
@@ -250,7 +250,7 @@ Take 1 million vectors of 1,024 numbers, each stored as a 32-bit float (4 bytes)
 
 - **Memory.** 1,000,000 × 1,024 × 4 bytes = 4,096,000,000 bytes = 4.096 GB.
 - **Exact search.** 1,000,000 × 1,024 = 1.024 billion multiplications for each query.
-- **IVF.** FAISS recommends $4\sqrt{N}$ to $16\sqrt{N}$ clusters, thus 4,000 or more. Assume 4,000 clusters of the same size (250 vectors) and `nprobe = 16`. One query reads 4,000 centroids + 16 × 250 vectors = 8,000 vectors. This is 0.8% of the store.
+- **IVF.** For a store of less than 1 million vectors, FAISS recommends $4\sqrt{N}$ to $16\sqrt{N}$ clusters. At this limit, that is 4,000 to 16,000 clusters. Assume 4,000 clusters of the same size (250 vectors) and `nprobe = 16`. One query reads 4,000 centroids + 16 × 250 vectors = 8,000 vectors. This is 0.8% of the store.
 - **HNSW.** With `M = 16` links for each vector, FAISS gives a memory use of $d \times 4 + M \times 2 \times 4$ bytes for each vector. The links add 128 bytes for each vector, 0.128 GB in total: 4.224 GB with the vectors.
 - **Tools.** FAISS and Annoy are libraries that hold an index in memory. Chroma, Milvus and Pinecone are databases: they add storage on disk, metadata filters, updates and an API.
 
@@ -313,7 +313,7 @@ scores, ids = index.search(model.encode(["the cat sat"], normalize_embeddings=Tr
 
 This page follows section 2 of "The LLM Engineer" in the [LLM Course](https://github.com/mlabonne/llm-course) by Maxime Labonne (Apache-2.0). The text and the example are new.
 
-- [LangChain - Text splitters](https://python.langchain.com/docs/how_to/#text-splitters).
+- [LangChain - Text splitters](https://docs.langchain.com/oss/python/integrations/splitters).
 - [Sentence Transformers library](https://www.sbert.net/).
 - [MTEB Leaderboard](https://huggingface.co/spaces/mteb/leaderboard).
 - [The Top 7 Vector Databases](https://www.datacamp.com/blog/the-top-5-vector-databases), Moez Ali.

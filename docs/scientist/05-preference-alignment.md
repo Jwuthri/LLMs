@@ -188,7 +188,7 @@ We reuse the 4 samples of section 1. Their scores are the rewards: 0.9, 0.4, 0.1
 
     $$A = [0.951,\ -0.512,\ -1.389,\ 0.951]$$
 
-    This page divides by N = 4 in the standard deviation.
+    This page divides by N = 4 in the standard deviation. The TRL library divides by N − 1, which gives a standard deviation of 0.395 here.
 
     **Why:** a reward of 0.4 is good for a hard prompt and bad for an easy prompt. The group mean removes this difference, and the division puts all prompts on one scale.
     { .why }
@@ -259,7 +259,7 @@ trainer = DPOTrainer(
     args=DPOConfig(beta=0.1, learning_rate=1e-6),
     train_dataset=load_dataset("trl-lib/ultrafeedback_binarized", split="train"),
 )
-trainer.train()                                # columns: prompt, chosen, rejected
+trainer.train()                                # columns: chosen, rejected (prompt + answer)
 ```
 
 ## Comparison

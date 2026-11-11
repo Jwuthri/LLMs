@@ -135,7 +135,7 @@ We put each column in one array. A missing number becomes `nan` ("not a number")
 
 3. **Calculate a summary, and take care with `nan`.** `np.mean(tokens)` gives `nan`. `np.nanmean(tokens)` ignores the missing value and gives 300.0.
 
-    **Why:** each calculation with `nan` gives `nan`. This is a safety function: you cannot forget a missing value.
+    **Why:** almost each calculation with `nan` gives `nan`. This is a safety function: you cannot forget a missing value.
     { .why }
 
 4. **Select rows with a mask.** `model == "small"` gives an array of `True` and `False`. Use it as an index.
@@ -275,7 +275,7 @@ For this model there is a direct formula, the **normal equation**: $\theta = (X^
     | `tokens` only | 0.111 | 0.3125 |
     | `tokens` and `is_large` | 0.010 | 0.065 |
 
-    **Why:** an error has a meaning only next to a **baseline** (a very simple model). And the train error (0.010) is always too optimistic: the weights were fitted to those rows.
+    **Why:** an error has a meaning only next to a **baseline** (a very simple model). And the train error (0.010) is usually too optimistic: the weights were fitted to those rows.
     { .why }
 
 <figure class="plot" markdown>
@@ -308,7 +308,7 @@ pipeline.predict(test[["tokens", "model"]])
 
 ### From toy to real
 
-All these algorithms have the same `fit` / `predict` interface.
+Each of these classes has a `fit` method. The classes of the first five rows also have `predict`. `PCA` and `TSNE` have `fit_transform`, which returns the new columns.
 
 | Goal | Algorithm | How it works | scikit-learn class |
 |---|---|---|---|
@@ -319,7 +319,7 @@ All these algorithms have the same `fit` / `predict` interface.
 | Find groups, with no target | K-means | Move k centres to the middle of their points | `KMeans` |
 | Reduce the number of columns | PCA, t-SNE | PCA keeps the directions with the largest eigenvalues. t-SNE makes a 2-D map for plots | `PCA`, `TSNE` |
 
-A large language model follows the same stages. But it has billions of weights, so there is no direct formula: it uses gradient descent.
+A large language model follows the same stages. But its output is not a weighted sum of the features, so there is no direct formula for its billions of weights: it uses gradient descent.
 
 ## Minimal code
 

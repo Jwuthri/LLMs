@@ -174,7 +174,7 @@ if __name__ == "__main__":
     print("only A correct, only B correct:", disagreements(MODEL_A, MODEL_B))
     clean_a, clean_b = without(MODEL_A, CONTAMINATED), without(MODEL_B, CONTAMINATED)
     print("clean questions:", len(clean_a), "accuracy A:", accuracy(clean_a), "accuracy B:", accuracy(clean_b))
-    print("MMLU test set (14,079 questions), p = 0.70: +/-", confidence_interval(0.7, 14079)[0])
+    print("MMLU test set (14,042 questions), p = 0.70: +/-", confidence_interval(0.7, 14042)[0])
 
     expected = elo_expected(1000, 1100)
     print("Elo expected score of A:", expected, "of B:", elo_expected(1100, 1000))

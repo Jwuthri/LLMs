@@ -145,7 +145,7 @@ We have 3 tools. The first task is a retrieval task: which tool answers this que
 
     The order is c3, c2, c1. The scores are near, so this table shows 5 decimals.
 
-    **Why:** RRF uses only the ranks. You do not have to put a cosine and a BM25 score on the same scale, as page 3 did. A chunk that is high in the 2 lists is better than a chunk that is first in one list and last in the other. The constant $k = 60$ makes the gap between rank 1 and rank 2 small, so one list cannot control the result. **RAG-fusion** uses the same formula on the lists of many rewritten questions.
+    **Why:** RRF uses only the ranks. You do not have to put a cosine and a BM25 score on the same scale, as page 3 did. A chunk that is high in the 2 lists gets a better score than a chunk that is first in one list and far down in the other. The constant $k = 60$ makes the gap between rank 1 and rank 2 small, so one list cannot control the result. **RAG-fusion** uses the same formula on the lists of many rewritten questions.
     { .why }
 
 3. **Add diversity with maximal marginal relevance (MMR).** MMR selects the chunks one at a time. The score of a candidate $d$ is its relevance minus its similarity to the chunks $S$ that are already selected.
@@ -298,11 +298,11 @@ best_answer = optimizer.compile(answer, trainset=examples)   # examples: a list 
 This page follows section 4 of "The LLM Engineer" in the [LLM Course](https://github.com/mlabonne/llm-course) by Maxime Labonne (Apache-2.0). The text and the example are new.
 
 - [LangChain - Query Construction](https://blog.langchain.dev/query-construction/).
-- [LangChain - SQL](https://python.langchain.com/docs/tutorials/sql_qa/).
+- [LangChain - Build a SQL agent](https://docs.langchain.com/oss/python/langchain/sql-agent).
 - [Pinecone - LLM agents](https://www.pinecone.io/learn/series/langchain/langchain-agents/).
 - [LLM Powered Autonomous Agents](https://lilianweng.github.io/posts/2023-06-23-agent/), Lilian Weng.
 - [LangChain - OpenAI's RAG](https://blog.langchain.dev/applying-openai-rag/).
-- [DSPy in 8 Steps](https://dspy-docs.vercel.app/docs/building-blocks/solving_your_task) and [DSPy](https://arxiv.org/abs/2310.03714), Khattab et al., 2023.
+- [DSPy in 8 Steps](https://web.archive.org/web/20241016053304/https://dspy-docs.vercel.app/docs/building-blocks/solving_your_task) (archived copy of 2024; the page is no longer in the DSPy documentation) and [DSPy](https://arxiv.org/abs/2310.03714), Khattab et al., 2023.
 - [RAG-fusion](https://github.com/Raudaschl/rag-fusion), Adrian Raudaschl.
 - [Reciprocal rank fusion outperforms Condorcet and individual rank learning methods](https://doi.org/10.1145/1571941.1572114), Cormack, Clarke and Büttcher, 2009 (RRF, k = 60).
 - [The use of MMR, diversity-based reranking for reordering documents and producing summaries](https://doi.org/10.1145/290941.291025), Carbonell and Goldstein, 1998 (MMR).

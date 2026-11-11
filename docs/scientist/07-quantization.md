@@ -104,7 +104,7 @@ To quantize, we need a rule that changes each real weight into an integer, and a
 
 - This method is **post-training quantization (PTQ)**: you quantize a model that is already trained. The other family, quantization-aware training, trains the model with the rounding in the loop.
 - Real tools do not use one scale for a full model. They use one scale for each row or for each small block of weights. A smaller group has a smaller range, thus smaller steps.
-- A weight much larger than the others is an **outlier**. Parts 3 and 4 are about outliers. For example, LLM.int8() keeps the outlier values in FP16 and quantizes the rest to INT8.
+- A weight much larger than the others is an **outlier**. Parts 3 and 4 are about outliers. The same problem exists for activations (the values that a layer calculates). For example, LLM.int8() keeps the outlier activation values in FP16 and quantizes the rest to INT8.
 
 ## 2. GGUF and llama.cpp
 
@@ -259,7 +259,7 @@ $W_j$ is column $j$ of $W$. The usual value is $\alpha = 0.5$.
 ### From toy to real
 
 - The SmoothQuant paper reports INT8 weights and activations for LLMs, with up to 1.56× faster inference and 2× less memory.
-- **ZeroQuant** (in the DeepSpeed library) is a full pipeline, not one formula. Its paper lists three parts: a fine-grained quantization scheme for weights and activations, a layer-by-layer **knowledge distillation** (each quantized layer learns to copy the output of the original layer) that does not need the original training data, and an inference backend that removes the cost of the quantize and dequantize operations. It reports a mixed INT4/INT8 model with a memory footprint 3 times smaller than FP16.
+- **ZeroQuant** (in the DeepSpeed library until September 2026) is a full pipeline, not one formula. Its paper lists three parts: a fine-grained quantization scheme for weights and activations, a layer-by-layer **knowledge distillation** (each quantized layer learns to copy the output of the original layer) that does not need the original training data, and an inference backend that removes the cost of the quantize and dequantize operations. It reports a mixed INT4/INT8 model with a memory footprint 3 times smaller than FP16.
 
 ## Minimal code
 
@@ -318,7 +318,7 @@ This page follows section 7 of "The LLM Scientist" in the [LLM Course](https://g
 - [4-bit LLM Quantization with GPTQ](https://mlabonne.github.io/blog/posts/4_bit_Quantization_with_GPTQ.html), Maxime Labonne.
 - [Understanding Activation-Aware Weight Quantization](https://medium.com/friendliai/understanding-activation-aware-weight-quantization-awq-boosting-inference-serving-efficiency-in-10bb0faf63a8), FriendliAI.
 - [SmoothQuant on Llama 2 7B](https://github.com/mit-han-lab/smoothquant/blob/main/examples/smoothquant_llama_demo.ipynb), MIT HAN Lab.
-- [DeepSpeed Model Compression](https://www.deepspeed.ai/tutorials/model-compression/), DeepSpeed (ZeroQuant; the link of the course, not reachable in November 2026).
+- [DeepSpeed Model Compression](https://github.com/deepspeedai/DeepSpeed/blob/fd405169232dd83bdc7883df1c7d707d482e1be6/docs/_tutorials/model-compression.md), DeepSpeed (ZeroQuant; the last version of the tutorial. DeepSpeed removed its compression library in September 2026, so the link of the course is dead).
 - [llama.cpp quantize tool](https://github.com/ggml-org/llama.cpp/blob/master/tools/quantize/README.md) (bits per weight and file sizes of Llama 3.1 8B) and the [k-quants pull request](https://github.com/ggml-org/llama.cpp/pull/1684) (`Q4_K`: 4.5 bits per weight, `Q6_K`: 6.5625, the `Q4_K_M` mix).
 - [GGUF specification](https://github.com/ggml-org/ggml/blob/master/docs/gguf.md) (the parts of the file).
 - [GPTQ](https://arxiv.org/abs/2210.17323), Frantar et al., 2022 (calibration set, 175 billion parameters in about 4 GPU hours).

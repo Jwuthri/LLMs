@@ -30,6 +30,10 @@ def drop_punctuation(tokens: list[str]) -> list[str]:
     return [token for token in tokens if token.isalpha()]
 
 
+def drop_stop_words(tokens: list[str]) -> list[str]:
+    return [token for token in tokens if token not in STOP_WORDS]
+
+
 def stem(word: str) -> str:
     """Toy stemmer with one rule: cut a final "s" from a word of 4 letters or more."""
     return word[:-1] if len(word) > 3 and word.endswith("s") else word
@@ -186,9 +190,8 @@ if __name__ == "__main__":
     for text in RAW_DOCS:
         tokens = tokenize(text)
         words = drop_punctuation(tokens)
-        print(text, "->", tokens, "| stems:", [stem(w) for w in words],
-              "| lemmas:", [lemmatize(w) for w in words],
-              "| no stop words:", [w for w in preprocess(text) if w not in STOP_WORDS])
+        print(text, "->", tokens, "| no stop words:", drop_stop_words(words),
+              "| stems:", [stem(w) for w in words], "| lemmas:", [lemmatize(w) for w in words])
     for row in bpe_trace(BPE_CORPUS):
         print("bpe:", row)
 

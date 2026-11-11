@@ -31,9 +31,9 @@ This page uses a **corpus** (a set of texts) of 3 short documents. It also uses 
     **Why:** a program that counts strings sees `The` and `the` as two different words. Lowercase text makes them one.
     { .why }
 
-2. **Remove the punctuation and the stop words.** A **stop word** is a very frequent word with little meaning, here `the` and `on`. The 3 documents have 12 words. Only 7 remain: `cat sat`, `dog sat`, `cat sat cat`.
+2. **Remove the punctuation and the stop words.** A **stop word** is a very frequent word with little meaning, here `the` and `on`. The 3 documents have 12 words. Only 7 remain: `cat sat`, `dog sat`, `cats sat cat`.
 
-    **Why:** stop words are in each document, so they do not help to tell two documents apart.
+    **Why:** stop words are in most documents, so they do not help to tell two documents apart.
     { .why }
 
 3. **Stem each word.** **Stemming** cuts the end of a word with a fixed rule. Our rule removes a final "s": `cats` → `cat`. The word `sat` does not change.

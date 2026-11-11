@@ -69,7 +69,7 @@ Most providers use the same shape for the data: a list of **messages**, each wit
 
     $$\frac{1{,}000 \times 3}{1{,}000{,}000} + \frac{200 \times 15}{1{,}000{,}000} = 0.003 + 0.003 = 0.006 \text{ dollars}$$
 
-    **Why:** the two prices are different. Here an output token costs 5 times more, so 200 output tokens cost as much as 1,000 input tokens. The model reads the input tokens in parallel, but it writes the output tokens one at a time.
+    **Why:** the two prices are different. Here an output token costs 5 times more, so 200 output tokens cost as much as 1,000 input tokens. A common explanation: the model reads the input tokens in parallel, but it writes the output tokens one at a time.
     { .why }
 
 4. **Multiply by the number of requests.** With 10,000 requests each day: 10,000 × 0.006 = 60 dollars each day, or 1,800 dollars in 30 days.
@@ -118,7 +118,7 @@ $$\text{memory} = \text{parameters} \times \text{bytes for each weight} + \text{
 
 2. **Calculate the size at 4 bits.** 4 bits are 0.5 byte: $8 \times 10^9 \times 0.5 = 4$ GB.
 
-    **Why:** [quantization](../scientist/07-quantization.md) stores each weight with fewer bits. The model is 4 times smaller with a small loss of quality. A real 4-bit file is a little larger (about 4.9 GB), because it also holds scales.
+    **Why:** [quantization](../scientist/07-quantization.md) stores each weight with fewer bits. The model is 4 times smaller with a small loss of quality. A real 4-bit file is a little larger (about 4.9 GB): it also holds scales, and some parts of the model keep more than 4 bits.
     { .why }
 
 3. **Add the context overhead.** The model keeps 2 vectors (a key and a value) for each token of the context in each block. This is the **key-value cache**. For Llama 3 8B, each of these vectors has 1,024 numbers of 2 bytes.
