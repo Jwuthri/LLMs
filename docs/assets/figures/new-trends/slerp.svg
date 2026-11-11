@@ -1,0 +1,13 @@
+<svg viewBox="0 0 720 240" role="img" aria-label="Two vectors W and W_B of length 1.556 with an angle of 68.7 degrees. The middle of the straight line between them has a length of 1.285. The middle of the arc between them has a length of 1.556.">
+<defs><marker id="new-trends-slerp-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dgm-head"/></marker></defs>
+<path d="M110 210H276" class="dgm-arrow" marker-end="url(#new-trends-slerp-head)"/><path d="M110 210L170.3 55.4" class="dgm-arrow" marker-end="url(#new-trends-slerp-head)"/>
+<path d="M280 210A170 170 0 0 0 171.8 51.6" class="dgm-arrow-accent"/>
+<path d="M280 210L171.8 51.6" class="dgm-box-warm"/>
+<path d="M150 210A40 40 0 0 0 124.5 172.7" class="dgm-arrow"/>
+<circle cx="225.9" cy="130.8" r="6" class="dgm-s2"/><circle cx="250.4" cy="114.1" r="6" class="dgm-s1"/>
+<text x="290" y="215" class="dgm-text">W</text><text x="150" y="38" class="dgm-text">W_B</text><text x="156" y="192" class="dgm-text-small">68.7°</text>
+<text x="30" y="228" class="dgm-text-small">origin</text>
+<circle cx="366" cy="66" r="6" class="dgm-s2"/><text x="382" y="71" class="dgm-text">LERP: the middle of the straight line</text><text x="382" y="91" class="dgm-text-small">length 1.285 (shorter than the two inputs)</text>
+<circle cx="366" cy="126" r="6" class="dgm-s1"/><text x="382" y="131" class="dgm-text">SLERP: the middle of the arc</text><text x="382" y="151" class="dgm-text-small">length 1.556 (the same as the two inputs)</text>
+<text x="382" y="196" class="dgm-text-small">The two inputs W and W_B have a length of 1.556.</text>
+</svg>
