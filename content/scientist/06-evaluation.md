@@ -78,7 +78,7 @@ A benchmark score without an interval is half of the result. Report the accuracy
 - The formula above is rough for 10 questions (the interval of A almost reaches 1). The conclusion does not change.
 - [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) and [Lighteval](https://github.com/huggingface/lighteval) run many benchmarks with one command.
 - Benchmarks fit tasks with one correct answer. They are weak for open or creative tasks. Public questions also leak into training data with time.
-- A model can also identify that it is in a test and change its behaviour. The page [AI safety](09-ai-safety.md) gives the numbers.
+- A model can also identify that it is in a test and change its behaviour. The page [Scheming and alignment evaluations](../safety/04-scheming.md) gives the numbers.
 
 ## 2. Human evaluation
 

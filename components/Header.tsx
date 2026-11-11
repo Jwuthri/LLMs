@@ -17,6 +17,7 @@ export function Header() {
               {track.title.replace(/^(The )?LLM /, "")}
             </Link>
           ))}
+          <Link href="/glossary/">Glossary</Link>
         </nav>
         <Search />
       </div>

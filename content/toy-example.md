@@ -26,7 +26,7 @@ Two numbers come back on many pages:
 | Part | Pages |
 |---|---|
 | Token ids | [LLM architecture](scientist/01-architecture.md), [NLP](fundamentals/04-nlp.md) |
-| Embeddings | [LLM architecture](scientist/01-architecture.md) (attention), [Vector storage](engineer/02-vector-storage.md) (similarity search), [Inference optimization](engineer/06-inference-optimization.md) (key-value cache), [AI safety](scientist/09-ai-safety.md) (probe) |
+| Embeddings | [LLM architecture](scientist/01-architecture.md) (attention), [Vector storage](engineer/02-vector-storage.md) (similarity search), [Inference optimization](engineer/06-inference-optimization.md) (key-value cache), [Interpretability](safety/05-interpretability.md) (probe, steering) |
 | Logits and probabilities | [LLM architecture](scientist/01-architecture.md) (sampling), [Neural networks](fundamentals/03-neural-networks.md) (loss), [Mathematics](fundamentals/01-math.md) |
 | Weight matrix $W$ | [Fine-tuning](scientist/04-fine-tuning.md) (LoRA), [Quantization](scientist/07-quantization.md), [Mathematics](fundamentals/01-math.md) |
 
