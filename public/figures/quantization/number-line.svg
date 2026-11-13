@@ -1,0 +1,18 @@
+<svg viewBox="0 0 720 215" role="img" aria-label="A number line from -1.2 to 1.2 with 15 integer positions from -7 to 7. The weights -1.2, 0.3, 0.5 and 0.8 move to the nearest positions -7, 2, 3 and 5, which give the values -1.2, 0.343, 0.514 and 0.857.">
+<defs><marker id="quantization-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dgm-head-accent"/></marker></defs>
+<text x="20" y="24" class="dgm-text-small">The 4 weights of W (real numbers)</text>
+<circle cx="60" cy="62" r="5" class="dgm-s2"/><text x="60" y="48" text-anchor="middle" class="dgm-text-mono">-1.2</text>
+<circle cx="435" cy="62" r="5" class="dgm-s2"/><text x="431" y="48" text-anchor="middle" class="dgm-text-mono">0.3</text>
+<circle cx="485" cy="62" r="5" class="dgm-s2"/><text x="489" y="48" text-anchor="middle" class="dgm-text-mono">0.5</text>
+<circle cx="560" cy="62" r="5" class="dgm-s2"/><text x="560" y="48" text-anchor="middle" class="dgm-text-mono">0.8</text>
+<path d="M60 70V110" class="dgm-arrow-accent" marker-end="url(#quantization-head)"/>
+<path d="M436 70L445 110" class="dgm-arrow-accent" marker-end="url(#quantization-head)"/>
+<path d="M485 70L488 110" class="dgm-arrow-accent" marker-end="url(#quantization-head)"/>
+<path d="M562 70L573 110" class="dgm-arrow-accent" marker-end="url(#quantization-head)"/>
+<text x="584" y="94" class="dgm-text-small">error 0.057</text>
+<path d="M60 120H660" class="dgm-arrow"/><path d="M60.0 113V127M102.9 113V127M145.7 113V127M188.6 113V127M231.4 113V127M274.3 113V127M317.1 113V127M360.0 113V127M402.9 113V127M445.7 113V127M488.6 113V127M531.4 113V127M574.3 113V127M617.1 113V127M660.0 113V127" class="dgm-arrow"/>
+<circle cx="60" cy="120" r="5" class="dgm-s1"/><circle cx="445.7" cy="120" r="5" class="dgm-s1"/><circle cx="488.6" cy="120" r="5" class="dgm-s1"/><circle cx="574.3" cy="120" r="5" class="dgm-s1"/>
+<text x="60.0" y="146" text-anchor="middle" class="dgm-text-small">-7</text><text x="102.9" y="146" text-anchor="middle" class="dgm-text-small">-6</text><text x="145.7" y="146" text-anchor="middle" class="dgm-text-small">-5</text><text x="188.6" y="146" text-anchor="middle" class="dgm-text-small">-4</text><text x="231.4" y="146" text-anchor="middle" class="dgm-text-small">-3</text><text x="274.3" y="146" text-anchor="middle" class="dgm-text-small">-2</text><text x="317.1" y="146" text-anchor="middle" class="dgm-text-small">-1</text><text x="360.0" y="146" text-anchor="middle" class="dgm-text-small">0</text><text x="402.9" y="146" text-anchor="middle" class="dgm-text-small">1</text><text x="445.7" y="146" text-anchor="middle" class="dgm-text-small">2</text><text x="488.6" y="146" text-anchor="middle" class="dgm-text-small">3</text><text x="531.4" y="146" text-anchor="middle" class="dgm-text-small">4</text><text x="574.3" y="146" text-anchor="middle" class="dgm-text-small">5</text><text x="617.1" y="146" text-anchor="middle" class="dgm-text-small">6</text><text x="660.0" y="146" text-anchor="middle" class="dgm-text-small">7</text>
+<text x="60" y="166" text-anchor="middle" class="dgm-text-small">-1.2</text><text x="445.7" y="166" text-anchor="middle" class="dgm-text-small">0.343</text><text x="488.6" y="166" text-anchor="middle" class="dgm-text-small">0.514</text><text x="574.3" y="166" text-anchor="middle" class="dgm-text-small">0.857</text>
+<text x="20" y="198" class="dgm-text-small">Top row: the integer that is stored. Bottom row: the value after dequantization. Step = 1.2 / 7 = 0.171.</text>
+</svg>

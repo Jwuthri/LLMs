@@ -1,0 +1,16 @@
+<svg viewBox="0 0 720 214" role="img" aria-label="Left: with MCP, a host application with a model and an MCP client sends tools/call to an MCP server and gets a result. Right: with A2A, a client agent sends SendMessage to a remote agent and gets a task or a message.">
+<defs><marker id="agents-protocols-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dgm-head"/></marker><marker id="agents-protocols-head-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dgm-head-accent"/></marker></defs>
+<text x="14" y="24" class="dgm-text">MCP: an application uses tools and data</text>
+<rect x="14" y="40" width="120" height="110" rx="6" class="dgm-box"/><text x="74" y="68" text-anchor="middle" class="dgm-text">Host app</text><text x="74" y="92" text-anchor="middle" class="dgm-text-small">model</text><text x="74" y="110" text-anchor="middle" class="dgm-text-small">+ MCP client</text>
+<rect x="236" y="40" width="114" height="110" rx="6" class="dgm-box-accent"/><text x="293" y="68" text-anchor="middle" class="dgm-text">MCP server</text><text x="293" y="92" text-anchor="middle" class="dgm-text-small">tools</text><text x="293" y="110" text-anchor="middle" class="dgm-text-small">resources</text><text x="293" y="128" text-anchor="middle" class="dgm-text-small">prompts</text>
+<path d="M134 76H232" class="dgm-arrow" marker-end="url(#agents-protocols-head)"/><text x="184" y="68" text-anchor="middle" class="dgm-text-small">tools/call</text>
+<path d="M236 116H138" class="dgm-arrow-accent" marker-end="url(#agents-protocols-head-accent)"/><text x="184" y="134" text-anchor="middle" class="dgm-text-small">result</text>
+<text x="14" y="176" class="dgm-text-small">JSON-RPC 2.0 messages.</text><text x="14" y="194" class="dgm-text-small">Transport: stdio (local) or Streamable HTTP (remote).</text>
+<path d="M366 14V200" class="dgm-arrow" style="stroke-dasharray:4 4"/>
+<text x="382" y="24" class="dgm-text">A2A: an agent gives work to an agent</text>
+<rect x="382" y="40" width="104" height="110" rx="6" class="dgm-box"/><text x="434" y="68" text-anchor="middle" class="dgm-text">Client agent</text><text x="434" y="92" text-anchor="middle" class="dgm-text-small">reads the</text><text x="434" y="110" text-anchor="middle" class="dgm-text-small">Agent Card</text>
+<rect x="604" y="40" width="106" height="110" rx="6" class="dgm-box-accent"/><text x="657" y="68" text-anchor="middle" class="dgm-text">Remote agent</text><text x="657" y="92" text-anchor="middle" class="dgm-text-small">a black box</text><text x="657" y="110" text-anchor="middle" class="dgm-text-small">with skills</text>
+<path d="M486 76H600" class="dgm-arrow" marker-end="url(#agents-protocols-head)"/><text x="545" y="68" text-anchor="middle" class="dgm-text-small">SendMessage</text>
+<path d="M604 116H490" class="dgm-arrow-accent" marker-end="url(#agents-protocols-head-accent)"/><text x="545" y="134" text-anchor="middle" class="dgm-text-small">Task or Message</text>
+<text x="382" y="176" class="dgm-text-small">JSON-RPC, gRPC or HTTP+JSON.</text><text x="382" y="194" class="dgm-text-small">Long tasks: polling, streaming or push.</text>
+</svg>

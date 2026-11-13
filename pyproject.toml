@@ -1,0 +1,22 @@
+[project]
+name = "llm-course-explained"
+version = "0.1.0"
+description = "The LLM course syllabus, explained with one tiny example and real numbers."
+requires-python = ">=3.12"
+dependencies = [
+    "matplotlib>=3.11.2",
+    "numpy>=2.5.4",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
+
+[tool.uv]
+exclude-newer = "7 days"
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

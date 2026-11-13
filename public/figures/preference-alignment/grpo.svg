@@ -1,0 +1,8 @@
+<svg viewBox="0 0 720 210" role="img" aria-label="A group of 4 answers to one prompt with rewards 0.9, 0.4, 0.1 and 0.9. The group-relative advantages are +0.951, -0.512, -1.389 and +0.951.">
+<text x="360" y="30" text-anchor="middle" class="dgm-text-small">One prompt, a group of 4 sampled answers. Group mean 0.575, standard deviation 0.342.</text>
+<rect x="24" y="48" width="150" height="104" rx="6" class="dgm-box-accent"/><text x="99" y="74" text-anchor="middle" class="dgm-text-mono">"sat"</text><text x="99" y="100" text-anchor="middle" class="dgm-text-small">reward 0.9</text><text x="99" y="130" text-anchor="middle" class="dgm-text-mono">A = +0.951</text>
+<rect x="198" y="48" width="150" height="104" rx="6" class="dgm-box"/><text x="273" y="74" text-anchor="middle" class="dgm-text-mono">"cat"</text><text x="273" y="100" text-anchor="middle" class="dgm-text-small">reward 0.4</text><text x="273" y="130" text-anchor="middle" class="dgm-text-mono">A = −0.512</text>
+<rect x="372" y="48" width="150" height="104" rx="6" class="dgm-box"/><text x="447" y="74" text-anchor="middle" class="dgm-text-mono">"the"</text><text x="447" y="100" text-anchor="middle" class="dgm-text-small">reward 0.1</text><text x="447" y="130" text-anchor="middle" class="dgm-text-mono">A = −1.389</text>
+<rect x="546" y="48" width="150" height="104" rx="6" class="dgm-box-accent"/><text x="621" y="74" text-anchor="middle" class="dgm-text-mono">"sat"</text><text x="621" y="100" text-anchor="middle" class="dgm-text-small">reward 0.9</text><text x="621" y="130" text-anchor="middle" class="dgm-text-mono">A = +0.951</text>
+<text x="360" y="184" text-anchor="middle" class="dgm-text-small">A = (reward − mean) / standard deviation. Highlighted: more likely after the update.</text>
+</svg>

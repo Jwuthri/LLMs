@@ -1,0 +1,15 @@
+<svg viewBox="0 0 720 270" role="img" aria-label="DPO data flow: the prompt goes to the trained policy and to the frozen reference. The log-ratios of sat and the give a margin of 0.900 and a loss of 0.493. The gradient changes only the policy.">
+<defs><marker id="preference-alignment-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dgm-head"/></marker><marker id="preference-alignment-head-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dgm-head-accent"/></marker></defs>
+<rect x="14" y="120" width="100" height="60" rx="6" class="dgm-box"/><text x="64" y="144" text-anchor="middle" class="dgm-text">Prompt</text><text x="64" y="166" text-anchor="middle" class="dgm-text-mono">"the cat"</text>
+<rect x="150" y="48" width="220" height="80" rx="6" class="dgm-box-accent"/><text x="260" y="76" text-anchor="middle" class="dgm-text">Policy (trained)</text><text x="260" y="104" text-anchor="middle" class="dgm-text-mono">sat 0.659   the 0.099</text>
+<rect x="150" y="172" width="220" height="80" rx="6" class="dgm-box"/><text x="260" y="200" text-anchor="middle" class="dgm-text">Reference (frozen)</text><text x="260" y="228" text-anchor="middle" class="dgm-text-mono">sat 0.506   the 0.186</text>
+<rect x="410" y="94" width="156" height="112" rx="6" class="dgm-box"/><text x="488" y="118" text-anchor="middle" class="dgm-text">log π − log π ref</text><text x="488" y="143" text-anchor="middle" class="dgm-text-mono">sat  +0.263</text><text x="488" y="165" text-anchor="middle" class="dgm-text-mono">the  −0.637</text><text x="488" y="190" text-anchor="middle" class="dgm-text-small">margin = 0.900</text>
+<rect x="602" y="108" width="106" height="84" rx="6" class="dgm-box"/><text x="655" y="134" text-anchor="middle" class="dgm-text">DPO loss</text><text x="655" y="158" text-anchor="middle" class="dgm-text-mono">0.493</text><text x="655" y="179" text-anchor="middle" class="dgm-text-small">−ln σ(0.45)</text>
+<path d="M114 150H132V88H146" class="dgm-arrow" marker-end="url(#preference-alignment-head)"/>
+<path d="M132 150V212H146" class="dgm-arrow" marker-end="url(#preference-alignment-head)"/>
+<path d="M370 88H390V136H406" class="dgm-arrow" marker-end="url(#preference-alignment-head)"/>
+<path d="M370 212H390V164H406" class="dgm-arrow" marker-end="url(#preference-alignment-head)"/>
+<path d="M566 150H598" class="dgm-arrow" marker-end="url(#preference-alignment-head)"/>
+<path d="M655 108V26H260V44" class="dgm-arrow-accent" marker-end="url(#preference-alignment-head-accent)"/>
+<text x="470" y="46" text-anchor="middle" class="dgm-text-small">gradient: only the policy changes</text>
+</svg>

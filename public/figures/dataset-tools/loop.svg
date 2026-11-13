@@ -1,0 +1,13 @@
+<svg viewBox="0 0 720 200" role="img" aria-label="The loop of four steps with the toy counts. Collect: 8 samples. Filter: 7 samples after the rules, 6 after deduplication. Generate: 3 new samples, 9 in total. Explore: 2 clusters, and sample 8 is the outlier. An arrow goes from Explore back to Collect: do it again.">
+<defs><marker id="dataset-tools-loop-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dgm-head-accent"/></marker><marker id="dataset-tools-loop-back" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dgm-head"/></marker></defs>
+<rect x="14" y="30" width="140" height="84" rx="6" class="dgm-box"/><text x="84" y="54" text-anchor="middle" class="dgm-text">1. Collect</text><text x="84" y="76" text-anchor="middle" class="dgm-text-small">pages and PDFs</text><text x="84" y="98" text-anchor="middle" class="dgm-text-mono">8 samples</text>
+<rect x="198" y="30" width="140" height="84" rx="6" class="dgm-box-accent"/><text x="268" y="54" text-anchor="middle" class="dgm-text">2. Filter</text><text x="268" y="76" text-anchor="middle" class="dgm-text-small">after the rules: 7</text><text x="268" y="98" text-anchor="middle" class="dgm-text-small">after duplicates: 6</text>
+<rect x="382" y="30" width="140" height="84" rx="6" class="dgm-box-accent"/><text x="452" y="54" text-anchor="middle" class="dgm-text">3. Generate</text><text x="452" y="76" text-anchor="middle" class="dgm-text-small">3 new samples</text><text x="452" y="98" text-anchor="middle" class="dgm-text-mono">9 samples</text>
+<rect x="566" y="30" width="140" height="84" rx="6" class="dgm-box"/><text x="636" y="54" text-anchor="middle" class="dgm-text">4. Explore</text><text x="636" y="76" text-anchor="middle" class="dgm-text-small">2 clusters</text><text x="636" y="98" text-anchor="middle" class="dgm-text-small">outlier: sample 8</text>
+<path d="M154 72H194" class="dgm-arrow-accent" marker-end="url(#dataset-tools-loop-head)"/>
+<path d="M338 72H378" class="dgm-arrow-accent" marker-end="url(#dataset-tools-loop-head)"/>
+<path d="M522 72H562" class="dgm-arrow-accent" marker-end="url(#dataset-tools-loop-head)"/>
+<text x="174" y="62" text-anchor="middle" class="dgm-text-mono">8</text><text x="358" y="62" text-anchor="middle" class="dgm-text-mono">6</text><text x="542" y="62" text-anchor="middle" class="dgm-text-mono">9</text>
+<path d="M636 114V158H84V118" class="dgm-arrow" marker-end="url(#dataset-tools-loop-back)"/>
+<text x="360" y="180" text-anchor="middle" class="dgm-text-small">Do it again: what you see in step 4 changes steps 1, 2 and 3</text>
+</svg>

@@ -1,0 +1,16 @@
+<svg viewBox="0 0 720 232" role="img" aria-label="An image goes through a vision encoder, which gives 576 patch vectors. A projector changes each patch vector into a vector with the size of a token embedding. These image tokens go in front of the text tokens, and the LLM reads one sequence.">
+<defs><marker id="new-trends-llava-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dgm-head"/></marker><marker id="new-trends-llava-head-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dgm-head-accent"/></marker></defs>
+<rect x="14" y="24" width="116" height="60" rx="6" class="dgm-box"/><text x="72" y="49" text-anchor="middle" class="dgm-text">Image</text><text x="72" y="69" text-anchor="middle" class="dgm-text-small">336 × 336 pixels</text>
+<rect x="166" y="24" width="150" height="60" rx="6" class="dgm-box"/><text x="241" y="49" text-anchor="middle" class="dgm-text">Vision encoder</text><text x="241" y="69" text-anchor="middle" class="dgm-text-small">CLIP ViT-L/14, frozen</text>
+<rect x="352" y="24" width="150" height="60" rx="6" class="dgm-box"/><text x="427" y="49" text-anchor="middle" class="dgm-text">576 patch vectors</text><text x="427" y="69" text-anchor="middle" class="dgm-text-small">24 × 24 patches</text>
+<rect x="538" y="24" width="168" height="60" rx="6" class="dgm-box-accent"/><text x="622" y="49" text-anchor="middle" class="dgm-text">Projector</text><text x="622" y="69" text-anchor="middle" class="dgm-text-small">toy: multiply by W</text>
+<path d="M130 54H162" class="dgm-arrow" marker-end="url(#new-trends-llava-head)"/><path d="M316 54H348" class="dgm-arrow" marker-end="url(#new-trends-llava-head)"/><path d="M502 54H534" class="dgm-arrow" marker-end="url(#new-trends-llava-head)"/>
+<path d="M622 84V114H89V142" class="dgm-arrow-accent" marker-end="url(#new-trends-llava-head-accent)"/><text x="356" y="106" text-anchor="middle" class="dgm-text-small">vectors with the size of a token embedding</text>
+<rect x="14" y="146" width="150" height="56" rx="6" class="dgm-box-accent"/><text x="89" y="169" text-anchor="middle" class="dgm-text">image token</text><text x="89" y="190" text-anchor="middle" class="dgm-text-mono">[-0.32, 0.82]</text>
+<rect x="174" y="146" width="100" height="56" rx="6" class="dgm-box"/><text x="224" y="169" text-anchor="middle" class="dgm-text">the</text><text x="224" y="190" text-anchor="middle" class="dgm-text-mono">[1, 0]</text>
+<rect x="284" y="146" width="100" height="56" rx="6" class="dgm-box"/><text x="334" y="169" text-anchor="middle" class="dgm-text">cat</text><text x="334" y="190" text-anchor="middle" class="dgm-text-mono">[0, 1]</text>
+<rect x="436" y="146" width="110" height="56" rx="6" class="dgm-box"/><text x="491" y="179" text-anchor="middle" class="dgm-text">LLM blocks</text>
+<rect x="596" y="146" width="110" height="56" rx="6" class="dgm-box"/><text x="651" y="179" text-anchor="middle" class="dgm-text">Next token</text>
+<path d="M384 174H432" class="dgm-arrow" marker-end="url(#new-trends-llava-head)"/><path d="M546 174H592" class="dgm-arrow" marker-end="url(#new-trends-llava-head)"/>
+<text x="14" y="222" class="dgm-text-small">One input sequence: the image tokens first, then the text tokens.</text>
+</svg>

@@ -1,0 +1,15 @@
+<svg viewBox="0 0 720 222" role="img" aria-label="Pass 3 on the context the cat sat. Without a cache the model computes 3 key-value pairs and 6 dot products. With a cache it reads 2 pairs from the cache, computes 1 pair and 3 dot products.">
+<text x="14" y="24" class="dgm-text">Pass 3, without a cache</text>
+<rect x="14" y="40" width="100" height="60" rx="6" class="dgm-box-accent"/><text x="64" y="64" text-anchor="middle" class="dgm-text-mono">K, V of the</text><text x="64" y="86" text-anchor="middle" class="dgm-text-small">computed</text>
+<rect x="124" y="40" width="100" height="60" rx="6" class="dgm-box-accent"/><text x="174" y="64" text-anchor="middle" class="dgm-text-mono">K, V of cat</text><text x="174" y="86" text-anchor="middle" class="dgm-text-small">computed</text>
+<rect x="234" y="40" width="100" height="60" rx="6" class="dgm-box-accent"/><text x="284" y="64" text-anchor="middle" class="dgm-text-mono">K, V of sat</text><text x="284" y="86" text-anchor="middle" class="dgm-text-small">computed</text>
+<text x="14" y="128" class="dgm-text-small">3 key-value pairs computed</text><text x="14" y="146" class="dgm-text-small">6 dot products (3 queries: 1 + 2 + 3)</text>
+<text x="14" y="184" class="dgm-text">Total of passes 1 to 3</text><text x="14" y="206" class="dgm-text-mono">6 pairs, 10 dot products</text>
+<path d="M360 14V208" class="dgm-arrow" style="stroke-dasharray:4 4"/>
+<text x="386" y="24" class="dgm-text">Pass 3, with a cache</text>
+<rect x="386" y="40" width="100" height="60" rx="6" class="dgm-box"/><text x="436" y="64" text-anchor="middle" class="dgm-text-mono">K, V of the</text><text x="436" y="86" text-anchor="middle" class="dgm-text-small">from the cache</text>
+<rect x="496" y="40" width="100" height="60" rx="6" class="dgm-box"/><text x="546" y="64" text-anchor="middle" class="dgm-text-mono">K, V of cat</text><text x="546" y="86" text-anchor="middle" class="dgm-text-small">from the cache</text>
+<rect x="606" y="40" width="100" height="60" rx="6" class="dgm-box-accent"/><text x="656" y="64" text-anchor="middle" class="dgm-text-mono">K, V of sat</text><text x="656" y="86" text-anchor="middle" class="dgm-text-small">computed</text>
+<text x="386" y="128" class="dgm-text-small">1 key-value pair computed</text><text x="386" y="146" class="dgm-text-small">3 dot products (1 query: sat)</text>
+<text x="386" y="184" class="dgm-text">Total of passes 1 to 3</text><text x="386" y="206" class="dgm-text-mono">3 pairs, 6 dot products</text>
+</svg>
