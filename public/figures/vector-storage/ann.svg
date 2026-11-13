@@ -1,0 +1,21 @@
+<svg viewBox="0 0 720 250" role="img" aria-label="Left: an IVF index with 2 clusters. The query the cat sat all day is nearest to the centroid of cluster A, 0.943, so the search reads only c1 and misses the true best chunk c2, 0.966, in cluster B. Right: an HNSW graph walk for the query the cat sat, from c3, 0.814, to c2, 0.919, to c1, 0.981.">
+<defs><marker id="vector-storage-ann-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dgm-head"/></marker><marker id="vector-storage-ann-head-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dgm-head-accent"/></marker></defs>
+<text x="20" y="28" class="dgm-text">IVF: search only the nearest cluster</text>
+<rect x="20" y="44" width="150" height="96" rx="6" class="dgm-box-warm"/><text x="95" y="62" text-anchor="middle" class="dgm-text-small">cluster A</text>
+<rect x="55" y="72" width="80" height="52" rx="6" class="dgm-box"/><text x="95" y="94" text-anchor="middle" class="dgm-text">c1</text><text x="95" y="114" text-anchor="middle" class="dgm-text-mono">0.943</text>
+<rect x="190" y="44" width="150" height="96" rx="6" class="dgm-box-warm"/><text x="265" y="62" text-anchor="middle" class="dgm-text-small">cluster B</text>
+<rect x="200" y="72" width="62" height="52" rx="6" class="dgm-box-accent"/><text x="231" y="94" text-anchor="middle" class="dgm-text">c2</text><text x="231" y="114" text-anchor="middle" class="dgm-text-mono">0.966</text>
+<rect x="268" y="72" width="62" height="52" rx="6" class="dgm-box"/><text x="299" y="94" text-anchor="middle" class="dgm-text">c3</text><text x="299" y="114" text-anchor="middle" class="dgm-text-mono">0.888</text>
+<rect x="95" y="190" width="170" height="48" rx="6" class="dgm-box"/><text x="180" y="208" text-anchor="middle" class="dgm-text-small">query</text><text x="180" y="228" text-anchor="middle" class="dgm-text-mono">the cat sat all day</text>
+<path d="M130 190V145" class="dgm-arrow-accent" marker-end="url(#vector-storage-ann-head-accent)"/><text x="122" y="164" text-anchor="end" class="dgm-text-small">centroid 0.943</text><text x="122" y="179" text-anchor="end" class="dgm-text-small">search here</text>
+<path d="M230 190V145" class="dgm-arrow" marker-end="url(#vector-storage-ann-head)"/><text x="238" y="164" class="dgm-text-small">centroid 0.932</text><text x="238" y="179" class="dgm-text-small">skip</text>
+<path d="M360 16V240" class="dgm-arrow"/>
+<text x="380" y="28" class="dgm-text">HNSW: walk the graph to the query</text>
+<text x="380" y="58" class="dgm-text-small">cosine with the query "the cat sat"</text>
+<rect x="380" y="72" width="90" height="52" rx="6" class="dgm-box"/><text x="425" y="94" text-anchor="middle" class="dgm-text">c3</text><text x="425" y="114" text-anchor="middle" class="dgm-text-mono">0.814</text>
+<rect x="495" y="72" width="90" height="52" rx="6" class="dgm-box"/><text x="540" y="94" text-anchor="middle" class="dgm-text">c2</text><text x="540" y="114" text-anchor="middle" class="dgm-text-mono">0.919</text>
+<rect x="610" y="72" width="90" height="52" rx="6" class="dgm-box-accent"/><text x="655" y="94" text-anchor="middle" class="dgm-text">c1</text><text x="655" y="114" text-anchor="middle" class="dgm-text-mono">0.981</text>
+<path d="M470 98H491" class="dgm-arrow-accent" marker-end="url(#vector-storage-ann-head-accent)"/><path d="M585 98H606" class="dgm-arrow-accent" marker-end="url(#vector-storage-ann-head-accent)"/>
+<text x="425" y="144" text-anchor="middle" class="dgm-text-small">entry point</text><text x="540" y="144" text-anchor="middle" class="dgm-text-small">nearer: move</text><text x="655" y="144" text-anchor="middle" class="dgm-text-small">no nearer</text><text x="655" y="159" text-anchor="middle" class="dgm-text-small">neighbour: stop</text>
+<text x="380" y="200" class="dgm-text-small">A real HNSW index adds upper layers with few</text><text x="380" y="216" class="dgm-text-small">nodes and long links: a fast road to the right area.</text>
+</svg>

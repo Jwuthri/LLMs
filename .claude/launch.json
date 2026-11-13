@@ -1,0 +1,28 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "web",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "dev"
+      ],
+      "port": 3210
+    },
+    {
+      "name": "static",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "3211",
+        "--bind",
+        "127.0.0.1",
+        "--directory",
+        "out"
+      ],
+      "port": 3211
+    }
+  ]
+}

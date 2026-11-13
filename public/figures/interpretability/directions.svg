@@ -1,0 +1,19 @@
+<svg viewBox="0 0 720 250" role="img" aria-label="Left: the plane of the hidden state with the three embeddings the = [1, 0], cat = [0, 1] and sat = [1, 1], and the steering step from h = [1, 1] to [0, 2] along v = [-1, 1]. Right: four operations on a direction. A probe reads it: the score 1.0 is above the threshold 0.2. A sparse autoencoder finds it: 0.707 minus 0.75 becomes 0. Steering pushes along it: [1, 1] becomes [0, 2]. An ablation removes it: [1, 1] becomes [1, 0].">
+<defs><marker id="interpretability-directions-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dgm-head"/></marker><marker id="interpretability-directions-head-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dgm-head-accent"/></marker></defs>
+<text x="14" y="20" class="dgm-text-small">The hidden state h: 2 numbers</text>
+<path d="M70 220H258" class="dgm-arrow"/><path d="M70 220V38" class="dgm-arrow"/>
+<text x="258" y="238" text-anchor="end" class="dgm-text-small">number 1</text><text x="80" y="42" class="dgm-text-small">number 2</text>
+<path d="M70 220H148" class="dgm-arrow" marker-end="url(#interpretability-directions-head)"/>
+<path d="M70 220V142" class="dgm-arrow" marker-end="url(#interpretability-directions-head)"/>
+<path d="M70 220L148 142" class="dgm-arrow" marker-end="url(#interpretability-directions-head)"/>
+<text x="150" y="238" text-anchor="middle" class="dgm-text-mono">the</text>
+<text x="62" y="145" text-anchor="end" class="dgm-text-mono">cat</text>
+<circle cx="150" cy="140" r="4" class="dgm-s1"/><text x="160" y="145" class="dgm-text-mono">sat, h = [1, 1]</text>
+<path d="M146 136L75 65" class="dgm-arrow-accent" marker-end="url(#interpretability-directions-head-accent)"/>
+<circle cx="70" cy="60" r="4" class="dgm-s1"/><text x="80" y="65" class="dgm-text-mono">h' = [0, 2]</text>
+<text x="118" y="98" class="dgm-text-small">+ 1 × v, v = [-1, 1]</text>
+<rect x="300" y="34" width="200" height="88" rx="6" class="dgm-box"/><text x="314" y="58" class="dgm-text">1. Read: probe</text><text x="314" y="80" class="dgm-text-small">score = h · v</text><text x="314" y="104" class="dgm-text-mono">1.0 &gt; 0.2: concept</text>
+<rect x="510" y="34" width="200" height="88" rx="6" class="dgm-box"/><text x="524" y="58" class="dgm-text">2. Find: SAE features</text><text x="524" y="80" class="dgm-text-small">feature = ReLU(x · v + b)</text><text x="524" y="104" class="dgm-text-mono">0.707 − 0.75 → 0</text>
+<rect x="300" y="136" width="200" height="88" rx="6" class="dgm-box-accent"/><text x="314" y="160" class="dgm-text">3. Push: steering</text><text x="314" y="182" class="dgm-text-small">h' = h + α · v</text><text x="314" y="206" class="dgm-text-mono">[1, 1] → [0, 2]</text>
+<rect x="510" y="136" width="200" height="88" rx="6" class="dgm-box"/><text x="524" y="160" class="dgm-text">4. Remove: ablation</text><text x="524" y="182" class="dgm-text-small">h' = h − (h · v) v</text><text x="524" y="206" class="dgm-text-mono">[1, 1] → [1, 0]</text>
+</svg>

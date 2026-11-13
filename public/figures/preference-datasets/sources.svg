@@ -1,0 +1,20 @@
+<svg viewBox="0 0 720 270" role="img" aria-label="Three sources of preference pairs. Human votes: two models answer and a person chooses. Judge scores: a judge model gives a score to each answer, and binarization keeps the best and the worst. Construction: a program adds an error to a correct answer. Each source gives a pair with a prompt, a chosen answer and a rejected answer.">
+<defs><marker id="preference-datasets-sources-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dgm-head"/></marker><marker id="preference-datasets-sources-head-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dgm-head-accent"/></marker></defs>
+<text x="14" y="22" class="dgm-text-small">Source</text><text x="174" y="22" class="dgm-text-small">Answers</text><text x="354" y="22" class="dgm-text-small">Who decides</text><text x="556" y="22" class="dgm-text-small">One pair</text>
+<text x="14" y="62" class="dgm-text">1. Human votes</text><text x="14" y="80" class="dgm-text-small">2 answers for 1 pair</text>
+<rect x="174" y="36" width="140" height="56" rx="6" class="dgm-box"/><text x="244" y="60" text-anchor="middle" class="dgm-text">Two models</text><text x="244" y="78" text-anchor="middle" class="dgm-text-small">one answer each</text>
+<rect x="354" y="36" width="150" height="56" rx="6" class="dgm-box"/><text x="429" y="60" text-anchor="middle" class="dgm-text">A person chooses</text><text x="429" y="78" text-anchor="middle" class="dgm-text-small">or says "tie"</text>
+<text x="14" y="142" class="dgm-text">2. Judge scores</text><text x="14" y="160" class="dgm-text-small">3 answers for 1 pair</text>
+<rect x="174" y="116" width="140" height="56" rx="6" class="dgm-box"/><text x="244" y="140" text-anchor="middle" class="dgm-text">Three answers</text><text x="244" y="158" text-anchor="middle" class="dgm-text-mono">4.5  4.0  2.0</text>
+<rect x="354" y="116" width="150" height="56" rx="6" class="dgm-box"/><text x="429" y="140" text-anchor="middle" class="dgm-text">Binarization</text><text x="429" y="158" text-anchor="middle" class="dgm-text-small">best against worst</text>
+<text x="14" y="222" class="dgm-text">3. Construction</text><text x="14" y="240" class="dgm-text-small">1 new answer for 1 pair</text>
+<rect x="174" y="196" width="140" height="56" rx="6" class="dgm-box"/><text x="244" y="220" text-anchor="middle" class="dgm-text">A correct answer</text><text x="244" y="238" text-anchor="middle" class="dgm-text-small">from a dataset</text>
+<rect x="354" y="196" width="150" height="56" rx="6" class="dgm-box"/><text x="429" y="220" text-anchor="middle" class="dgm-text">Add an error</text><text x="429" y="238" text-anchor="middle" class="dgm-text-small">on purpose</text>
+<rect x="556" y="86" width="150" height="116" rx="6" class="dgm-box-accent"/><text x="631" y="112" text-anchor="middle" class="dgm-text">prompt</text><text x="631" y="140" text-anchor="middle" class="dgm-text">chosen answer</text><text x="631" y="168" text-anchor="middle" class="dgm-text">rejected answer</text><text x="631" y="190" text-anchor="middle" class="dgm-text-small">direction, not level</text>
+<path d="M314 64H350" class="dgm-arrow" marker-end="url(#preference-datasets-sources-head)"/>
+<path d="M314 144H350" class="dgm-arrow" marker-end="url(#preference-datasets-sources-head)"/>
+<path d="M314 224H350" class="dgm-arrow" marker-end="url(#preference-datasets-sources-head)"/>
+<path d="M504 64H530V110H552" class="dgm-arrow-accent" marker-end="url(#preference-datasets-sources-head-accent)"/>
+<path d="M504 144H552" class="dgm-arrow-accent" marker-end="url(#preference-datasets-sources-head-accent)"/>
+<path d="M504 224H530V178H552" class="dgm-arrow-accent" marker-end="url(#preference-datasets-sources-head-accent)"/>
+</svg>

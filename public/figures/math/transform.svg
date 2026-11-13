@@ -1,0 +1,23 @@
+<svg viewBox="0 0 720 275" role="img" aria-label="Left: the vectors the, cat and sat and a unit square of area 1. Right: the same vectors after the multiplication by W. The square becomes a parallelogram of area 1.11, and sat moves to minus 0.7, 1.1.">
+<defs><marker id="math-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dgm-head"/></marker><marker id="math-head-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dgm-head-accent"/></marker></defs>
+<text x="40" y="30" class="dgm-text">Before: area 1</text>
+<text x="400" y="30" class="dgm-text">After W: area 1.11 = det W</text>
+<path d="M40 215H270M120 260V60" class="dgm-arrow" style="stroke-width:1"/>
+<polygon points="120,215 190,215 190,145 120,145" class="dgm-box"/>
+<path d="M120 215H190" class="dgm-arrow" style="stroke-width:2" marker-end="url(#math-head)"/>
+<path d="M120 215V145" class="dgm-arrow" style="stroke-width:2" marker-end="url(#math-head)"/>
+<path d="M120 215L190 145" class="dgm-arrow-accent" marker-end="url(#math-head-accent)"/>
+<text x="160" y="235" class="dgm-text-small">the = [1, 0]</text>
+<text x="112" y="141" text-anchor="end" class="dgm-text-small">cat = [0, 1]</text>
+<text x="198" y="141" class="dgm-text-small">sat = [1, 1]</text>
+<path d="M292 120H372" class="dgm-arrow-accent" marker-end="url(#math-head-accent)"/>
+<text x="332" y="108" text-anchor="middle" class="dgm-text-small">multiply by W</text>
+<path d="M400 215H640M500 260V60" class="dgm-arrow" style="stroke-width:1"/>
+<polygon points="500,215 535,159 451,138 416,194" class="dgm-box-warm"/>
+<path d="M500 215L535 159" class="dgm-arrow" style="stroke-width:2" marker-end="url(#math-head)"/>
+<path d="M500 215L416 194" class="dgm-arrow" style="stroke-width:2" marker-end="url(#math-head)"/>
+<path d="M500 215L451 138" class="dgm-arrow-accent" marker-end="url(#math-head-accent)"/>
+<text x="543" y="157" class="dgm-text-small">W·the = [0.5, 0.8]</text>
+<text x="408" y="186" text-anchor="end" class="dgm-text-small">W·cat = [−1.2, 0.3]</text>
+<text x="451" y="126" text-anchor="middle" class="dgm-text-small">W·sat = [−0.7, 1.1]</text>
+</svg>

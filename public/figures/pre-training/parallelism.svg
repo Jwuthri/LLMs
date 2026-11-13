@@ -1,0 +1,18 @@
+<svg viewBox="0 0 720 272" role="img" aria-label="Three ways to split training on 2 workers. Data parallel splits the batch and averages the gradients. Pipeline parallel splits the layers. Tensor parallel splits one matrix multiplication.">
+<defs><marker id="pretrain-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dgm-head"/></marker></defs>
+<text x="20" y="22" class="dgm-text">Data parallel</text><text x="20" y="40" class="dgm-text-small">split the batch of 4 samples</text>
+<rect x="20" y="52" width="180" height="62" rx="6" class="dgm-box"/><text x="110" y="74" text-anchor="middle" class="dgm-text">Worker A: full model</text><text x="110" y="91" text-anchor="middle" class="dgm-text-small">samples 1 and 2</text><text x="110" y="106" text-anchor="middle" class="dgm-text-small">[0.099, 0.242, −0.341]</text>
+<rect x="20" y="132" width="180" height="62" rx="6" class="dgm-box"/><text x="110" y="154" text-anchor="middle" class="dgm-text">Worker B: full model</text><text x="110" y="171" text-anchor="middle" class="dgm-text-small">samples 3 and 4</text><text x="110" y="186" text-anchor="middle" class="dgm-text-small">[0.099, −0.258, 0.159]</text>
+<rect x="20" y="216" width="180" height="44" rx="6" class="dgm-box-accent"/><text x="110" y="234" text-anchor="middle" class="dgm-text">Mean gradient</text><text x="110" y="251" text-anchor="middle" class="dgm-text-small">[0.099, −0.008, −0.091]</text>
+<path d="M200 83H216V238H205" class="dgm-arrow" marker-end="url(#pretrain-head)"/><path d="M200 163H216" class="dgm-arrow"/>
+<text x="260" y="22" class="dgm-text">Pipeline parallel</text><text x="260" y="40" class="dgm-text-small">split the layers</text>
+<rect x="260" y="52" width="180" height="62" rx="6" class="dgm-box"/><text x="350" y="78" text-anchor="middle" class="dgm-text">Worker A: layers 1–2</text><text x="350" y="98" text-anchor="middle" class="dgm-text-small">first half of the model</text>
+<rect x="260" y="132" width="180" height="62" rx="6" class="dgm-box"/><text x="350" y="158" text-anchor="middle" class="dgm-text">Worker B: layers 3–4</text><text x="350" y="178" text-anchor="middle" class="dgm-text-small">reads the output of A</text>
+<rect x="260" y="216" width="180" height="44" rx="6" class="dgm-box-accent"/><text x="350" y="234" text-anchor="middle" class="dgm-text">Logits</text><text x="350" y="251" text-anchor="middle" class="dgm-text-small">after the last layer</text>
+<path d="M350 114V128" class="dgm-arrow" marker-end="url(#pretrain-head)"/><path d="M350 194V212" class="dgm-arrow" marker-end="url(#pretrain-head)"/>
+<text x="500" y="22" class="dgm-text">Tensor parallel</text><text x="500" y="40" class="dgm-text-small">split one matrix, x = [1, 1]</text>
+<rect x="500" y="52" width="180" height="62" rx="6" class="dgm-box"/><text x="590" y="78" text-anchor="middle" class="dgm-text">Worker A: row 1 of W</text><text x="590" y="98" text-anchor="middle" class="dgm-text-small">[0.5, −1.2] · x = −0.7</text>
+<rect x="500" y="132" width="180" height="62" rx="6" class="dgm-box"/><text x="590" y="158" text-anchor="middle" class="dgm-text">Worker B: row 2 of W</text><text x="590" y="178" text-anchor="middle" class="dgm-text-small">[0.8, 0.3] · x = 1.1</text>
+<rect x="500" y="216" width="180" height="44" rx="6" class="dgm-box-accent"/><text x="590" y="234" text-anchor="middle" class="dgm-text">W x</text><text x="590" y="251" text-anchor="middle" class="dgm-text-small">[−0.7, 1.1]</text>
+<path d="M680 83H696V238H685" class="dgm-arrow" marker-end="url(#pretrain-head)"/><path d="M680 163H696" class="dgm-arrow"/>
+</svg>

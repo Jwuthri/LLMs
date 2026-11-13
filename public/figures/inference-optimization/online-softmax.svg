@@ -1,0 +1,14 @@
+<svg viewBox="0 0 720 216" role="img" aria-label="Online softmax for the query sat in two blocks. Block 1 gives m 0.707, l 2 and o 1, 1. Block 2 rescales by 0.493 and gives m 1.414, l 1.986 and o 1.493, 1.493. The output o divided by l is 0.752, 0.752.">
+<defs><marker id="inference-optimization-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dgm-head"/></marker><marker id="inference-optimization-head-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dgm-head-accent"/></marker></defs>
+<text x="14" y="24" class="dgm-text-small">Scores of the query "sat". Only one block of scores is in memory at a time.</text>
+<rect x="14" y="40" width="184" height="60" rx="6" class="dgm-box"/><text x="106" y="64" text-anchor="middle" class="dgm-text">Block 1: the, cat</text><text x="106" y="86" text-anchor="middle" class="dgm-text-mono">[0.707, 0.707]</text>
+<rect x="284" y="40" width="184" height="60" rx="6" class="dgm-box"/><text x="376" y="64" text-anchor="middle" class="dgm-text">Block 2: sat</text><text x="376" y="86" text-anchor="middle" class="dgm-text-mono">[1.414]</text>
+<rect x="14" y="140" width="184" height="64" rx="6" class="dgm-box-accent"/><text x="106" y="165" text-anchor="middle" class="dgm-text-mono">m = 0.707, l = 2</text><text x="106" y="188" text-anchor="middle" class="dgm-text-mono">o = [1, 1]</text>
+<rect x="284" y="140" width="184" height="64" rx="6" class="dgm-box-accent"/><text x="376" y="165" text-anchor="middle" class="dgm-text-mono">m = 1.414, l = 1.986</text><text x="376" y="188" text-anchor="middle" class="dgm-text-mono">o = [1.493, 1.493]</text>
+<rect x="554" y="140" width="152" height="64" rx="6" class="dgm-box"/><text x="630" y="165" text-anchor="middle" class="dgm-text">Output = o / l</text><text x="630" y="188" text-anchor="middle" class="dgm-text-mono">[0.752, 0.752]</text>
+<path d="M106 100V136" class="dgm-arrow" marker-end="url(#inference-optimization-head)"/>
+<path d="M376 100V136" class="dgm-arrow" marker-end="url(#inference-optimization-head)"/>
+<path d="M198 172H280" class="dgm-arrow-accent" marker-end="url(#inference-optimization-head-accent)"/><text x="240" y="162" text-anchor="middle" class="dgm-text-small">× 0.493</text>
+<path d="M468 172H550" class="dgm-arrow-accent" marker-end="url(#inference-optimization-head-accent)"/><text x="510" y="162" text-anchor="middle" class="dgm-text-small">divide</text>
+<text x="554" y="64" class="dgm-text-small">The same result as</text><text x="554" y="82" class="dgm-text-small">the normal softmax.</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg viewBox="0 0 720 270" role="img" aria-label="A good dataset has three properties: accuracy, diversity and complexity. Three types of check measure them: manual review, rules, and a judge model. The toy dataset has an accuracy of 0.75, a topic entropy of 1.040 and a mean of 1.375 turns.">
+<defs><marker id="dataset-quality-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dgm-head"/></marker></defs>
+<text x="14" y="22" class="dgm-text-small">Property</text><text x="262" y="22" class="dgm-text-small">Question</text><text x="530" y="22" class="dgm-text-small">Toy value</text>
+<rect x="14" y="34" width="200" height="56" rx="6" class="dgm-box-accent"/><text x="114" y="58" text-anchor="middle" class="dgm-text">1 Accuracy</text><text x="114" y="78" text-anchor="middle" class="dgm-text-small">correct and relevant</text>
+<rect x="262" y="34" width="220" height="56" rx="6" class="dgm-box"/><text x="372" y="58" text-anchor="middle" class="dgm-text">Is each answer right?</text><text x="372" y="78" text-anchor="middle" class="dgm-text-small">solver, unit test, review</text>
+<text x="530" y="67" class="dgm-text-mono">6 of 8 = 0.75</text>
+<path d="M214 62H258" class="dgm-arrow" marker-end="url(#dataset-quality-head)"/>
+<rect x="14" y="106" width="200" height="56" rx="6" class="dgm-box-accent"/><text x="114" y="130" text-anchor="middle" class="dgm-text">2 Diversity</text><text x="114" y="150" text-anchor="middle" class="dgm-text-small">many different cases</text>
+<rect x="262" y="106" width="220" height="56" rx="6" class="dgm-box"/><text x="372" y="130" text-anchor="middle" class="dgm-text">Are the samples different?</text><text x="372" y="150" text-anchor="middle" class="dgm-text-small">topic shares, embeddings</text>
+<text x="530" y="139" class="dgm-text-mono">entropy 1.040</text>
+<path d="M214 134H258" class="dgm-arrow" marker-end="url(#dataset-quality-head)"/>
+<rect x="14" y="178" width="200" height="56" rx="6" class="dgm-box-accent"/><text x="114" y="202" text-anchor="middle" class="dgm-text">3 Complexity</text><text x="114" y="222" text-anchor="middle" class="dgm-text-small">hard enough</text>
+<rect x="262" y="178" width="220" height="56" rx="6" class="dgm-box"/><text x="372" y="202" text-anchor="middle" class="dgm-text">Is there something to learn?</text><text x="372" y="222" text-anchor="middle" class="dgm-text-small">turns, tokens, a baseline</text>
+<text x="530" y="211" class="dgm-text-mono">1.375 turns</text>
+<path d="M214 206H258" class="dgm-arrow" marker-end="url(#dataset-quality-head)"/>
+<text x="14" y="258" class="dgm-text-small">4 The checks together (rules, checker, judge model, manual review) decide which samples stay: 5 of 8.</text>
+</svg>

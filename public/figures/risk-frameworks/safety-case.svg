@@ -1,0 +1,13 @@
+<svg viewBox="0 0 720 300" role="img" aria-label="A safety case as a tree. The top claim rests on three claims with the confidences 0.9, 0.9 and 0.95. Their product is 0.77. A second team raises the first claim to 0.98 and the product to 0.838.">
+<defs><marker id="risk-frameworks-case-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dgm-head"/></marker><marker id="risk-frameworks-case-head-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dgm-head-accent"/></marker></defs>
+<rect x="170" y="14" width="380" height="60" rx="6" class="dgm-box-accent"/><text x="360" y="38" text-anchor="middle" class="dgm-text">Claim: the release gives no serious uplift</text><text x="360" y="60" text-anchor="middle" class="dgm-text-mono">0.9 × 0.9 × 0.95 = 0.77</text>
+<rect x="14" y="130" width="212" height="72" rx="6" class="dgm-box"/><text x="120" y="156" text-anchor="middle" class="dgm-text">1 The tests find the</text><text x="120" y="174" text-anchor="middle" class="dgm-text">true capability</text><text x="120" y="194" text-anchor="middle" class="dgm-text-mono">0.9</text>
+<rect x="254" y="130" width="212" height="72" rx="6" class="dgm-box"/><text x="360" y="156" text-anchor="middle" class="dgm-text">2 The test tasks cover</text><text x="360" y="174" text-anchor="middle" class="dgm-text">the threat model</text><text x="360" y="194" text-anchor="middle" class="dgm-text-mono">0.9</text>
+<rect x="494" y="130" width="212" height="72" rx="6" class="dgm-box"/><text x="600" y="156" text-anchor="middle" class="dgm-text">3 The safeguards</text><text x="600" y="174" text-anchor="middle" class="dgm-text">hold</text><text x="600" y="194" text-anchor="middle" class="dgm-text-mono">0.95</text>
+<path d="M120 130L250 78" class="dgm-arrow" marker-end="url(#risk-frameworks-case-head)"/>
+<path d="M360 130V78" class="dgm-arrow" marker-end="url(#risk-frameworks-case-head)"/>
+<path d="M600 130L470 78" class="dgm-arrow" marker-end="url(#risk-frameworks-case-head)"/>
+<rect x="14" y="240" width="212" height="46" rx="6" class="dgm-box-warm"/><text x="120" y="260" text-anchor="middle" class="dgm-text-small">Second, independent team: 0.8</text><text x="120" y="277" text-anchor="middle" class="dgm-text-small">claim 1 becomes 0.98</text>
+<path d="M120 240V206" class="dgm-arrow-accent" marker-end="url(#risk-frameworks-case-head-accent)"/>
+<text x="254" y="260" class="dgm-text-small">With the second team:</text><text x="254" y="278" class="dgm-text-mono">0.98 × 0.9 × 0.95 = 0.838</text>
+</svg>

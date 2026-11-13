@@ -1,0 +1,14 @@
+<svg viewBox="0 0 720 254" role="img" aria-label="The agent loop for the cat task: the model writes a thought and a tool call, your code runs the calculator and returns 12, then the model writes the final answer.">
+<defs><marker id="agents-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dgm-head"/></marker><marker id="agents-head-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dgm-head-accent"/></marker></defs>
+<rect x="10" y="30" width="140" height="84" rx="6" class="dgm-box"/><text x="80" y="56" text-anchor="middle" class="dgm-text">Task</text><text x="80" y="78" text-anchor="middle" class="dgm-text-small">How many legs</text><text x="80" y="96" text-anchor="middle" class="dgm-text-small">do 3 cats have?</text>
+<rect x="196" y="30" width="180" height="84" rx="6" class="dgm-box-accent"/><text x="286" y="56" text-anchor="middle" class="dgm-text">Model</text><text x="286" y="78" text-anchor="middle" class="dgm-text-small">thought: "I need 3 x 4"</text><text x="286" y="96" text-anchor="middle" class="dgm-text-small">It writes text only.</text>
+<rect x="484" y="30" width="226" height="84" rx="6" class="dgm-box"/><text x="597" y="56" text-anchor="middle" class="dgm-text">Agent loop (your code)</text><text x="597" y="78" text-anchor="middle" class="dgm-text-small">checks the call, runs the tool,</text><text x="597" y="96" text-anchor="middle" class="dgm-text-small">adds the result to the messages</text>
+<path d="M150 72H192" class="dgm-arrow" marker-end="url(#agents-head)"/>
+<path d="M376 54H480" class="dgm-arrow" marker-end="url(#agents-head)"/><text x="430" y="46" text-anchor="middle" class="dgm-text-small">action</text>
+<path d="M484 92H380" class="dgm-arrow-accent" marker-end="url(#agents-head-accent)"/><text x="430" y="110" text-anchor="middle" class="dgm-text-small">observation</text>
+<rect x="484" y="176" width="226" height="64" rx="6" class="dgm-box"/><text x="597" y="201" text-anchor="middle" class="dgm-text">Tool: calculator</text><text x="597" y="224" text-anchor="middle" class="dgm-text-mono">multiply(3, 4) = 12</text>
+<path d="M560 114V172" class="dgm-arrow" marker-end="url(#agents-head)"/><text x="552" y="148" text-anchor="end" class="dgm-text-small">tool call</text>
+<path d="M640 176V118" class="dgm-arrow-accent" marker-end="url(#agents-head-accent)"/><text x="648" y="148" class="dgm-text-small">"12"</text>
+<rect x="150" y="176" width="272" height="64" rx="6" class="dgm-box"/><text x="286" y="201" text-anchor="middle" class="dgm-text">Final answer</text><text x="286" y="224" text-anchor="middle" class="dgm-text-mono">"3 cats have 12 legs."</text>
+<path d="M286 114V172" class="dgm-arrow" marker-end="url(#agents-head)"/><text x="296" y="148" class="dgm-text-small">reply 2: no tool call</text>
+</svg>

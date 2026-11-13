@@ -1,0 +1,20 @@
+<svg viewBox="0 0 720 236" role="img" aria-label="A control protocol. The untrusted model writes an output. The trusted monitor gives it a suspicion score. Outputs with a score in the top 2% are audited by humans, the next 8% are replaced by the answer of the trusted model, and the other 90% are used. Of the attacks, 0.479 are audited, 0.285 are replaced and 0.236 are used.">
+<defs><marker id="control-protocol-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dgm-head-accent"/></marker></defs>
+<rect x="14" y="78" width="80" height="60" rx="6" class="dgm-box"/><text x="54" y="113" text-anchor="middle" class="dgm-text">Task</text>
+<rect x="120" y="78" width="140" height="60" rx="6" class="dgm-box-warm"/><text x="190" y="104" text-anchor="middle" class="dgm-text">Untrusted model</text><text x="190" y="124" text-anchor="middle" class="dgm-text-small">capable, can attack</text>
+<rect x="286" y="78" width="140" height="60" rx="6" class="dgm-box-accent"/><text x="356" y="104" text-anchor="middle" class="dgm-text">Trusted monitor</text><text x="356" y="124" text-anchor="middle" class="dgm-text-small">suspicion score</text>
+<rect x="534" y="14" width="172" height="52" rx="6" class="dgm-box-accent"/><text x="620" y="36" text-anchor="middle" class="dgm-text">Audit by humans</text><text x="620" y="55" text-anchor="middle" class="dgm-text-small">score in the top 2%</text>
+<rect x="534" y="82" width="172" height="52" rx="6" class="dgm-box-accent"/><text x="620" y="104" text-anchor="middle" class="dgm-text">Defer to trusted</text><text x="620" y="123" text-anchor="middle" class="dgm-text-small">the next 8%</text>
+<rect x="534" y="150" width="172" height="52" rx="6" class="dgm-box"/><text x="620" y="172" text-anchor="middle" class="dgm-text">Use the output</text><text x="620" y="191" text-anchor="middle" class="dgm-text-small">the other 90%</text>
+<path d="M94 108H116" class="dgm-arrow-accent" marker-end="url(#control-protocol-head)"/>
+<path d="M260 108H282" class="dgm-arrow-accent" marker-end="url(#control-protocol-head)"/>
+<path d="M426 108H530" class="dgm-arrow-accent" marker-end="url(#control-protocol-head)"/>
+<path d="M500 108V40H530" class="dgm-arrow-accent" marker-end="url(#control-protocol-head)"/>
+<path d="M500 108V176H530" class="dgm-arrow-accent" marker-end="url(#control-protocol-head)"/>
+<text x="14" y="36" class="dgm-text-small">Where one attack goes:</text>
+<text x="14" y="56" class="dgm-text-mono">0.479 + 0.285 + 0.236 = 1</text>
+<text x="494" y="34" text-anchor="end" class="dgm-text-mono">0.479</text>
+<text x="494" y="100" text-anchor="end" class="dgm-text-mono">0.285</text>
+<text x="494" y="194" text-anchor="end" class="dgm-text-mono">0.236</text>
+<text x="14" y="226" class="dgm-text-small">Audit budget 2%, deferral 10%, monitor with a separation of 2 (assumed values).</text>
+</svg>
