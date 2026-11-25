@@ -191,6 +191,7 @@ pre {
 .site-nav a {
   color: var(--ink-2);
   text-decoration: none;
+  white-space: nowrap;
 }
 .site-nav a:hover {
   color: var(--accent-ink);
@@ -1132,15 +1133,11 @@ pre {
 
 /* ---------- Small screens ---------- */
 
-@media (max-width: 860px) {
-  body {
-    font-size: 16px;
-  }
+/* The nav has 9 links: below 1200px it moves to its own row under the wordmark and the search. */
+@media (max-width: 1200px) {
   .site-header__inner {
     gap: 0.8rem;
     padding: 0.7rem 1rem;
-  }
-  .site-header__inner {
     flex-wrap: wrap;
   }
   .site-nav {
@@ -1154,6 +1151,11 @@ pre {
   }
   .search-button {
     margin-left: auto;
+  }
+}
+@media (max-width: 860px) {
+  body {
+    font-size: 16px;
   }
   .home,
   .reading {

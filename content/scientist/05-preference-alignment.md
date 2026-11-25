@@ -219,6 +219,7 @@ RL needs only a score, not a better answer. The advantage decides the direction,
 - GRPO uses the same clipped objective as PPO. In TRL, the defaults are 8 samples for each prompt and $\varepsilon = 0.2$.
 - The reward can come from a reward model or from a **reward function** (a rule in code, for example "the final number is correct"). This makes RL a good fit for reasoning models.
 - RL generates text during training. It costs much more compute than DPO and is more sensitive to the learning rate, the batch size and the clip range.
+- The track [RL for LLMs](../rl/01-rl-basics.md) explains each part in depth: reward types, the value model and GAE, and the successors of GRPO (Dr. GRPO, DAPO, GSPO, CISPO).
 
 ## Minimal code
 

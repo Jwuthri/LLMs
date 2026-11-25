@@ -5,6 +5,8 @@ Maxime Labonne (Apache-2.0) with one tiny example, real numbers, formulas, figur
 Three parts are additions to the course: a track on AI safety (6 lessons and a glossary), and lessons on
 diffusion models, training libraries, metrics and losses, and newer quantization methods. A fifth track, LLM Datasets (4 lessons and a
 catalogue), follows the list [LLM Datasets](https://github.com/mlabonne/llm-datasets) of the same author.
+A sixth track, RL for LLMs (7 lessons), explains rewards, policy gradients, PPO, GRPO and its successors (Dr. GRPO,
+DAPO, GSPO, CISPO), stable training, reward hacking and agentic RL.
 
 ## Run
 
@@ -22,7 +24,7 @@ uv run pytest -q       # checks each number shown on the pages
 
 | Path | Content |
 |---|---|
-| `content/` | The 30 lessons, the toy-example page, the AI safety glossary and the notebook guide (Markdown) |
+| `content/` | The 41 lessons, the toy-example page, the AI safety glossary and the notebook guide (Markdown) |
 | `app/`, `components/`, `lib/` | The Next.js site. `lib/markdown.ts` turns a lesson into HTML at build time |
 | `app/globals.css` | The theme (cream, white, light orange) and all styles |
 | `public/figures/` | Diagrams (hand-written SVG) and plots (written by the example scripts) |

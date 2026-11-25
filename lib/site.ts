@@ -4,7 +4,7 @@ import path from "node:path";
 
 export const CONTENT_DIR = path.join(process.cwd(), "content");
 
-export type TrackId = "fundamentals" | "scientist" | "engineer" | "safety" | "datasets";
+export type TrackId = "fundamentals" | "scientist" | "engineer" | "safety" | "datasets" | "rl";
 
 export interface Track {
   id: TrackId;
@@ -37,6 +37,11 @@ export const TRACKS: Track[] = [
     id: "datasets",
     title: "LLM Datasets",
     tagline: "How to measure, choose, mix and build the data that a model learns from.",
+  },
+  {
+    id: "rl",
+    title: "RL for LLMs",
+    tagline: "How a model learns from a score: rewards, policy gradients, and the methods that keep training stable.",
   },
 ];
 
