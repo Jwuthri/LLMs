@@ -1,0 +1,36 @@
+<svg viewBox="0 0 720 430" role="img" aria-label="The parts of the GRPO loss and the part that each successor changes. Dr. GRPO removes the std and the per-answer length division. GSPO uses one ratio per answer. DAPO raises the upper clip to 1.28, divides by all tokens of the batch, drops groups with equal rewards and adds a length penalty. CISPO clips the weight and keeps the gradient.">
+<defs><marker id="grpo-family-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="dgm-head"/></marker></defs>
+<text x="174" y="28" text-anchor="middle" class="dgm-text">GRPO loss, part by part</text>
+<text x="528" y="28" text-anchor="middle" class="dgm-text">What the successor changes</text>
+<rect x="24" y="44" width="300" height="52" rx="6" class="dgm-box"/>
+<text x="40" y="66" class="dgm-text-mono">Advantage: (r − mean) / std</text><text x="40" y="84" class="dgm-text-small">same value for every token</text>
+<line x1="330" y1="70" x2="372" y2="70" class="dgm-arrow" marker-end="url(#grpo-family-arrow)"/>
+<rect x="378" y="44" width="318" height="52" rx="6" class="dgm-box-accent"/>
+<text x="392" y="75" class="dgm-text-small">Dr. GRPO: r − mean (no std)</text>
+<rect x="24" y="104" width="300" height="52" rx="6" class="dgm-box"/>
+<text x="40" y="126" class="dgm-text-mono">Ratio: one per token</text><text x="40" y="144" class="dgm-text-small">π_new(o_t) / π_old(o_t)</text>
+<line x1="330" y1="130" x2="372" y2="130" class="dgm-arrow" marker-end="url(#grpo-family-arrow)"/>
+<rect x="378" y="104" width="318" height="52" rx="6" class="dgm-box-accent"/>
+<text x="392" y="126" class="dgm-text-small">GSPO: one per answer</text><text x="392" y="144" class="dgm-text-small">exp(mean token log-ratio)</text>
+<rect x="24" y="164" width="300" height="52" rx="6" class="dgm-box"/>
+<text x="40" y="186" class="dgm-text-mono">Clip: [0.8, 1.2]</text><text x="40" y="204" class="dgm-text-small">clipped token: no gradient</text>
+<line x1="330" y1="190" x2="372" y2="190" class="dgm-arrow" marker-end="url(#grpo-family-arrow)"/>
+<rect x="378" y="164" width="318" height="52" rx="6" class="dgm-box-accent"/>
+<text x="392" y="186" class="dgm-text-small">DAPO: [0.8, 1.28]</text><text x="392" y="204" class="dgm-text-small">CISPO: clip the weight, keep the gradient</text>
+<rect x="24" y="224" width="300" height="52" rx="6" class="dgm-box"/>
+<text x="40" y="246" class="dgm-text-mono">Sum: mean over tokens,</text><text x="40" y="264" class="dgm-text-small">then mean over answers</text>
+<line x1="330" y1="250" x2="372" y2="250" class="dgm-arrow" marker-end="url(#grpo-family-arrow)"/>
+<rect x="378" y="224" width="318" height="52" rx="6" class="dgm-box-accent"/>
+<text x="392" y="246" class="dgm-text-small">Dr. GRPO: sum / (G · MAX_TOKENS)</text><text x="392" y="264" class="dgm-text-small">DAPO: sum / tokens of the batch</text>
+<rect x="24" y="284" width="300" height="52" rx="6" class="dgm-box"/>
+<text x="40" y="315" class="dgm-text-mono">Groups: use all of them</text>
+<line x1="330" y1="310" x2="372" y2="310" class="dgm-arrow" marker-end="url(#grpo-family-arrow)"/>
+<rect x="378" y="284" width="318" height="52" rx="6" class="dgm-box-accent"/>
+<text x="392" y="315" class="dgm-text-small">DAPO: drop groups with equal rewards</text>
+<rect x="24" y="344" width="300" height="52" rx="6" class="dgm-box"/>
+<text x="40" y="375" class="dgm-text-mono">Reward: score of the answer</text>
+<line x1="330" y1="370" x2="372" y2="370" class="dgm-arrow" marker-end="url(#grpo-family-arrow)"/>
+<rect x="378" y="344" width="318" height="52" rx="6" class="dgm-box-accent"/>
+<text x="392" y="375" class="dgm-text-small">DAPO: add a soft length penalty</text>
+<text x="360" y="416" text-anchor="middle" class="dgm-text-small">KL to the reference: GRPO keeps it (β = 0.04 in DeepSeekMath); DAPO and CISPO drop it.</text>
+</svg>
