@@ -1,0 +1,17 @@
+<svg viewBox="0 0 720 270" role="img" aria-label="The RL loop on the toy. The prompt Copy: the cat sat goes to the policy, which samples an answer token by token, for example sat cat sat. A checker compares the answer with the target and gives a reward of 0.667. The update step changes the logits by step size times reward minus baseline times the gradient of log pi, and the loop starts again with the new policy.">
+<defs><marker id="rl-basics-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dgm-head"/></marker><marker id="rl-basics-head-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dgm-head-accent"/></marker></defs>
+<rect x="12" y="40" width="130" height="74" rx="6" class="dgm-box"/><text x="77" y="68" text-anchor="middle" class="dgm-text">Prompt</text><text x="77" y="92" text-anchor="middle" class="dgm-text-mono">Copy: the cat sat</text>
+<rect x="182" y="40" width="150" height="74" rx="6" class="dgm-box-accent"/><text x="257" y="64" text-anchor="middle" class="dgm-text">Policy π</text><text x="257" y="84" text-anchor="middle" class="dgm-text-small">writes 1 token, 3 times</text><text x="257" y="102" text-anchor="middle" class="dgm-text-small">state = prompt + tokens</text>
+<rect x="372" y="40" width="150" height="74" rx="6" class="dgm-box"/><text x="447" y="68" text-anchor="middle" class="dgm-text">Answer y</text><text x="447" y="92" text-anchor="middle" class="dgm-text-mono">sat cat sat</text>
+<rect x="562" y="40" width="146" height="74" rx="6" class="dgm-box"/><text x="635" y="64" text-anchor="middle" class="dgm-text">Checker</text><text x="635" y="84" text-anchor="middle" class="dgm-text-small">compares with target</text><text x="635" y="102" text-anchor="middle" class="dgm-text-small">2 of 3 tokens correct</text>
+<path d="M142 77H178" class="dgm-arrow" marker-end="url(#rl-basics-head)"/>
+<path d="M332 77H368" class="dgm-arrow" marker-end="url(#rl-basics-head)"/>
+<path d="M522 77H558" class="dgm-arrow" marker-end="url(#rl-basics-head)"/>
+<rect x="562" y="170" width="146" height="64" rx="6" class="dgm-box"/><text x="635" y="196" text-anchor="middle" class="dgm-text">Reward R</text><text x="635" y="218" text-anchor="middle" class="dgm-text-mono">R = 0.667</text>
+<path d="M635 114V166" class="dgm-arrow" marker-end="url(#rl-basics-head)"/>
+<rect x="182" y="170" width="340" height="64" rx="6" class="dgm-box-warm"/><text x="352" y="196" text-anchor="middle" class="dgm-text">Update the logits θ</text><text x="352" y="218" text-anchor="middle" class="dgm-text-mono">θ ← θ + α (R − b) ∇ log π(y)</text>
+<path d="M562 202H526" class="dgm-arrow-accent" marker-end="url(#rl-basics-head-accent)"/>
+<path d="M257 170V118" class="dgm-arrow-accent" marker-end="url(#rl-basics-head-accent)"/>
+<text x="360" y="22" text-anchor="middle" class="dgm-text-small">One episode: sample an answer, score it, update the policy, repeat.</text>
+<text x="360" y="258" text-anchor="middle" class="dgm-text-small">No correct answer is shown to the policy. Only the number R comes back.</text>
+</svg>

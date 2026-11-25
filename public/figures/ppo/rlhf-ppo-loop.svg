@@ -1,0 +1,19 @@
+<svg viewBox="0 0 720 340" role="img" aria-label="One iteration of RLHF with PPO. The policy writes answers. The frozen reference model gives log-probabilities for the KL penalty, the frozen reward model scores the answer at the last token, and the trained value model gives V(s_t) for each token. GAE turns these into advantages and returns. The PPO update runs K epochs of minibatch steps on the clipped policy loss and the value loss, then updates the policy and the value model.">
+<defs><marker id="ppo-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dgm-head"/></marker><marker id="ppo-head-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dgm-head-accent"/></marker></defs>
+<rect x="20" y="110" width="190" height="60" rx="6" class="dgm-box-accent"/><text x="115" y="134" text-anchor="middle" class="dgm-text">1 Policy π_old</text><text x="115" y="156" text-anchor="middle" class="dgm-text-small">trained · writes answers</text>
+<path d="M210 140C240 140 240 60 266 60" class="dgm-arrow" marker-end="url(#ppo-head)"/>
+<path d="M210 140H266" class="dgm-arrow" marker-end="url(#ppo-head)"/>
+<path d="M210 140C240 140 240 220 266 220" class="dgm-arrow" marker-end="url(#ppo-head)"/>
+<rect x="270" y="30" width="200" height="60" rx="6" class="dgm-box"/><text x="370" y="54" text-anchor="middle" class="dgm-text">2 Reference model</text><text x="370" y="76" text-anchor="middle" class="dgm-text-small">frozen · log-probs for the KL</text>
+<rect x="270" y="110" width="200" height="60" rx="6" class="dgm-box"/><text x="370" y="134" text-anchor="middle" class="dgm-text">3 Reward model</text><text x="370" y="156" text-anchor="middle" class="dgm-text-small">frozen · score at the last token</text>
+<rect x="270" y="190" width="200" height="60" rx="6" class="dgm-box-accent"/><text x="370" y="214" text-anchor="middle" class="dgm-text">4 Value model (critic)</text><text x="370" y="236" text-anchor="middle" class="dgm-text-small">trained · V(s_t) for each token</text>
+<path d="M470 60C490 60 490 140 506 140" class="dgm-arrow" marker-end="url(#ppo-head)"/>
+<path d="M470 140H506" class="dgm-arrow" marker-end="url(#ppo-head)"/>
+<path d="M470 220C490 220 490 140 506 140" class="dgm-arrow" marker-end="url(#ppo-head)"/>
+<rect x="510" y="110" width="190" height="60" rx="6" class="dgm-box"/><text x="605" y="134" text-anchor="middle" class="dgm-text">GAE</text><text x="605" y="156" text-anchor="middle" class="dgm-text-small">advantages A_t and returns</text>
+<path d="M605 170V226" class="dgm-arrow" marker-end="url(#ppo-head)"/>
+<rect x="510" y="230" width="190" height="60" rx="6" class="dgm-box"/><text x="605" y="254" text-anchor="middle" class="dgm-text">PPO update</text><text x="605" y="276" text-anchor="middle" class="dgm-text-small">K epochs · clip + value loss</text>
+<path d="M510 280H500V306H115V174" class="dgm-arrow-accent" marker-end="url(#ppo-head-accent)"/>
+<path d="M370 306V254" class="dgm-arrow-accent" marker-end="url(#ppo-head-accent)"/>
+<text x="250" y="326" text-anchor="middle" class="dgm-text-small">new weights for models 1 and 4, then π_old ← π_θ and collect again</text>
+</svg>

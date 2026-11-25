@@ -14,7 +14,7 @@ export function Header() {
           <Link href="/toy-example/">Toy example</Link>
           {TRACKS.map((track) => (
             <Link key={track.id} href={`/${track.id}/`}>
-              {track.title.replace(/^(The )?LLM /, "")}
+              {track.title.replace(/^(The )?LLM /, "").replace(/ for LLMs$/, "")}
             </Link>
           ))}
           <Link href="/glossary/">Glossary</Link>

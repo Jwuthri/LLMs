@@ -1,0 +1,27 @@
+<svg viewBox="0 0 720 168" role="img" aria-label="The 11 tokens of one 2-turn episode. The 7 tokens that the model wrote (sat cat sat, the call check, the cat sat) have mask 1. The 4 tokens of the tool output have mask 0.">
+<text x="137" y="22" text-anchor="middle" class="dgm-text">turn 1: model</text><text x="389" y="22" text-anchor="middle" class="dgm-text">tool output: environment</text><text x="612" y="22" text-anchor="middle" class="dgm-text">turn 2: model</text>
+<rect x="14" y="36" width="60" height="44" rx="5" class="dgm-box-accent"/><text x="44" y="63" text-anchor="middle" class="dgm-text-mono">sat</text>
+<text x="44" y="108" text-anchor="middle" class="dgm-text">1</text>
+<rect x="77" y="36" width="60" height="44" rx="5" class="dgm-box-accent"/><text x="107" y="63" text-anchor="middle" class="dgm-text-mono">cat</text>
+<text x="107" y="108" text-anchor="middle" class="dgm-text">1</text>
+<rect x="140" y="36" width="60" height="44" rx="5" class="dgm-box-accent"/><text x="170" y="63" text-anchor="middle" class="dgm-text-mono">sat</text>
+<text x="170" y="108" text-anchor="middle" class="dgm-text">1</text>
+<rect x="203" y="36" width="60" height="44" rx="5" class="dgm-box-accent"/><text x="233" y="63" text-anchor="middle" class="dgm-text-mono">&lt;check&gt;</text>
+<text x="233" y="108" text-anchor="middle" class="dgm-text">1</text>
+<rect x="266" y="36" width="60" height="44" rx="5" class="dgm-box-warm"/><text x="296" y="63" text-anchor="middle" class="dgm-text-mono">result:</text>
+<text x="296" y="108" text-anchor="middle" class="dgm-text">0</text>
+<rect x="329" y="36" width="60" height="44" rx="5" class="dgm-box-warm"/><text x="359" y="63" text-anchor="middle" class="dgm-text-mono">token</text>
+<text x="359" y="108" text-anchor="middle" class="dgm-text">0</text>
+<rect x="392" y="36" width="60" height="44" rx="5" class="dgm-box-warm"/><text x="422" y="63" text-anchor="middle" class="dgm-text-mono">1</text>
+<text x="422" y="108" text-anchor="middle" class="dgm-text">0</text>
+<rect x="455" y="36" width="60" height="44" rx="5" class="dgm-box-warm"/><text x="485" y="63" text-anchor="middle" class="dgm-text-mono">wrong</text>
+<text x="485" y="108" text-anchor="middle" class="dgm-text">0</text>
+<rect x="518" y="36" width="60" height="44" rx="5" class="dgm-box-accent"/><text x="548" y="63" text-anchor="middle" class="dgm-text-mono">the</text>
+<text x="548" y="108" text-anchor="middle" class="dgm-text">1</text>
+<rect x="581" y="36" width="60" height="44" rx="5" class="dgm-box-accent"/><text x="611" y="63" text-anchor="middle" class="dgm-text-mono">cat</text>
+<text x="611" y="108" text-anchor="middle" class="dgm-text">1</text>
+<rect x="644" y="36" width="60" height="44" rx="5" class="dgm-box-accent"/><text x="674" y="63" text-anchor="middle" class="dgm-text-mono">sat</text>
+<text x="674" y="108" text-anchor="middle" class="dgm-text">1</text>
+<text x="14" y="134" class="dgm-text-small">Loss mask: 1 = the model wrote the token (it gets a gradient). 0 = the environment wrote it.</text>
+<text x="14" y="156" class="dgm-text-small">7 of 11 tokens are trained. The call &lt;check&gt; is trained. Its result is not.</text>
+</svg>
